@@ -1,0 +1,204 @@
+/* Planvo Custom Styling für Dokumentation */
+
+:root {
+  --planvo-primary: #3f51b5;
+  --planvo-primary-dark: #303f9f;
+  --planvo-accent: #ff4081;
+  --planvo-success: #4caf50;
+  --planvo-warning: #ff9800;
+  --planvo-error: #f44336;
+}
+
+/* Logo Anpassungen */
+.md-header__button.md-logo img {
+  height: 32px;
+}
+
+/* Größere Hero-Section auf Startseite */
+.md-typeset h1:first-child {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+/* Grid Cards Styling für Startseite */
+.grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.grid.cards > * {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  background: var(--md-default-bg-color);
+}
+
+.grid.cards > *:hover {
+  box-shadow: 0 8px 16px rgba(63, 81, 181, 0.15);
+  border-color: var(--planvo-primary);
+  transform: translateY(-2px);
+}
+
+/* Icon Styling in Grid Cards */
+.grid.cards svg {
+  color: var(--planvo-primary);
+  margin-bottom: 1rem;
+}
+
+/* Button Styling */
+.md-button {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.md-button--primary {
+  background-color: var(--planvo-primary);
+}
+
+.md-button--primary:hover {
+  background-color: var(--planvo-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(63, 81, 181, 0.3);
+}
+
+/* Responsive Images */
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 1.5rem 0;
+}
+
+/* Screenshot Styling */
+.md-typeset img[alt*="Screenshot"],
+.md-typeset img[alt*="screenshot"] {
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Code Blocks */
+.md-typeset pre {
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Inline Code */
+.md-typeset code {
+  background-color: var(--md-code-bg-color);
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  font-size: 0.85em;
+}
+
+/* Tabellen */
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--planvo-primary);
+  color: white;
+  font-weight: 600;
+}
+
+/* Admonitions (Callout-Boxen) */
+.md-typeset .admonition {
+  border-radius: 0.5rem;
+  border-left-width: 4px;
+}
+
+.md-typeset .admonition.tip {
+  border-left-color: var(--planvo-success);
+}
+
+.md-typeset .admonition.warning {
+  border-left-color: var(--planvo-warning);
+}
+
+.md-typeset .admonition.danger {
+  border-left-color: var(--planvo-error);
+}
+
+/* Planvo-spezifische Callout */
+.md-typeset .admonition.planvo {
+  border-left-color: var(--planvo-primary);
+}
+
+.md-typeset .admonition.planvo > .admonition-title {
+  background-color: rgba(63, 81, 181, 0.1);
+}
+
+/* Navigation Breadcrumbs */
+.md-path {
+  color: var(--md-default-fg-color--light);
+}
+
+/* Search Highlighting */
+.md-search-result__teaser mark {
+  background-color: rgba(63, 81, 181, 0.3);
+  color: inherit;
+}
+
+/* TOC (Table of Contents) */
+.md-nav__link--active {
+  color: var(--planvo-primary);
+  font-weight: 600;
+}
+
+/* Tabs */
+.md-typeset .tabbed-set>label {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.md-typeset .tabbed-set>input:checked+label {
+  border-color: var(--planvo-primary);
+  color: var(--planvo-primary);
+}
+
+/* Footer */
+.md-footer {
+  background-color: var(--planvo-primary-dark);
+}
+
+/* Custom Classes */
+.centered {
+  text-align: center;
+}
+
+.highlight-box {
+  background-color: rgba(63, 81, 181, 0.05);
+  border-left: 4px solid var(--planvo-primary);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 76.1875em) {
+  .grid.cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print Styles */
+@media print {
+  .md-header,
+  .md-footer,
+  .md-sidebar {
+    display: none;
+  }
+}
+
