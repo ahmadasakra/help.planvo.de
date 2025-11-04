@@ -1,0 +1,55 @@
+name: Deploy Documentation
+
+on:
+  # Wird ausgelöst bei Push auf main branch
+  push:
+    branches:
+      - main
+  
+  # Manueller Trigger möglich
+  workflow_dispatch:
+
+# Berechtigungen für GitHub Pages
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Repository auschecken
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Für git-revision-date Plugin
+      
+      # 2. Python Setup
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
+      # 3. Cache für schnellere Builds
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          path: ~/.cache/pip
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      
+      # 4. MkDocs installieren
+      - name: Install MkDocs Material
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-minify-plugin
+      
+      # 5. Dokumentation bauen und deployen
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force --clean --verbose
+
+      # 6. Status-Nachricht
+      - name: Deployment Success
+        run: echo "✅ Dokumentation erfolgreich deployed nach https://help.planvo.de"
+
