@@ -58,9 +58,6 @@ theme:
     repo: fontawesome/brands/github
     logo: material/help-circle
   
-  # Favicon
-  favicon: assets/favicon.png
-  
   # Custom CSS
   extra_css:
     - assets/extra.css
@@ -72,6 +69,7 @@ plugins:
         - de
         - en
       separator: '[\s\-\.]+'
+  - swagger-ui-tag
 
 # Markdown Extensions
 markdown_extensions:
@@ -140,6 +138,7 @@ nav:
     - API Keys verwalten: api/api-keys.md
     - Schnellstart-Guide: api/quickstart.md
     - API-Referenz: api/reference.md
+    - API Playground (Swagger): api/swagger.md
     - Code-Beispiele: api/examples.md
   
   - Hilfe:

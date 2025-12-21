@@ -437,14 +437,31 @@ paths:
 
 components:
   securitySchemes:
-    CustomHeaders:
-      type: apiKey
-      in: header
-      name: X-Portfolio-Subdomain
+    ApiKeyAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API_KEY
       description: |
-        Custom headers for API identification. Required headers:
-        - X-Portfolio-Subdomain: Your Planvo subdomain
-        - X-Website-Source: Your website name
+        API Key Authentication for public booking endpoints.
+        
+        Include your API Key in the Authorization header:
+        ```
+        Authorization: Bearer pk_live_your_api_key_here
+        ```
+        
+        ### How to get an API Key:
+        1. Login to your Planvo account (https://ihre-firma.planvo.de)
+        2. Navigate to Settings → API Keys
+        3. Click "Neuer API Key"
+        4. Fill in the required information
+        5. Copy the generated API Key (shown only once!)
+        6. Add to your `.env` file: `PLANVO_API_KEY=pk_live_...`
+        
+        ### Key Features:
+        - SHA-256 hashed storage
+        - Rate limiting (60 req/min, 1000 req/day)
+        - Optional IP whitelisting
+        - Usage tracking and statistics
 
   schemas:
     BookableService:
@@ -799,34 +816,6 @@ tags:
   - name: Booking
     description: Endpoints for creating bookings
 
-components:
-  securitySchemes:
-    ApiKeyAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: API_KEY
-      description: |
-        API Key Authentication for public booking endpoints.
-        
-        Include your API Key in the Authorization header:
-        ```
-        Authorization: Bearer pk_live_your_api_key_here
-        ```
-        
-        ### How to get an API Key:
-        1. Login to your Planvo account (https://ihre-firma.planvo.de)
-        2. Navigate to Settings → API Keys
-        3. Click "Neuer API Key"
-        4. Fill in the required information
-        5. Copy the generated API Key (shown only once!)
-        6. Add to your `.env` file: `PLANVO_API_KEY=pk_live_...`
-        
-        ### Key Features:
-        - **Secure**: SHA-256 hashed in database
-        - **Rate Limited**: 60 req/min, 1000 req/day (customizable)
-        - **Trackable**: View usage statistics in dashboard
-        - **Flexible**: Optional IP whitelisting and expiration dates
-
 externalDocs:
   description: Find more information in the integration guide
-  url: https://github.com/planvo/docs/BOOKING_API_INTEGRATION.md
+  url: https://help.planvo.de/api/
