@@ -1,0 +1,832 @@
+openapi: 3.0.0
+info:
+  title: Planvo Booking API
+  version: 2.0.0
+  description: |
+    Public API for booking appointments through external websites.
+
+    This API allows you to integrate Planvo's booking system into your website.
+    Authentication is handled via API Keys that you can generate in your Planvo dashboard.
+
+    ## Features
+    - Fetch available services with pricing and duration
+    - Get list of bookable employees
+    - Check available days in a month (for calendar display)
+    - Get available time slots for a specific date
+    - Create bookings with automatic client creation
+    - Automatic email confirmations
+    - Rate limiting per API Key
+
+    ## Workflow
+    1. Create an API Key in your Planvo dashboard (Settings → API Keys)
+    2. Add the API Key to your website's environment variables
+    3. Fetch available services (`GET /services`)
+    4. Fetch available employees (`GET /employees`)
+    5. Check available days for a month (`GET /available-days`)
+    6. Get time slots for a specific date (`GET /availability`)
+    7. Create a booking (`POST /book`)
+
+    ## Authentication
+    This API uses API Key authentication via the Authorization header:
+    ```
+    Authorization: Bearer pk_live_your_api_key_here
+    ```
+
+    ### How to get an API Key:
+    1. Login to your Planvo account (https://ihre-firma.planvo.de)
+    2. Navigate to Settings → API Keys
+    3. Click "Neuer API Key"
+    4. Fill in the form:
+       - Name: e.g., "Hauptwebsite"
+       - Website URL: e.g., "https://ihre-firma.de"
+       - Website Source: e.g., "Ihre Firma Website"
+    5. Copy the generated API Key (shown only once!)
+    6. Add it to your website's `.env` file:
+       ```
+       PLANVO_API_KEY=pk_live_abc123xyz789...
+       ```
+
+    ### Security Features:
+    - API Keys are SHA-256 hashed in the database
+    - Rate limiting (60 req/min, 1000 req/day by default)
+    - Optional IP whitelisting
+    - Optional expiration dates
+    - Activity tracking and statistics
+
+  contact:
+    name: Planvo Support
+    email: support@planvo.de
+    url: https://planvo.de
+  license:
+    name: Proprietary
+
+servers:
+  - url: http://localhost:8888
+    description: Development server
+  - url: https://api.planvo.de
+    description: Production server
+
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /api/public/booking/services:
+    get:
+      summary: Get all bookable services
+      description: |
+        Retrieves all bookable services that are enabled and not removed.
+        Each service includes title, description, category, price, duration, and features.
+
+        This endpoint is typically called first in the booking workflow to display available services to the user.
+      operationId: getBookableServices
+      tags:
+        - Services
+      responses:
+        '200':
+          description: Successful response with list of services
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/BookableService'
+              examples:
+                successResponse:
+                  summary: Successful service list
+                  value:
+                    success: true
+                    data:
+                      - _id: 6767a1b2c3d4e5f6g7h8i9j0
+                        title: Web Development
+                        description: Professional website development services
+                        category: web-development
+                        icon: Code
+                        features:
+                          - Responsive Design
+                          - SEO Optimization
+                          - Performance Tuning
+                        duration: 90
+                        price:
+                          amount: 150
+                          currency: EUR
+                        enabled: true
+                        sortOrder: 1
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/public/booking/employees:
+    get:
+      summary: Get all bookable employees
+      description: |
+        Retrieves all active employees. Bookability is controlled via WeeklyAvailability records.
+        Employees without availability will have no available time slots.
+
+        This endpoint returns basic employee information including name, position, profile image,
+        languages, and specialties.
+      operationId: getBookableEmployees
+      tags:
+        - Employees
+      responses:
+        '200':
+          description: Successful response with list of employees
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/BookableEmployee'
+              examples:
+                successResponse:
+                  summary: Successful employee list
+                  value:
+                    success: true
+                    data:
+                      - _id: 5f8d0d55b54764421b7156c1
+                        name: Ahmed
+                        surname: Asakrah
+                        position:
+                          _id: 5f8d0d55b54764421b7156c2
+                          title: Senior Developer
+                        profileImage: https://example.com/images/ahmed.jpg
+                        languages:
+                          - Deutsch
+                          - English
+                          - العربية
+                        specialties:
+                          - Web Development
+                          - API Design
+                          - Cloud Architecture
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/public/booking/available-days:
+    get:
+      summary: Get available days in a month
+      description: |
+        Returns an array of dates (ISO format) that have available time slots in the specified month.
+        This is useful for displaying a calendar with marked available days.
+
+        The endpoint checks:
+        - Weekly availability patterns for the employee
+        - Existing appointments (to exclude fully booked days)
+        - Service duration requirements
+        - Break times
+      operationId: getAvailableDays
+      tags:
+        - Availability
+      parameters:
+        - name: employeeId
+          in: query
+          required: true
+          description: Employee ID or 'any' for automatic assignment
+          schema:
+            type: string
+            example: any
+        - name: year
+          in: query
+          required: true
+          description: Year (e.g., 2025)
+          schema:
+            type: integer
+            example: 2025
+        - name: month
+          in: query
+          required: true
+          description: Month (1-12)
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 12
+            example: 12
+        - name: serviceId
+          in: query
+          required: true
+          description: Service ID to check availability for
+          schema:
+            type: string
+            example: 6767a1b2c3d4e5f6g7h8i9j0
+      responses:
+        '200':
+          description: Successful response with array of available dates
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    items:
+                      type: string
+                      format: date
+                      description: Date in ISO format (YYYY-MM-DD)
+              examples:
+                successResponse:
+                  summary: Available days in December 2025
+                  value:
+                    success: true
+                    data:
+                      - '2025-12-23'
+                      - '2025-12-24'
+                      - '2025-12-27'
+                      - '2025-12-30'
+                      - '2025-12-31'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/public/booking/availability:
+    get:
+      summary: Get time slots for a specific date
+      description: |
+        Returns available time slots for a specific date. Time slots are calculated based on:
+        - Weekly availability patterns
+        - Existing appointments
+        - Service duration
+        - Break times
+
+        Time slots are returned in 30-minute intervals by default.
+      operationId: getAvailability
+      tags:
+        - Availability
+      parameters:
+        - name: employeeId
+          in: query
+          required: true
+          description: Employee ID or 'any' for automatic assignment
+          schema:
+            type: string
+            example: any
+        - name: date
+          in: query
+          required: true
+          description: Date in YYYY-MM-DD format
+          schema:
+            type: string
+            format: date
+            example: '2025-12-23'
+        - name: serviceId
+          in: query
+          required: true
+          description: Service ID to check availability for
+          schema:
+            type: string
+            example: 6767a1b2c3d4e5f6g7h8i9j0
+      responses:
+        '200':
+          description: Successful response with array of time slots
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    type: array
+                    items:
+                      type: string
+                      pattern: ^\d{2}:\d{2}$
+                      description: Time in HH:MM format (24-hour)
+              examples:
+                successResponse:
+                  summary: Available time slots for December 23, 2025
+                  value:
+                    success: true
+                    data:
+                      - '09:00'
+                      - '09:30'
+                      - '10:00'
+                      - '10:30'
+                      - '11:00'
+                      - '14:00'
+                      - '14:30'
+                      - '15:00'
+                      - '15:30'
+                      - '16:00'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/public/booking/book:
+    post:
+      summary: Create a new booking
+      description: |
+        Creates a new booking. If the client doesn't exist, a new client record will be created automatically.
+
+        The endpoint will:
+        1. Validate the request data
+        2. Create or find the client based on email
+        3. Create the appointment
+        4. Generate an appointment number
+        5. Send a confirmation email to the client
+        6. Return the created appointment details
+
+        **Note:** The appointment status will be 'planned' and may require manual confirmation by staff.
+      operationId: createBooking
+      tags:
+        - Booking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingRequest'
+            examples:
+              basicBooking:
+                summary: Basic booking with required fields
+                value:
+                  serviceId: 6767a1b2c3d4e5f6g7h8i9j0
+                  employeeId: any
+                  date: '2025-12-23'
+                  time: '10:00'
+                  contact:
+                    firstName: Max
+                    lastName: Mustermann
+                    email: max.mustermann@example.com
+              fullBooking:
+                summary: Full booking with all optional fields
+                value:
+                  serviceId: 6767a1b2c3d4e5f6g7h8i9j0
+                  employeeId: 5f8d0d55b54764421b7156c1
+                  date: '2025-12-23'
+                  time: '10:00'
+                  contact:
+                    firstName: Max
+                    lastName: Mustermann
+                    email: max.mustermann@example.com
+                    phone: +49 123 456789
+                    notes: Bitte Parkplatz reservieren. Ich komme mit dem Auto.
+      responses:
+        '200':
+          description: Booking created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Buchung erfolgreich erstellt
+                  data:
+                    type: object
+                    properties:
+                      appointment:
+                        $ref: '#/components/schemas/Appointment'
+              examples:
+                successResponse:
+                  summary: Successful booking creation
+                  value:
+                    success: true
+                    message: Buchung erfolgreich erstellt
+                    data:
+                      appointment:
+                        _id: 676abc123def456ghi789jkl
+                        number: TA-20251223-0001
+                        title: Web Development
+                        startDate: '2025-12-23T10:00:00.000Z'
+                        endDate: '2025-12-23T11:30:00.000Z'
+                        startTime: '10:00'
+                        duration: 90
+                        status: planned
+                        category: consultation
+                        priority: normal
+                        source: Portfolio Website
+                        client:
+                          _id: 676abc123def456ghi789xyz
+                          firstName: Max
+                          lastName: Mustermann
+                          email: max.mustermann@example.com
+                          phone: +49 123 456789
+                          customerNumber: PW-20251223-0001
+                        createdAt: '2025-12-21T12:00:00.000Z'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  securitySchemes:
+    CustomHeaders:
+      type: apiKey
+      in: header
+      name: X-Portfolio-Subdomain
+      description: |
+        Custom headers for API identification. Required headers:
+        - X-Portfolio-Subdomain: Your Planvo subdomain
+        - X-Website-Source: Your website name
+
+  schemas:
+    BookableService:
+      type: object
+      required:
+        - _id
+        - title
+        - description
+        - category
+        - duration
+        - price
+        - enabled
+      properties:
+        _id:
+          type: string
+          description: Unique service identifier
+          example: 6767a1b2c3d4e5f6g7h8i9j0
+        title:
+          type: string
+          description: Service name
+          example: Web Development
+        description:
+          type: string
+          description: Service description
+          example: Professional website development services
+        category:
+          type: string
+          description: Service category
+          enum:
+            - web-development
+            - api-development
+            - seo
+            - ai-solutions
+            - cloud-devops
+            - tech-mentoring
+          example: web-development
+        icon:
+          type: string
+          description: Icon identifier (Lucide React icon name)
+          example: Code
+        features:
+          type: array
+          description: List of service features
+          items:
+            type: string
+          example:
+            - Responsive Design
+            - SEO Optimization
+            - Performance Tuning
+        duration:
+          type: integer
+          description: Service duration in minutes
+          minimum: 15
+          example: 90
+        price:
+          type: object
+          required:
+            - amount
+            - currency
+          properties:
+            amount:
+              type: number
+              format: float
+              description: Price amount
+              example: 150
+            currency:
+              type: string
+              description: Currency code (ISO 4217)
+              example: EUR
+        enabled:
+          type: boolean
+          description: Whether the service is available for booking
+          example: true
+        sortOrder:
+          type: integer
+          description: Display order
+          example: 1
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updatedAt:
+          type: string
+          format: date-time
+          description: Last update timestamp
+
+    BookableEmployee:
+      type: object
+      required:
+        - _id
+        - name
+        - surname
+      properties:
+        _id:
+          type: string
+          description: Unique employee identifier
+          example: 5f8d0d55b54764421b7156c1
+        name:
+          type: string
+          description: First name
+          example: Ahmed
+        surname:
+          type: string
+          description: Last name
+          example: Asakrah
+        position:
+          type: object
+          description: Employee position
+          properties:
+            _id:
+              type: string
+            title:
+              type: string
+              example: Senior Developer
+        profileImage:
+          type: string
+          format: uri
+          description: URL to profile image
+          example: https://example.com/images/ahmed.jpg
+        languages:
+          type: array
+          description: Spoken languages
+          items:
+            type: string
+          example:
+            - Deutsch
+            - English
+            - العربية
+        specialties:
+          type: array
+          description: Areas of expertise
+          items:
+            type: string
+          example:
+            - Web Development
+            - API Design
+            - Cloud Architecture
+
+    BookingRequest:
+      type: object
+      required:
+        - serviceId
+        - employeeId
+        - date
+        - time
+        - contact
+      properties:
+        serviceId:
+          type: string
+          description: Service ID to book
+          example: 6767a1b2c3d4e5f6g7h8i9j0
+        employeeId:
+          type: string
+          description: Employee ID or 'any' for automatic assignment
+          example: any
+        date:
+          type: string
+          format: date
+          description: Booking date in YYYY-MM-DD format
+          example: '2025-12-23'
+        time:
+          type: string
+          pattern: ^\d{2}:\d{2}$
+          description: Booking time in HH:MM format (24-hour)
+          example: '10:00'
+        contact:
+          type: object
+          required:
+            - firstName
+            - lastName
+            - email
+          properties:
+            firstName:
+              type: string
+              description: Client's first name
+              minLength: 1
+              example: Max
+            lastName:
+              type: string
+              description: Client's last name
+              minLength: 1
+              example: Mustermann
+            email:
+              type: string
+              format: email
+              description: Client's email address
+              example: max.mustermann@example.com
+            phone:
+              type: string
+              description: Client's phone number (optional)
+              example: +49 123 456789
+            notes:
+              type: string
+              description: Additional notes or requests (optional)
+              maxLength: 1000
+              example: Bitte Parkplatz reservieren
+
+    Appointment:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Unique appointment identifier
+          example: 676abc123def456ghi789jkl
+        number:
+          type: string
+          description: Human-readable appointment number
+          example: TA-20251223-0001
+        title:
+          type: string
+          description: Appointment title (usually service name)
+          example: Web Development
+        startDate:
+          type: string
+          format: date-time
+          description: Appointment start date and time
+          example: '2025-12-23T10:00:00.000Z'
+        endDate:
+          type: string
+          format: date-time
+          description: Appointment end date and time
+          example: '2025-12-23T11:30:00.000Z'
+        startTime:
+          type: string
+          description: Start time in HH:MM format
+          example: '10:00'
+        duration:
+          type: integer
+          description: Duration in minutes
+          example: 90
+        status:
+          type: string
+          enum:
+            - planned
+            - confirmed
+            - cancelled
+          description: Appointment status
+          example: planned
+        category:
+          type: string
+          description: Appointment category
+          example: consultation
+        priority:
+          type: string
+          enum:
+            - low
+            - normal
+            - high
+          description: Appointment priority
+          example: normal
+        source:
+          type: string
+          description: Booking source (from X-Website-Source header)
+          example: Portfolio Website
+        client:
+          type: object
+          description: Client information
+          properties:
+            _id:
+              type: string
+            firstName:
+              type: string
+            lastName:
+              type: string
+            email:
+              type: string
+            phone:
+              type: string
+            customerNumber:
+              type: string
+              description: Auto-generated customer number
+              example: PW-20251223-0001
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp
+
+    Error:
+      type: object
+      required:
+        - success
+        - message
+      properties:
+        success:
+          type: boolean
+          example: false
+        message:
+          type: string
+          description: Error message
+          example: Pflichtfelder fehlen
+        error:
+          type: string
+          description: Detailed error information (in development mode)
+
+  responses:
+    BadRequest:
+      description: Bad request - Invalid parameters or missing required fields
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            missingFields:
+              summary: Missing required fields
+              value:
+                success: false
+                message: Pflichtfelder fehlen
+            invalidDate:
+              summary: Invalid date format
+              value:
+                success: false
+                message: Ungültiges Datumsformat
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            serviceNotFound:
+              summary: Service not found
+              value:
+                success: false
+                message: Service nicht gefunden
+            companyNotFound:
+              summary: Company not found
+              value:
+                success: false
+                message: Company nicht gefunden
+
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            serverError:
+              summary: Generic server error
+              value:
+                success: false
+                message: Interner Serverfehler
+
+tags:
+  - name: Services
+    description: Endpoints for managing bookable services
+  - name: Employees
+    description: Endpoints for retrieving employee information
+  - name: Availability
+    description: Endpoints for checking availability
+  - name: Booking
+    description: Endpoints for creating bookings
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API_KEY
+      description: |
+        API Key Authentication for public booking endpoints.
+        
+        Include your API Key in the Authorization header:
+        ```
+        Authorization: Bearer pk_live_your_api_key_here
+        ```
+        
+        ### How to get an API Key:
+        1. Login to your Planvo account (https://ihre-firma.planvo.de)
+        2. Navigate to Settings → API Keys
+        3. Click "Neuer API Key"
+        4. Fill in the required information
+        5. Copy the generated API Key (shown only once!)
+        6. Add to your `.env` file: `PLANVO_API_KEY=pk_live_...`
+        
+        ### Key Features:
+        - **Secure**: SHA-256 hashed in database
+        - **Rate Limited**: 60 req/min, 1000 req/day (customizable)
+        - **Trackable**: View usage statistics in dashboard
+        - **Flexible**: Optional IP whitelisting and expiration dates
+
+externalDocs:
+  description: Find more information in the integration guide
+  url: https://github.com/planvo/docs/BOOKING_API_INTEGRATION.md

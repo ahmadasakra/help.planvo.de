@@ -135,7 +135,15 @@ nav:
     - Zeiterfassung Mobile: mobile/zeiterfassung.md
     - Offline-Modus: mobile/offline-modus.md
   
+  - API & Integrationen:
+    - api/index.md
+    - API Keys verwalten: api/api-keys.md
+    - Schnellstart-Guide: api/quickstart.md
+    - API-Referenz: api/reference.md
+    - Code-Beispiele: api/examples.md
+  
   - Hilfe:
     - FAQ: hilfe/faq.md
     - Kontakt & Support: hilfe/kontakt.md
+
 
