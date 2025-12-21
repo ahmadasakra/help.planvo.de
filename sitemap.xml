@@ -2,58 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://help.planvo.de/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
+    </url>
+    <url>
+         <loc>https://help.planvo.de/api/</loc>
+         <lastmod>2025-12-21</lastmod>
+    </url>
+    <url>
+         <loc>https://help.planvo.de/api/api-keys/</loc>
+         <lastmod>2025-12-21</lastmod>
+    </url>
+    <url>
+         <loc>https://help.planvo.de/api/examples/</loc>
+         <lastmod>2025-12-21</lastmod>
+    </url>
+    <url>
+         <loc>https://help.planvo.de/api/quickstart/</loc>
+         <lastmod>2025-12-21</lastmod>
+    </url>
+    <url>
+         <loc>https://help.planvo.de/api/reference/</loc>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/erste-schritte/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/erste-schritte/anmeldung/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/erste-schritte/dashboard/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/hilfe/faq/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/hilfe/kontakt/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/mobile/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/mobile/installation/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/mobile/offline-modus/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/mobile/zeiterfassung/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/web/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/web/projekte/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/web/schichten/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
     <url>
          <loc>https://help.planvo.de/web/zeiterfassung/</loc>
-         <lastmod>2025-11-04</lastmod>
+         <lastmod>2025-12-21</lastmod>
     </url>
 </urlset>
