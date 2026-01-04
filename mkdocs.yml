@@ -4,7 +4,7 @@ site_description: Offizielle Hilfe-Dokumentation für Planvo - Ihre digitale Bus
 site_author: Planvo GmbH
 
 # Repository
-repo_url: https://github.com/IHR-USERNAME/help.planvo.de
+repo_url: https://github.com/ahmadasakra/help.planvo.de
 repo_name: help.planvo.de
 edit_uri: edit/main/docs/
 
