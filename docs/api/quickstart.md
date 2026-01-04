@@ -390,3 +390,10 @@ CORS-Fehler sollten nicht auftreten, da unsere API alle Origins erlaubt. Falls d
 - 💬 Live-Chat: Verfügbar im Planvo-Dashboard
 - 📚 Community: [community.planvo.de](https://community.planvo.de)
 
+
+
+
+
+
+
+

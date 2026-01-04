@@ -33,11 +33,11 @@ pip --version
 ### Installation & lokaler Server
 
 ```bash
-# 1. MkDocs Material installieren
-pip install mkdocs-material
-
-# 2. Repository klonen (falls noch nicht geschehen)
+# 1. Repository klonen (falls noch nicht geschehen)
 cd /Users/ahmedasakrah/Desktop/PlanvoMobile/help.planvo.de
+
+# 2. Dependencies installieren
+pip install -r requirements.txt
 
 # 3. Lokalen Dev-Server starten
 mkdocs serve
@@ -47,6 +47,14 @@ mkdocs serve
 ```
 
 Das war's! Sie sehen jetzt die Dokumentation lokal.
+
+### Alternative Installation (einzelne Pakete)
+
+```bash
+pip install mkdocs-material
+pip install mkdocs-minify-plugin
+pip install mkdocs-swagger-ui-tag
+```
 
 ---
 
@@ -119,9 +127,11 @@ help.planvo.de/
 
 ## 🚢 Deployment
 
-### Option 1: GitHub Pages (Empfohlen)
+### Automatisches Deployment mit GitHub Actions
 
-**Automatisches Deployment bei jedem `git push`:**
+Das Projekt ist so konfiguriert, dass es automatisch zu GitHub Pages deployed wird, sobald Sie Änderungen zu `main` pushen.
+
+**Workflow:**
 
 ```bash
 # 1. Änderungen committen
@@ -135,7 +145,23 @@ git push origin main
 # → https://help.planvo.de ist in ~2 Minuten live
 ```
 
-**GitHub Pages konfigurieren:**
+**Was passiert automatisch:**
+
+1. ✅ GitHub Actions wird getriggert
+2. ✅ Python Environment wird aufgesetzt
+3. ✅ Dependencies werden aus `requirements.txt` installiert:
+   - `mkdocs-material` (Theme)
+   - `mkdocs-minify-plugin` (Optimierung)
+   - `mkdocs-swagger-ui-tag` (API-Dokumentation)
+4. ✅ Dokumentation wird gebaut
+5. ✅ Zu `gh-pages` Branch deployed
+6. ✅ Auf https://help.planvo.de verfügbar
+
+---
+
+### GitHub Pages konfigurieren
+
+**Einmalige Einrichtung:**
 
 1. GitHub Repository → **Settings**
 2. **Pages** (linke Sidebar)
@@ -155,14 +181,17 @@ Warten Sie 5-10 Minuten → https://help.planvo.de ist live!
 
 ---
 
-### Option 2: Manuelles Build & Deploy
+### Manuelles Deployment
+
+Falls Sie manuell deployen möchten:
 
 ```bash
-# Build erstellen
-mkdocs build
+# Build & Deploy zu GitHub Pages
+mkdocs gh-deploy --force --clean
 
-# Ergebnis in 'site/' Ordner
-# → Hochladen zu Ihrem Server
+# Oder nur lokal bauen
+mkdocs build
+# → Ergebnis in 'site/' Ordner
 ```
 
 ---

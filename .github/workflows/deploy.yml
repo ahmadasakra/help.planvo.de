@@ -42,8 +42,7 @@ jobs:
       # 4. MkDocs installieren
       - name: Install MkDocs Material
         run: |
-          pip install mkdocs-material
-          pip install mkdocs-minify-plugin
+          pip install -r requirements.txt
       
       # 5. Dokumentation bauen und deployen
       - name: Deploy to GitHub Pages
