@@ -126,6 +126,13 @@ nav:
     - Zeiterfassung: web/zeiterfassung.md
     - Projektmanagement: web/projekte.md
     - Schichtplanung: web/schichten.md
+    - Rechnungen & Angebote: web/rechnungen.md
+    - Kundenverwaltung: web/kunden.md
+    - Aufgabenmanagement: web/aufgaben.md
+    - Service-Termine: web/service-termine.md
+    - Urlaubsverwaltung: web/urlaub.md
+    - Plantafel: web/plantafel.md
+    - Dokumentenmanagement: web/dokumente.md
   
   - Mobile App:
     - mobile/index.md

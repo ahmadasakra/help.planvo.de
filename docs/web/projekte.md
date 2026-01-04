@@ -29,6 +29,21 @@ Das Projektmanagement in Planvo bietet Ihnen:
 
 ---
 
+## 📹 Video-Tutorial
+
+!!! info "Video-Tutorial"
+    **🎥 Video: Projektmanagement**
+    
+    In diesem Video zeigen wir Ihnen, wie Sie:
+    - Ein neues Projekt erstellen
+    - Teams zuweisen
+    - Die Plantafel nutzen
+    - Aufgaben verwalten
+    
+    *Video wird demnächst verfügbar sein*
+
+---
+
 ## 📊 Projekt-Übersicht
 
 ### Projekte ansehen

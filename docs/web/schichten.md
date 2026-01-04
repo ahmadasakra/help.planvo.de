@@ -29,6 +29,21 @@ Die Schichtplanung in Planvo hilft Ihnen bei:
 
 ---
 
+## 📹 Video-Tutorial
+
+!!! info "Video-Tutorial"
+    **🎥 Video: Schichtplanung**
+    
+    In diesem Video zeigen wir Ihnen, wie Sie:
+    - Schichten erstellen
+    - Mitarbeiter zuweisen
+    - Schichtbewerbungen verwalten
+    - Anwesenheit bestätigen
+    
+    *Video wird demnächst verfügbar sein*
+
+---
+
 ## 📅 Schichten ansehen
 
 ### Kalender-Ansicht

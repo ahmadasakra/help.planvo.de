@@ -27,6 +27,21 @@ Mit der Zeiterfassung können Sie Ihre tägliche Arbeitszeit ganz einfach per Kn
 
 ---
 
+## 📹 Video-Tutorial
+
+!!! info "Video-Tutorial"
+    **🎥 Video: Zeiterfassung im Web**
+    
+    In diesem Video zeigen wir Ihnen, wie Sie:
+    - Ein- und ausstempeln
+    - Pausen verwalten
+    - Zeiten nachträglich korrigieren
+    - Stundenübersicht einsehen
+    
+    *Video wird demnächst verfügbar sein*
+
+---
+
 ## 🚀 Arbeitsbeginn stempeln
 
 ### Schnellzugriff über Dashboard
