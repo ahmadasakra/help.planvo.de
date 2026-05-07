@@ -36,6 +36,14 @@ Die **Planvo Web-Version** ist Ihre vollständige Desktop-Lösung für:
     
     [:octicons-arrow-right-24: Mehr erfahren](projekte.md)
 
+-   :material-file-document:{ .lg } **Berichte**
+    
+    ---
+    
+    Professionelle PDF-Berichte aus Projekten
+    
+    [:octicons-arrow-right-24: Mehr erfahren](berichte.md)
+
 -   :material-calendar-clock:{ .lg } **Schichtplanung**
     
     ---
@@ -55,6 +63,7 @@ Die **Planvo Web-Version** ist Ihre vollständige Desktop-Lösung für:
 | [🏠 Dashboard](../erste-schritte/dashboard.md) | Persönliche Übersicht | Alle |
 | [⏰ Zeiterfassung](zeiterfassung.md) | Arbeitszeiten erfassen | Alle |
 | [📊 Projekte](projekte.md) | Projektmanagement | Projektleiter, Team |
+| [📄 Berichte](berichte.md) | Berichtsvorlagen & PDF-Erstellung | Projektleiter, Techniker |
 | [📅 Schichten](schichten.md) | Schichtplanung | Alle |
 | 🏖️ **Urlaub** | Urlaubsverwaltung | Alle |
 | 💰 **Rechnungen** | Rechnungswesen | Buchhaltung |
@@ -68,10 +77,11 @@ Die **Planvo Web-Version** ist Ihre vollständige Desktop-Lösung für:
 2. [Dashboard kennenlernen](../erste-schritte/dashboard.md)
 3. [Zeit erfassen](zeiterfassung.md)
 4. [Projekte ansehen](projekte.md)
+5. [Bericht erstellen](berichte.md)
 
 ---
 
 [:octicons-arrow-right-24: Zeiterfassung](zeiterfassung.md){ .md-button .md-button--primary }
 [:octicons-arrow-right-24: Projekte](projekte.md){ .md-button }
+[:octicons-arrow-right-24: Berichte](berichte.md){ .md-button }
 [:octicons-arrow-right-24: Schichten](schichten.md){ .md-button }
-

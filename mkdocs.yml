@@ -125,6 +125,7 @@ nav:
     - web/index.md
     - Zeiterfassung: web/zeiterfassung.md
     - Projektmanagement: web/projekte.md
+    - Berichte: web/berichte.md
     - Schichtplanung: web/schichten.md
     - Rechnungen & Angebote: web/rechnungen.md
     - Kundenverwaltung: web/kunden.md
