@@ -154,8 +154,8 @@ git push origin main
    - `mkdocs-minify-plugin` (Optimierung)
    - `mkdocs-swagger-ui-tag` (API-Dokumentation)
 4. ✅ Dokumentation wird gebaut
-5. ✅ Zu `gh-pages` Branch deployed
-6. ✅ Auf https://help.planvo.de verfügbar
+5. ✅ Als **GitHub Pages**-Artefakt veröffentlicht (Source: **GitHub Actions**)
+6. ✅ Unter der Repo-URL bzw. Custom Domain erreichbar
 
 ---
 
@@ -163,11 +163,12 @@ git push origin main
 
 **Einmalige Einrichtung:**
 
-1. GitHub Repository → **Settings**
-2. **Pages** (linke Sidebar)
-3. Source: **gh-pages branch**
-4. Custom domain: **help.planvo.de**
-5. **Save**
+1. GitHub Repository → **Settings** → **Pages**
+2. Unter **Build and deployment** → **Source:** **GitHub Actions** wählen (nicht „Deploy from a branch“)
+3. Optional **Custom domain:** **help.planvo.de** (wie in `site/CNAME` nach dem Build)
+4. Nach dem ersten erfolgreichen Workflow-Lauf erscheint die Site unter  
+   `https://<user-or-org>.github.io/<repo>/`  
+   bzw. unter **help.planvo.de**, wenn DNS/CNAME stimmt
 
 **DNS konfigurieren:**
 
