@@ -24,7 +24,7 @@ Die **Planvo Web-Version** ist Ihre vollständige Desktop-Lösung für:
     
     ---
     
-    Ein- und Ausstempeln, Pausen, Überstunden
+    Projektzeit im Kalender, Liste, Export und Auswertung
     
     [:octicons-arrow-right-24: Mehr erfahren](zeiterfassung.md)
 
@@ -61,7 +61,7 @@ Die **Planvo Web-Version** ist Ihre vollständige Desktop-Lösung für:
 | Bereich | Beschreibung | Für wen? |
 |---------|--------------|----------|
 | [🏠 Dashboard](../erste-schritte/dashboard.md) | Persönliche Übersicht | Alle |
-| [⏰ Zeiterfassung](zeiterfassung.md) | Arbeitszeiten erfassen | Alle |
+| [⏰ Zeiterfassung](zeiterfassung.md) | Kalender, Zeiteinträge, Auswertung | Alle (je nach Rolle) |
 | [📊 Projekte](projekte.md) | Projektmanagement | Projektleiter, Team |
 | [📄 Berichte](berichte.md) | Berichtsvorlagen & PDF-Erstellung | Projektleiter, Techniker |
 | [📅 Schichten](schichten.md) | Schichtplanung | Alle |

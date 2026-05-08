@@ -1,370 +1,292 @@
 # Zeiterfassung (Web)
 
-> **⏱️ Lesezeit:** 8 Minuten  
-> **📱 Verfügbar in:** Web & Mobile  
-> **👤 Für:** Alle Mitarbeiter
+> **⏱️ Lesezeit:** 10 Minuten  
+> **📱 Verfügbar in:** Web (ergänzend: [Zeiterfassung Mobile](../mobile/zeiterfassung.md))  
+> **👤 Für:** Mitarbeitende, Projektleitung, Personal (je nach Berechtigung)
 
 ---
 
 ## 📋 Was Sie in diesem Kapitel lernen
 
-- ✅ Wie Sie Ihre Arbeitszeit per Web erfassen
-- ✅ Wie Sie Pausen stempeln
-- ✅ Wie Sie Ihre Zeiten nachträglich korrigieren
-- ✅ Wie Sie Ihre Stundenübersicht einsehen und exportieren
+- ✅ Wo Sie **Projektzeiten** erfassen und die **Kalenderansicht** nutzen
+- ✅ Wie Sie **Einträge im Kalender** bearbeiten, verschieben und neu anlegen
+- ✅ Wie der Dialog **Projektzeit erfassen** funktioniert (inkl. **Pausen**)
+- ✅ Wo Sie **Zeiteinträge als Liste** sehen, **exportieren** und das **Stundenkonto** nutzen
+- ✅ Wie die **Auswertung** (Menüpunkt) zu Diagrammen und weiteren Tabs führt
 
 ---
 
 ## 🎯 Übersicht
 
-Mit der Zeiterfassung können Sie Ihre tägliche Arbeitszeit ganz einfach per Knopfdruck erfassen. Das System berechnet automatisch:
+In Planvo erfassen Sie Arbeitszeit in der Regel als **Projektzeit**: Sie wählen ein **Projekt** (sofern vorgesehen), **Datum**, **Start- und Endzeit** und können **Pausen** und **Bemerkungen** hinzufügen.
 
-- ⏰ Ihre Arbeitsstunden
-- ☕ Pausenzeiten
-- 📊 Überstunden
-- 📈 Wochenarbeitszeit
-- 💰 Vergütbare Stunden
+Zwei zentrale Menüpunkte in der Web-App:
 
----
+| Menüpunkt | Route (URL) | Zweck |
+|-----------|-------------|--------|
+| **Zeiterfassung** | `/project-time` | Kalender, schnelles Erfassen, Tabs **Zeiteinträge** und **Stundenkonto** |
+| **Auswertung** | `/analyse` | Auswertungen, Tabellen, Diagramme, ggf. Finanzen und Abwesenheiten |
 
-## 📹 Video-Tutorial
+!!! info "Berechtigungen"
+    Was Sie sehen, hängt von Ihrer **Rolle** ab: Nur eigene Zeiten, alle Mitarbeiter, Export für das Team oder zusätzliche Tabs (z. B. **Finanzen**, **Abwesenheitsauswertung**) sind möglich. Fehlt ein Menüpunkt, wenden Sie sich an Ihre Administration.
 
-!!! info "Video-Tutorial"
-    **🎥 Video: Zeiterfassung im Web**
-    
-    In diesem Video zeigen wir Ihnen, wie Sie:
-    - Ein- und ausstempeln
-    - Pausen verwalten
-    - Zeiten nachträglich korrigieren
-    - Stundenübersicht einsehen
-    
-    *Video wird demnächst verfügbar sein*
+Die folgenden **10 Schritte** sind mit Screenshots unter `docs/assets/zeiterfassung/` bebildert (`zeiterfassung1.png` … `zeiterfassung10.png`).
 
 ---
 
-## 🚀 Arbeitsbeginn stempeln
+## Schritt 1 – Navigation: Zeiterfassung und Auswertung
 
-### Schnellzugriff über Dashboard
+**Weg:** In der **linken Seitenleiste** den Bereich **Projekte & Planung** aufklappen.
 
-**Option 1: Zeiterfassung-Widget**
+Dort finden Sie u. a.:
 
-1. Nach dem Login sehen Sie das **Zeiterfassung-Widget** auf dem Dashboard
-2. Klicken Sie auf den grünen Button **"Arbeit starten"**
-3. ✅ Sie sind jetzt eingestempelt!
+- **Zeiterfassung** → Kalender, Zeiteinträge, Stundenkonto  
+- **Auswertung** → Kennzahlen und Diagramme (siehe Text am Ende dieses Kapitels)
 
-**Option 2: Zeiterfassung-Menü**
+![Schritt 1 – Navigation zu Zeiterfassung und Auswertung](../assets/zeiterfassung/zeiterfassung1.png)
 
-1. Klicken Sie im Hauptmenü auf **"Zeiterfassung"**
-2. Klicken Sie auf **"Einstempeln"**
-3. Optional: Wählen Sie ein **Projekt** aus
-4. Optional: Fügen Sie eine **Notiz** hinzu
-5. Klicken Sie auf **"Starten"**
-
-![Zeiterfassung Start Screenshot]
+**Was Sie hier sehen:** Wo Sie zwischen **Kalender/Zeiteinträgen** und der **Auswertung** wechseln.
 
 ---
 
-### Projekt zuordnen
+## Schritt 2 – Seite „Zeiterfassung“: die drei Tabs
 
-Sie können Ihre Zeit direkt einem Projekt zuordnen:
+Öffnen Sie **Zeiterfassung**. Oben gibt es bis zu **drei Register**:
 
-1. Beim Einstempeln erscheint ein Dropdown **"Projekt auswählen"**
-2. Wählen Sie das gewünschte Projekt
-3. Die Zeit wird automatisch diesem Projekt gutgeschrieben
+| Tab | Inhalt |
+|-----|--------|
+| **Zeiterfassung** | Kalender (**Monat**, **Woche**, **Tag**) mit Ihren Blöcken |
+| **Zeiteinträge** | Listenansicht mit Filtern, Bearbeiten/Löschen (soweit erlaubt), **Export** |
+| **Stundenkonto** | Übersicht zum Stundenkonto; bei Berechtigung zusätzlich **Team-Übersicht** |
 
-!!! tip "Standard-Projekt festlegen"
-    Unter **Einstellungen** → **Zeiterfassung** können Sie ein Standard-Projekt festlegen, das automatisch vorausgewählt wird.
+![Schritt 2 – Tabs Zeiterfassung, Zeiteinträge, Stundenkonto](../assets/zeiterfassung/zeiterfassung2.png)
 
----
-
-## ☕ Pausen verwalten
-
-### Pause starten
-
-**Während Sie eingestempelt sind:**
-
-1. Klicken Sie auf den orangenen Button **"Pause starten"**
-2. Die Zeiterfassung stoppt automatisch
-3. Eine Uhr zeigt die Pausenzeit
-
-### Pause beenden
-
-1. Klicken Sie auf **"Pause beenden"**
-2. Die Zeiterfassung läuft weiter
-3. Die Pause wird automatisch von der Arbeitszeit abgezogen
-
-### Automatische Pausen
-
-!!! info "Gesetzliche Pausen"
-    Nach deutschem Arbeitszeitgesetz:
-    
-    - Bei > 6 Stunden: Mindestens 30 Minuten Pause
-    - Bei > 9 Stunden: Mindestens 45 Minuten Pause
-    
-    Planvo zieht diese Pausen automatisch ab, wenn Sie sie nicht manuell stempeln.
+Oben rechts kann je nach Berechtigung **+ Zeit erfassen** erscheinen — derselbe Dialog wie bei **Neuer Eintrag** in der Listenansicht.
 
 ---
 
-## 🏁 Arbeitsende stempeln
+## Schritt 3 – Kalender steuern (Woche, Monat, Tag)
 
-### Ausstempeln
+Im Tab **Zeiterfassung** steuern Sie den Kalender mit:
 
-1. Klicken Sie auf den roten Button **"Arbeitsende"**
-2. Das System zeigt eine Zusammenfassung:
+- **Pfeil links / rechts** – vorheriger oder nächster Zeitraum  
+- **Heute** – Sprung zum aktuellen Tag  
+- **Monat**, **Woche**, **Tag** – Umschalten der Ansicht  
 
-```
-📊 Arbeitstag-Zusammenfassung
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-⏰ Arbeitsbeginn:     08:00 Uhr
-🏁 Arbeitsende:       17:00 Uhr
-─────────────────────────────
-⏱️  Bruttoarbeitszeit:  9h 00min
-☕ Pausen:             45min
-─────────────────────────────
-✅ Nettoarbeitszeit:   8h 15min
-📊 Überstunden:        +15min
-```
+![Schritt 3 – Kalenderleiste: Heute, Pfeile, Monat/Woche/Tag](../assets/zeiterfassung/zeiterfassung3.png)
 
-3. Klicken Sie auf **"Bestätigen"**
-
-### Notiz hinzufügen
-
-Beim Ausstempeln können Sie eine Notiz hinzufügen:
-
-- Was Sie heute gemacht haben
-- Besondere Vorkommnisse
-- Erledigte Aufgaben
-
-Dies hilft bei der späteren Nachvollziehbarkeit.
+In der **Wochen-** und **Tagesansicht** sehen Sie eine **Zeitachse** (in der Regel in **Viertelstunden**). Nach unten scrollen, um spätere Uhrzeiten zu sehen.
 
 ---
 
-## 📊 Stundenübersicht
+## Schritt 4 – Zeiteinträge im Kalender
 
-### Ansichten
+In **Woche** oder **Tag** erscheinen gebuchte Zeiten als **farbige Blöcke** auf der Zeitachse.
 
-**Tages-Ansicht:**
-```
-📅 Montag, 04.11.2024
-├─ 08:00 - 12:00    4h 00min  [Projekt: Büroumbau]
-├─ 12:00 - 12:45    ---       [PAUSE]
-├─ 12:45 - 17:00    4h 15min  [Projekt: Büroumbau]
-└─ Gesamt:          8h 15min  (+15min Überstunden)
-```
+![Schritt 4 – Einträge im Kalender bearbeiten und anlegen](../assets/zeiterfassung/zeiterfassung4.png)
 
-**Wochen-Ansicht:**
-```
-📅 KW 45 (28.10 - 03.11.2024)
-├─ Mo: 8h 15min  ✅
-├─ Di: 8h 00min  ✅
-├─ Mi: 7h 45min  ✅
-├─ Do: 8h 30min  ✅
-├─ Fr: 8h 00min  ✅
-└─ Gesamt: 40h 30min (+30min Überstunden)
-```
+**Typische Aktionen (wenn Ihre Rolle es erlaubt):**
 
-**Monats-Ansicht:**
-```
-📅 November 2024
-├─ Woche 44:  40h 00min
-├─ Woche 45:  40h 30min
-├─ Woche 46:  38h 15min
-├─ Woche 47:  ---
-└─ Gesamt:    118h 45min
-```
+- **Block anklicken** – Eintrag bearbeiten (Projekt, Zeitraum, Notizen)  
+- **Obere / untere Kante ziehen** – **Startzeit** bzw. **Endzeit** ändern  
+- **Leeren Bereich auf der Achse ziehen** – neuen Zeiteintrag für dieses Zeitfenster anlegen  
+
+Das System prüft **Überschneidungen** automatisch. Wenn eine Aktion fehlt, fehlt oft die **Schreibberechtigung** für Zeiteinträge.
+
+**Monatsansicht:** Über **Monat** sehen Sie den Überblick pro Tag; von dort wechseln Sie bei Bedarf in **Woche** oder **Tag** für Details.
 
 ---
 
-## ✏️ Zeiten nachträglich korrigieren
+## Schritt 5 – Neuen Eintrag starten (zwei Wege)
 
-### Manuelle Korrektur
+Sie können dieselbe **Projektzeit** auf zwei Arten beginnen:
 
-**Wenn Sie vergessen haben zu stempeln:**
+1. **Im Kalender:** Button **+ Zeit erfassen** (rechts in der Kalenderleiste)  
+2. **In der Liste:** Tab **Zeiteinträge** → **+ Neuer Eintrag** (neben **Export**)
 
-1. Gehen Sie zu **Zeiterfassung** → **Stundenübersicht**
-2. Klicken Sie auf den entsprechenden Tag
-3. Klicken Sie auf **✏️ Bearbeiten**
-4. Passen Sie die Zeiten an:
-   - Arbeitsbeginn
-   - Arbeitsende
-   - Pausen
-5. Fügen Sie einen **Korrekturgrund** hinzu (Pflichtfeld)
-6. Klicken Sie auf **"Speichern"**
+![Schritt 5 – Zeit erfassen im Kalender oder Neuer Eintrag in der Liste](../assets/zeiterfassung/zeiterfassung5.png)
 
-### Korrektur-Status
-
-Korrekturen durchlaufen einen Genehmigungsprozess:
-
-| Status | Beschreibung | Icon |
-|--------|--------------|------|
-| **Ausstehend** | Wartet auf Genehmigung | ⏳ |
-| **Genehmigt** | Von Vorgesetztem genehmigt | ✅ |
-| **Abgelehnt** | Korrektur wurde abgelehnt | ❌ |
-
-!!! warning "Korrektur-Fristen"
-    Korrekturen sind nur für die letzten 7 Tage möglich. Für ältere Einträge kontaktieren Sie bitte Ihren Vorgesetzten.
+Beide Wege öffnen **denselben Dialog** „Projektzeit erfassen“.
 
 ---
 
-## 📈 Statistiken & Auswertungen
+## Schritt 6 – Dialog „Projektzeit erfassen“: Projekt und Zeiten
 
-### Persönliche Statistiken
+Im Dialog legen Sie fest:
 
-Unter **Zeiterfassung** → **Statistiken** finden Sie:
+1. **Mitarbeiter** – nur sichtbar, wenn Sie Einträge für andere anlegen dürfen; sonst gilt der Eintrag für **Sie**  
+2. **Projekt** – Auswahl aus den aktiven Projekten (Pflicht, sofern Ihre Firma keine projektfreie Erfassung erlaubt)  
+3. **Datum**  
+4. **Start** und **Ende** (Uhrzeit)  
 
-**Überstunden-Konto:**
-```
-📊 Überstunden-Saldo
-━━━━━━━━━━━━━━━━━━━━
-Dieser Monat:    +2h 30min
-Letzter Monat:   +1h 15min
-Gesamt 2024:     +18h 45min
-━━━━━━━━━━━━━━━━━━━━
-Verfallend:      -3h 00min (31.12.2024)
-```
+![Schritt 6 – Projekt, Datum, Start und Ende](../assets/zeiterfassung/zeiterfassung6.png)
 
-**Durchschnittswerte:**
-- Ø Arbeitsstunden/Tag
-- Ø Arbeitstage/Woche
-- Ø Überstunden/Monat
-
-**Projekt-Verteilung:**
-```
-Projekt A:  60%  ████████████░░░░░░░░
-Projekt B:  30%  ██████░░░░░░░░░░░░░░
-Projekt C:  10%  ██░░░░░░░░░░░░░░░░░░
-```
+**Hinweis:** **Start** und **Ende** dürfen **nicht identisch** sein. **Nachtschicht:** Endzeit kann „früher“ als die Startzeit sein — das System wertet das als Ende am **Folgetag**.
 
 ---
 
-## 📥 Export & Reports
+## Schritt 7 – Pausen, Bemerkung und Farbe
 
-### Stundenzettel exportieren
+Im unteren Teil des Dialogs:
 
-1. Gehen Sie zu **Zeiterfassung** → **Export**
-2. Wählen Sie den **Zeitraum**
-3. Wählen Sie das **Format**:
-   - 📄 PDF (zum Ausdrucken)
-   - 📊 Excel (zum Weiterverarbeiten)
-   - 📋 CSV (für andere Systeme)
-4. Klicken Sie auf **"Exportieren"**
+- **Pausen** – **Hinzufügen** für Unterbrechungen, **Alle löschen** zum Entfernen; Pausen werden von der Bruttozeit abgezogen  
+- **Bemerkung** – freier Text; **leeren** löscht den Text  
+- **Farbe** – Darstellung des Blocks im Kalender  
+- **Eintrag erstellen** / **Aktualisieren** – speichern; **Abbrechen** schließt ohne Speichern  
 
-### Monatsbericht
+![Schritt 7 – Pausen, Bemerkung, Farbe und Speichern](../assets/zeiterfassung/zeiterfassung7.png)
 
-Der Monatsbericht enthält:
-- Alle Arbeitstage mit Details
-- Gesamtstunden
-- Überstunden
-- Urlaubstage
-- Krankheitstage
-- Unterschriftsfeld für Vorgesetzten
+!!! tip "GoBD / Korrekturen"
+    Wenn Ihre Organisation das vorsieht, kann beim **Bearbeiten** ein **Korrekturgrund** Pflicht sein.
 
 ---
 
-## ⚙️ Einstellungen
+## Schritt 8 – Tab „Zeiteinträge“ (Liste)
 
-### Zeiterfassung konfigurieren
+Unter **Zeiteinträge** filtern Sie nach **Mitarbeiter**, **Zeitraum** und **Projekt** und sehen alle Einträge in einer **Tabelle**.
 
-Unter **Einstellungen** → **Zeiterfassung** können Sie festlegen:
+![Schritt 8 – Liste der Zeiteinträge mit Filtern und Aktionen](../assets/zeiterfassung/zeiterfassung8.png)
 
-**Grundeinstellungen:**
-- ✅ Standard-Projekt
-- ✅ Automatische Pausen-Abzug aktivieren
-- ✅ Erinnerungen zum Ausstempeln
-- ✅ GPS-Tracking (optional)
+Typische Spalten (je nach Konfiguration): Mitarbeiter, Datum, Start, Ende, Dauer, angerechnete Zeit, Pause, Standort, Projekt, Notiz.
 
-**Benachrichtigungen:**
-- 🔔 Erinnerung zum Einstempeln (08:00 Uhr)
-- 🔔 Erinnerung zum Ausstempeln (17:00 Uhr)
-- 🔔 Lange Stempelung (> 10 Stunden)
-- 🔔 Vergessenes Ausstempeln
+**Aktionen** pro Zeile (soweit erlaubt): **Bearbeiten**, **Verlauf** (Historie), **Löschen**. Oben: **Export** und **+ Neuer Eintrag**.
 
-**Rundung:**
-- Auf 15 Minuten runden
-- Auf 5 Minuten runden
-- Keine Rundung
+!!! info "Sichtbarkeit"
+    Welche Zeilen Sie sehen, hängt von Ihren **Berechtigungen** ab (nur eigene Zeiten vs. Team).
 
 ---
 
-## 📍 GPS-Tracking (optional)
+## Schritt 9 – Export als PDF oder CSV
 
-Wenn GPS-Tracking aktiviert ist:
+**Export** öffnet den Dialog **Monatsbericht exportieren**:
 
-**Funktionen:**
-- 📍 Standort beim Ein-/Ausstempeln
-- 🗺️ Arbeitsort-Erkennung
-- 📊 Außendienst-Dokumentation
+1. **Monat** wählen (Pflicht)  
+2. Optional **Mitarbeitende** auswählen — leer bedeutet in der Regel **alle** (nur mit passender Berechtigung)  
+3. Format: **PDF** (Übersicht zum Archiv/Druck) oder **CSV** (Excel und weitere Programme)  
+4. **Export** starten und die Datei speichern  
 
-**Datenschutz:**
-- GPS wird nur beim Stempeln erfasst
-- Keine permanente Ortung
-- Daten nur für Zeiterfassung
-- Kann jederzeit deaktiviert werden
+![Schritt 9 – Monatsbericht exportieren (PDF oder CSV)](../assets/zeiterfassung/zeiterfassung9.png)
 
-!!! info "GPS aktivieren/deaktivieren"
-    **Einstellungen** → **Zeiterfassung** → **GPS-Tracking**
+!!! note "Viele Mitarbeitende"
+    Exporte für **viele Personen** können etwas dauern; ein Fortschrittshinweis kann erscheinen.
 
 ---
 
-## 💡 Tipps & Tricks
+## Schritt 10 – Stundenkonto verstehen
 
-!!! tip "Tipp 1: Browser-Bookmark"
-    Speichern Sie die Zeiterfassung-Seite als Lesezeichen für schnellen Zugriff
+Im Tab **Stundenkonto** sehen Sie Ihre **Soll- und Ist-Stunden**, **Salden** (Anfang, Ende, Status) und können einen Monat ggf. **freigeben** (**Monat freigeben**), sofern das in Ihrem Prozess vorgesehen ist.
 
-!!! tip "Tipp 2: Tastenkombination"
-    Drücken Sie `Alt + T` für schnelles Ein-/Ausstempeln
+Mit erweiterter Berechtigung erscheint **Team Übersicht**: Kennzahlen zum Team (Mitarbeiterzahl, durchschnittlicher Saldo, Freigaben, negative Salden) und eine Tabelle **Saldo pro Mitarbeiter** inkl. **Freigabestatus**.
 
-!!! tip "Tipp 3: Projekt-Favoriten"
-    Markieren Sie häufig genutzte Projekte als Favoriten für schnellere Auswahl
+![Schritt 10 – Mein Konto und Team-Übersicht](../assets/zeiterfassung/zeiterfassung10.png)
 
-!!! tip "Tipp 4: Wöchentliche Kontrolle"
-    Prüfen Sie jeden Freitag Ihre Wochenstunden und korrigieren Sie ggf.
+Je nach Rolle sehen Sie **nur Ihr Konto** oder zusätzlich die **Team-Übersicht**.
+
+---
+
+## Auswertung (Menüpunkt) – Diagramme und weitere Tabs
+
+Unter **Projekte & Planung** → **Auswertung** (`/analyse`) finden Sie je nach Recht u. a.:
+
+- Tab **Auswertung** – Filter (Mitarbeiter, Zeitraum, Projekt), Karten mit **Gesamtstunden**, **Arbeitstagen**, **Einträgen**, **Ø Stunden/Tag** sowie Diagramme (**Stunden pro Tag**, **Verteilung nach Projekt** / **Mitarbeiter**)  
+- Weitere Register: z. B. **Zeiterfassung** (Liste), **Stundenkonto**, **Finanzen** (mit Rechnungsmodul), **Abwesenheitsauswertung**
+
+Für **Urlaub** und **Krankheit** siehe [Urlaubsverwaltung](urlaub.md).
+
+---
+
+## Weitere Tabs unter „Auswertung“ (Kurzüberblick)
+
+| Tab | Kurzbeschreibung |
+|-----|------------------|
+| **Zeiterfassung** | Listenansicht ähnlich **Zeiteinträge** auf der Seite Zeiterfassung |
+| **Stundenkonto** | Wie auf `/project-time`, abhängig von `auswertung.stundenkonto` |
+| **Finanzen** | Nur mit Rechnungsmodul |
+| **Abwesenheitsauswertung** | HR-Kennzahlen zum Jahr |
+
+---
+
+## Dashboard: Live-Zeiterfassung (optional)
+
+Auf dem **Dashboard** kann ein Widget **Zeiterfassung** angezeigt werden: **Start**, **Pause** und **Stopp** — optional mit **GPS**, wenn Ihre Organisation das vorsieht.
+
+Das Widget **ergänzt** die Projektzeit im Kalender; Auswertungen beziehen sich auf die gespeicherten **Zeiteinträge**.
+
+---
+
+## 🔄 Kurze Szenarien
+
+=== "Einen Arbeitstag im Kalender buchen"
+
+    1. **Zeiterfassung** öffnen → **Woche** oder **Tag** wählen  
+    2. **+ Zeit erfassen** oder Bereich **ziehen**  
+    3. **Projekt**, **Datum**, **Start**, **Ende** wählen, ggf. **Pausen** und **Bemerkung**  
+    4. Speichern — der Block erscheint im Kalender  
+
+=== "Monatsbericht als PDF"
+
+    1. **Zeiterfassung** → Tab **Zeiteinträge**  
+    2. **Export** → Monat wählen → **PDF** → herunterladen  
+
+=== "Stunden pro Projekt im Quartal sehen"
+
+    1. Menü **Auswertung**  
+    2. Zeitraum setzen, optional **Projekt** wählen  
+    3. Diagramm **Stundenverteilung nach Projekt** prüfen  
 
 ---
 
 ## ❓ Häufige Fragen
 
-### Was passiert, wenn ich vergesse auszustempeln?
+??? question "Warum kann ich keinen Eintrag speichern?"
+    Häufig fehlt das **Projekt**, **Start** und **Ende** sind identisch, oder es gibt eine **Überschneidung**. Die Meldung im Dialog oder unten am Bildschirm nennt die Ursache.
 
-Das System sendet Ihnen nach 12 Stunden eine Benachrichtigung. Sie können dann nachträglich die korrekte Zeit eintragen.
+??? question "Warum sehe ich andere Mitarbeiter nicht?"
+    Dann ist Ihr Konto auf **eigene Zeiten** beschränkt. Ihre Administration kann erweiterte Leserechte vergeben.
 
-### Kann ich für mehrere Projekte gleichzeitig stempeln?
+??? question "Was ist der Unterschied zwischen Zeiterfassung und Auswertung?"
+    **Zeiterfassung** (`/project-time`) ist der **Kalender** inkl. Liste und Stundenkonto. **Auswertung** (`/analyse`) bündelt **Statistik** und je nach Rolle weitere Tabs.
 
-Nein, Sie können immer nur für ein Projekt gleichzeitig Zeit erfassen. Sie können aber während des Tages zwischen Projekten wechseln.
-
-### Wie funktioniert der Überstunden-Abbau?
-
-Überstunden können Sie mit Ihrem Vorgesetzten abstimmen und dann als bezahlte Freizeit nehmen oder auszahlen lassen.
-
-### Werden Feiertage automatisch berücksichtigt?
-
-Ja, gesetzliche Feiertage werden automatisch im System hinterlegt und von Ihrer Sollarbeitszeit abgezogen.
+??? question "Gibt es eine Tastenkombination zum Stempeln?"
+    Die Web-Oberfläche nutzt vor allem **Kalender** und **Dialoge**. Für Live-Zeit nutzen Sie ggf. das **Dashboard-Widget**.
 
 ---
 
-## 🔗 Verwandte Themen
+## 📋 Schnell-Referenz
 
-- [Zeiterfassung Mobile](../mobile/zeiterfassung.md)
-- [Projektzeit erfassen](projekte.md)
-- [Urlaub beantragen](zeiterfassung.md)
-- [Schichtplanung](schichten.md)
-
----
-
-## 📞 Support
-
-**Probleme bei der Zeiterfassung?**
-
-- 📧 E-Mail: [support@planvo.de](mailto:support@planvo.de)
-- 💬 Live-Chat auf [www.planvo.de](https://www.planvo.de)
-- 📞 Telefon: +49 (0) XXX XXXXXXX
+| Aufgabe | Weg |
+|---------|-----|
+| Zeit im Kalender buchen | **Zeiterfassung** → Tab **Zeiterfassung** → **+ Zeit erfassen** / im Raster ziehen |
+| Einträge als Liste | **Zeiterfassung** → Tab **Zeiteinträge** |
+| PDF/CSV-Export | **Zeiteinträge** → **Export** |
+| Stundenkonto | **Zeiterfassung** → Tab **Stundenkonto** |
+| Diagramme / Summen | Menü **Auswertung** |
+| Mobile Stempelung | [Zeiterfassung Mobile](../mobile/zeiterfassung.md) |
 
 ---
 
-[:octicons-arrow-right-24: Weiter zu Projekten](projekte.md){ .md-button .md-button--primary }
-[:octicons-arrow-right-24: Zurück zur Übersicht](index.md){ .md-button }
+## 🆘 Brauchen Sie Hilfe?
+
+<div class="grid cards" markdown>
+
+-   :material-chat:{ .lg } **Live-Chat**
+
+    ---
+
+    Schnelle Antworten während der Geschäftszeiten
+
+    [Chat öffnen](https://www.planvo.de)
+
+-   :material-email:{ .lg } **E-Mail Support**
+
+    ---
+
+    Detaillierte Anfragen per E-Mail
+
+    [support@planvo.de](mailto:support@planvo.de)
+
+</div>
 
 ---
 
-*Letzte Aktualisierung: November 2024 | Version 1.6.6*
-
+*Letzte Aktualisierung: Mai 2026 | Version 3.1 (10 Screenshots: zeiterfassung1–10)*
