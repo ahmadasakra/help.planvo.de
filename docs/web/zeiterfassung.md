@@ -33,7 +33,7 @@ Zwei zentrale Menüpunkte in der Web-App:
 
 ---
 
-## App-Einstellungen: Zeiterfassung (Administratoren)
+## App-Einstellungen: Zeiterfassung (Administratoren) {#app-einstellungen-zeiterfassung}
 
 **Weg:** **Einstellungen** (Seitenleiste oder Zahnrad) → **App-Einstellungen** → Karte bzw. Abschnitt **Zeiterfassung**
 

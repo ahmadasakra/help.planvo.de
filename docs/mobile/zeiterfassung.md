@@ -31,7 +31,7 @@ Tippen Sie unten auf das **Uhr-Symbol** ⏰
 3. Optional: Fügen Sie eine **Notiz** hinzu
 4. Tippen Sie auf **"Arbeit starten"**
 
-Sie können die Zeiterfassung auch direkt vom **Dashboard** aus starten — siehe Abschnitt [Dashboard: Stempeln, Pause und Schnellzugriff](#dashboard-stempeln-pause-und-schnellzugriff) am Ende dieser Seite.
+Sie können die Zeiterfassung auch direkt vom **Dashboard** aus starten — siehe Abschnitt [Dashboard: Stempeln, Pause und Schnellzugriff](#planvo-mobile-dashboard) am Ende dieser Seite.
 
 ### Status während der Arbeit
 
@@ -338,7 +338,7 @@ Ja, bei aktiver Internetverbindung synchronisiert die App alle 5 Minuten automat
 
 ---
 
-## 📱 Dashboard: Stempeln, Pause und Schnellzugriff
+## 📱 Dashboard: Stempeln, Pause und Schnellzugriff {#planvo-mobile-dashboard}
 
 Auf dem **Startbildschirm** der App haben Sie die Zeiterfassung und wichtige Bereiche direkt vor sich — typischerweise nach dem Öffnen der App oder dem Wechsel zum **Dashboard**.
 
@@ -354,7 +354,7 @@ Auf dem **Startbildschirm** der App haben Sie die Zeiterfassung und wichtige Ber
 !!! tip "Hintergrund"
     Die Zeiterfassung kann **im Hintergrund weiterlaufen**, auch wenn Sie die App verlassen — achten Sie darauf, bei Bedarf aktiv **auszustempeln** oder eine **Pause** zu setzen, damit die Zeiten zu Ihrem Arbeitstag passen.
 
-Welche Felder und Pflichten (z. B. **GPS**, **Foto**, **Projektpflicht**) für Ihr Unternehmen gelten, steht in den **App-Einstellungen** in der Web-Version — siehe [Zeiterfassung (Web) – App-Einstellungen](../web/zeiterfassung.md#app-einstellungen-zeiterfassung-administratoren).
+Welche Felder und Pflichten (z. B. **GPS**, **Foto**, **Projektpflicht**) für Ihr Unternehmen gelten, steht in den **App-Einstellungen** in der Web-Version — siehe [Zeiterfassung (Web) – App-Einstellungen](../web/zeiterfassung.md#app-einstellungen-zeiterfassung).
 
 ---
 
