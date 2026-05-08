@@ -31,7 +31,7 @@ Tippen Sie unten auf das **Uhr-Symbol** ⏰
 3. Optional: Fügen Sie eine **Notiz** hinzu
 4. Tippen Sie auf **"Arbeit starten"**
 
-![Mobile Stempeln Start]
+Sie können die Zeiterfassung auch direkt vom **Dashboard** aus starten — siehe Abschnitt [Dashboard: Stempeln, Pause und Schnellzugriff](#dashboard-stempeln-pause-und-schnellzugriff) am Ende dieser Seite.
 
 ### Status während der Arbeit
 
@@ -338,6 +338,26 @@ Ja, bei aktiver Internetverbindung synchronisiert die App alle 5 Minuten automat
 
 ---
 
+## 📱 Dashboard: Stempeln, Pause und Schnellzugriff
+
+Auf dem **Startbildschirm** der App haben Sie die Zeiterfassung und wichtige Bereiche direkt vor sich — typischerweise nach dem Öffnen der App oder dem Wechsel zum **Dashboard**.
+
+![Mobile App – Zeiterfassung auf dem Dashboard](../assets/zeiterfassung/MobilPlanvo.png)
+
+**Was Sie auf dem Screenshot erkennen:**
+
+1. **Ein- und Ausstempeln** – Der **große orangefarbene Button** (z. B. **Einstempeln** oder **Ausstempeln**) startet oder beendet Ihre laufende Zeiterfassung. Der genaue Text hängt davon ab, ob Sie gerade aktiv erfassen oder nicht.
+2. **Live-Zeit und Pause** – Die **laufende Zeit** wird angezeigt; über **Pause** legen Sie eine Unterbrechung ein. Die **gesamte Pausenzeit** wird mitgezählt und von der Arbeitszeit abgezogen.
+3. **Meine Einsätze** – Hier sehen Sie den **aktuellen Einsatz** bzw. das gebundene Projekt. Tippen Sie auf die Karte für **Details**.
+4. **Schnellzugriff (Services)** – Mit einem Tipp gelangen Sie zu **Personen**, **Projekten** und **Einsätzen** — ohne Umwege durch das Menü.
+
+!!! tip "Hintergrund"
+    Die Zeiterfassung kann **im Hintergrund weiterlaufen**, auch wenn Sie die App verlassen — achten Sie darauf, bei Bedarf aktiv **auszustempeln** oder eine **Pause** zu setzen, damit die Zeiten zu Ihrem Arbeitstag passen.
+
+Welche Felder und Pflichten (z. B. **GPS**, **Foto**, **Projektpflicht**) für Ihr Unternehmen gelten, steht in den **App-Einstellungen** in der Web-Version — siehe [Zeiterfassung (Web) – App-Einstellungen](../web/zeiterfassung.md#app-einstellungen-zeiterfassung-administratoren).
+
+---
+
 ## 🔗 Verwandte Themen
 
 - [Zeiterfassung Web](../web/zeiterfassung.md)
@@ -352,5 +372,5 @@ Ja, bei aktiver Internetverbindung synchronisiert die App alle 5 Minuten automat
 
 ---
 
-*Letzte Aktualisierung: November 2024 | Version 1.6.6*
+*Letzte Aktualisierung: Mai 2026 | Screenshot Dashboard ergänzt*
 

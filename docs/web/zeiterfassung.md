@@ -1,6 +1,6 @@
 # Zeiterfassung (Web)
 
-> **⏱️ Lesezeit:** 10 Minuten  
+> **⏱️ Lesezeit:** 12 Minuten  
 > **📱 Verfügbar in:** Web (ergänzend: [Zeiterfassung Mobile](../mobile/zeiterfassung.md))  
 > **👤 Für:** Mitarbeitende, Projektleitung, Personal (je nach Berechtigung)
 
@@ -8,6 +8,7 @@
 
 ## 📋 Was Sie in diesem Kapitel lernen
 
+- ✅ Wo **Administratoren** die **App-Einstellungen für die Zeiterfassung** anpassen
 - ✅ Wo Sie **Projektzeiten** erfassen und die **Kalenderansicht** nutzen
 - ✅ Wie Sie **Einträge im Kalender** bearbeiten, verschieben und neu anlegen
 - ✅ Wie der Dialog **Projektzeit erfassen** funktioniert (inkl. **Pausen**)
@@ -30,7 +31,31 @@ Zwei zentrale Menüpunkte in der Web-App:
 !!! info "Berechtigungen"
     Was Sie sehen, hängt von Ihrer **Rolle** ab: Nur eigene Zeiten, alle Mitarbeiter, Export für das Team oder zusätzliche Tabs (z. B. **Finanzen**, **Abwesenheitsauswertung**) sind möglich. Fehlt ein Menüpunkt, wenden Sie sich an Ihre Administration.
 
-Die folgenden **10 Schritte** sind mit Screenshots unter `docs/assets/zeiterfassung/` bebildert (`zeiterfassung1.png` … `zeiterfassung10.png`).
+---
+
+## App-Einstellungen: Zeiterfassung (Administratoren)
+
+**Weg:** **Einstellungen** (Seitenleiste oder Zahnrad) → **App-Einstellungen** → Karte bzw. Abschnitt **Zeiterfassung**
+
+Hier legen Sie **unternehmensweite Regeln** fest. Sie wirken auf die Zeiterfassung in **Web** und **App**, soweit die jeweilige Oberfläche die Option unterstützt. Oben können Sie über **Bearbeiten** in den Änderungsmodus wechseln; die **Einrichtungsanleitung** führt bei Bedarf durch weitere Schritte.
+
+![App-Einstellungen – Bereich Zeiterfassung](../assets/zeiterfassung/AppEinstellungenZeiterfassungPlanvo.png)
+
+| Einstellung | Kurz erklärt |
+|-------------|----------------|
+| **GPS Pflicht bei Zeiterfassung** | Wenn aktiv, ist beim Stempeln ein **GPS-Signal** erforderlich (sinnvoll für Außendienst, abhängig von Datenschutz und Vereinbarung). |
+| **Foto beim Einstempeln / Ausstempeln verpflichtend** | Erzwingt ein **Foto** beim Start bzw. Ende der Zeiterfassung (z. B. für Nachweise). |
+| **Zeiterfassung ohne Projekt erlauben** | Erlaubt Einträge **ohne gewähltes Projekt** — praktisch, wenn nicht jede Tätigkeit einem Projekt zugeordnet ist. |
+| **Automatisches Stoppen der Zeiterfassung** | Beendet die laufende Erfassung nach **Inaktivität** automatisch (Schutz vor vergessenem Ausstempeln). |
+| **Geofencing für Zeiterfassung** | Einschränkung der Erfassung auf **definierte Bereiche** (wenn in Ihrer Umgebung eingerichtet). |
+| **Maximale tägliche Arbeitszeit** | Obergrenze in **Stunden** pro Tag (Beispiel: 10 h) — je nach Auswertung und Hinweisen in der App. |
+
+!!! warning "Nur für Berechtigte"
+    Diese Seite sehen und ändern nur **Administratoren** bzw. Rollen mit Zugriff auf **App-Einstellungen**. Änderungen können sich auf **alle Mitarbeitenden** auswirken — kurz mit dem Team abstimmen.
+
+---
+
+Die folgenden **10 Schritte** zeigen die **Zeiterfassung im Alltag** (Kalender, Einträge, Export). Screenshots: `zeiterfassung1.png` … `zeiterfassung10.png`.
 
 ---
 
@@ -256,6 +281,7 @@ Das Widget **ergänzt** die Projektzeit im Kalender; Auswertungen beziehen sich 
 
 | Aufgabe | Weg |
 |---------|-----|
+| Regeln für Zeiterfassung (Firma) | **Einstellungen** → **App-Einstellungen** → **Zeiterfassung** |
 | Zeit im Kalender buchen | **Zeiterfassung** → Tab **Zeiterfassung** → **+ Zeit erfassen** / im Raster ziehen |
 | Einträge als Liste | **Zeiterfassung** → Tab **Zeiteinträge** |
 | PDF/CSV-Export | **Zeiteinträge** → **Export** |
@@ -289,4 +315,4 @@ Das Widget **ergänzt** die Projektzeit im Kalender; Auswertungen beziehen sich 
 
 ---
 
-*Letzte Aktualisierung: Mai 2026 | Version 3.1 (10 Screenshots: zeiterfassung1–10)*
+*Letzte Aktualisierung: Mai 2026 | Version 3.2 (App-Einstellungen + 10 Schritte)*

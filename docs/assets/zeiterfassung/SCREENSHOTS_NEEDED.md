@@ -1,4 +1,15 @@
-# Screenshots für `web/zeiterfassung.md`
+# Screenshots für die Zeiterfassung (Web & Mobile)
+
+Zusätzlich zu den **10 Schritt-Bildern** für die Web-Anleitung:
+
+| Datei | Verwendung in |
+|-------|----------------|
+| `AppEinstellungenZeiterfassungPlanvo.png` | [Web `zeiterfassung.md`](../../web/zeiterfassung.md) – App-Einstellungen (Admin) |
+| `MobilPlanvo.png` | [Mobile `zeiterfassung.md`](../../mobile/zeiterfassung.md) – Dashboard / Stempeln |
+
+---
+
+## Web: `web/zeiterfassung.md` – 10 Schrittbilder
 
 Die Anleitung bindet **10 Bilder** ein:
 
