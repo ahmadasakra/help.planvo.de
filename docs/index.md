@@ -1,4 +1,24 @@
-# Willkommen bei Planvo! 👋
+---
+title: Startseite
+description: Offizielle Planvo Hilfe – Schnellstart, Web, Mobile und Support
+---
+
+<div class="planvo-hero" markdown="0">
+  <div class="planvo-hero__inner">
+    <p class="planvo-hero__eyebrow">Offizielle Dokumentation</p>
+    <h1 class="planvo-hero__title">Willkommen bei Planvo</h1>
+    <p class="planvo-hero__lead">
+      Alles, was Sie für den Einstieg brauchen: erste Schritte, Web- und App-Hilfe sowie Support — übersichtlich und immer griffbereit.
+    </p>
+    <div class="planvo-hero__chips">
+      <span class="planvo-hero__chip">Web & Desktop</span>
+      <span class="planvo-hero__chip">iOS & Android</span>
+      <span class="planvo-hero__chip">Immer aktuell</span>
+    </div>
+  </div>
+</div>
+
+## Ihr Einstieg
 
 <div class="grid cards" markdown>
 
@@ -6,222 +26,211 @@
 
     ---
 
-    Lernen Sie Planvo in 5 Minuten kennen und starten Sie sofort durch
-    
+    In wenigen Minuten mit Planvo vertraut werden — ideal für neue Nutzerinnen und Nutzer.
+
     [:octicons-arrow-right-24: Erste Schritte](erste-schritte/index.md)
 
 -   :material-web:{ .lg .middle } __Web-Version__
 
     ---
 
-    Vollständige Desktop-Dokumentation für alle Funktionen
-    
-    [:octicons-arrow-right-24: Web Guide](web/index.md)
+    Zeiterfassung, Projekte, Schichten und mehr — die komplette Oberfläche am Computer.
+
+    [:octicons-arrow-right-24: Web-Guide](web/index.md)
 
 -   :material-cellphone:{ .lg .middle } __Mobile App__
 
     ---
 
-    Arbeiten Sie unterwegs mit der Planvo Mobile App
-    
-    [:octicons-arrow-right-24: Mobile Guide](mobile/index.md)
+    Unterwegs arbeiten: Installation, Offline-Modus und mobile Zeiterfassung.
+
+    [:octicons-arrow-right-24: Mobile-Guide](mobile/index.md)
 
 -   :material-help-circle:{ .lg .middle } __Hilfe & Support__
 
     ---
 
-    Häufig gestellte Fragen und Support-Kontakt
-    
-    [:octicons-arrow-right-24: Hilfe bekommen](hilfe/faq.md)
+    FAQ, Kontakt und Antworten auf häufige Fragen.
+
+    [:octicons-arrow-right-24: Hilfe](hilfe/faq.md)
 
 </div>
 
 ---
 
-## 🎯 Was ist Planvo?
+## Was ist Planvo?
 
-**Planvo** ist Ihre digitale All-in-One-Lösung für modernes Unternehmensmanagement. Mit Planvo verwalten Sie alle wichtigen Geschäftsprozesse an einem Ort - einfach, schnell und effizient.
+**Planvo** bündelt Ihr Tagesgeschäft an einem Ort: Zeiten, Projekte, Team, Finanzen und Dokumente — durchdacht vernetzt, damit Sie weniger suchen und mehr erledigen.
 
-### Hauptfunktionen im Überblick
+### Funktionen im Überblick
 
 <div class="grid" markdown>
 
 -   :material-clock-time-four:{ .lg } **Zeiterfassung**
-    
+
     ---
-    
-    Einfaches Ein- und Ausstempeln per Knopfdruck. Automatische Berechnung von Arbeitsstunden, Pausen und Überstunden.
+
+    Projektzeiten im Kalender, Listen, Export und Auswertungen.
 
 -   :material-chart-timeline-variant:{ .lg } **Projektmanagement**
-    
+
     ---
-    
-    Verwalten Sie Ihre Projekte, Aufgaben und Teams. Behalten Sie den Überblick mit der intelligenten Plantafel.
+
+    Projekte, Aufgaben und die Plantafel für den Überblick im Team.
 
 -   :material-calendar-clock:{ .lg } **Schichtplanung**
-    
-    ---
-    
-    Intelligente Mitarbeiterplanung mit automatischen Benachrichtigungen und Schichtbewerbungen.
 
--   :material-currency-eur:{ .lg } **Rechnungswesen**
-    
     ---
-    
-    Von Angebot bis Rechnung - Erstellen Sie professionelle Dokumente in Minuten.
 
--   :material-account-group:{ .lg } **Team-Management**
-    
-    ---
-    
-    Urlaubsanträge, Verfügbarkeiten und Kommunikation - alles zentral verwaltet.
+    Planung, Bewerbungen und Benachrichtigungen rund um Schichten.
 
--   :material-file-document:{ .lg } **Dokumentenverwaltung**
-    
+-   :material-currency-eur:{ .lg } **Rechnungen & Angebote**
+
     ---
-    
-    Speichern und organisieren Sie alle projektbezogenen Dokumente sicher in der Cloud.
+
+    Von Angebot bis Rechnung — professionelle Dokumente schnell erstellt.
+
+-   :material-account-group:{ .lg } **Team & HR**
+
+    ---
+
+    Urlaub, Verfügbarkeiten und Zusammenarbeit zentral.
+
+-   :material-file-document:{ .lg } **Dokumente**
+
+    ---
+
+    Projektbezogene Dateien sicher ablegen und wiederfinden.
 
 </div>
 
 ---
 
-## 🚀 Schnellstart
+## Schnellstart nach Rolle
 
 !!! tip "Neu bei Planvo?"
-    Folgen Sie unserem [Erste Schritte Guide](erste-schritte/index.md) und lernen Sie die wichtigsten Funktionen in wenigen Minuten!
+    Starten Sie mit dem [Guide „Erste Schritte“](erste-schritte/index.md) — dort finden Sie Anmeldung, Dashboard und die wichtigsten Abläufe.
 
 === "Mitarbeiter"
 
-    **Als Mitarbeiter können Sie:**
-    
-    - ⏰ Arbeitszeiten erfassen
-    - 📅 Schichten einsehen und bewerben
-    - 🏖️ Urlaubsanträge stellen
-    - 📊 Projektfortschritt verfolgen
-    - 💬 Mit Ihrem Team kommunizieren
-    
-    [:octicons-arrow-right-24: Mehr für Mitarbeiter](erste-schritte/index.md)
+    **Typische Aufgaben**
+
+    - Arbeits- und Projektzeiten erfassen  
+    - Schichten einsehen und bewerben  
+    - Urlaub beantragen  
+    - Projektinfos und Aufgaben verfolgen  
+
+    [:octicons-arrow-right-24: Zu den ersten Schritten](erste-schritte/index.md)
 
 === "Projektleiter"
 
-    **Als Projektleiter können Sie:**
-    
-    - 📋 Projekte erstellen und verwalten
-    - 👥 Teams koordinieren
-    - 📈 Fortschritt überwachen
-    - 🗓️ Ressourcen planen
-    - 📊 Berichte erstellen
-    
-    [:octicons-arrow-right-24: Mehr für Projektleiter](web/projekte.md)
+    **Typische Aufgaben**
+
+    - Projekte anlegen und steuern  
+    - Teams und Ressourcen koordinieren  
+    - Fortschritt und Berichte einsehen  
+
+    [:octicons-arrow-right-24: Projektdokumentation](web/projekte.md)
 
 === "Geschäftsführung"
 
-    **Als Geschäftsführer können Sie:**
-    
-    - 🎯 Übersicht über alle Projekte
-    - 💰 Finanzen im Blick behalten
-    - 📊 Detaillierte Reports und Analysen
-    - 👨‍💼 Mitarbeiter verwalten
-    - 📈 Strategische Planung
-    
-    [:octicons-arrow-right-24: Mehr für Geschäftsführung](web/index.md)
+    **Typische Aufgaben**
+
+    - Gesamtüberblick über Projekte und Kennzahlen  
+    - Finanzen und Auswertungen  
+    - Strategische Planung mit Reports  
+
+    [:octicons-arrow-right-24: Web-Übersicht](web/index.md)
 
 ---
 
-## 📱 Verfügbar auf allen Geräten
-
-Planvo funktioniert überall - im Büro, unterwegs und zu Hause.
+## Auf allen Geräten
 
 | Plattform | Beschreibung | Link |
 |-----------|--------------|------|
-| 🌐 **Web-Browser** | Vollständige Desktop-Version mit allen Funktionen | [demo.planvo.de](https://demo.planvo.de) |
-| 📱 **iOS App** | Für iPhone und iPad | [App Store](#) |
-| 🤖 **Android App** | Für alle Android-Geräte | [Google Play](#) |
-| 💻 **Tablet** | Optimiert für große Touchscreens | Web + Apps |
+| **Web** | Volle Funktionalität im Browser | [demo.planvo.de](https://demo.planvo.de) |
+| **iOS** | iPhone & iPad | [App Store](https://apps.apple.com/) |
+| **Android** | Smartphones & Tablets | [Google Play](https://play.google.com/) |
 
 ---
 
-## 💡 Beliebte Artikel
+## Beliebte Artikel
 
-Hier sind die meistgelesenen Hilfe-Artikel:
-
-1. [Wie erfasse ich meine Arbeitszeit?](web/zeiterfassung.md)
-2. [Mobile App installieren](mobile/installation.md)
-3. [Urlaubsantrag stellen](web/zeiterfassung.md)
-4. [Neues Projekt erstellen](web/projekte.md)
-5. [Schichten verwalten](web/schichten.md)
+1. [Zeiterfassung (Web)](web/zeiterfassung.md)  
+2. [Mobile App installieren](mobile/installation.md)  
+3. [Urlaubsverwaltung](web/urlaub.md)  
+4. [Projekte](web/projekte.md)  
+5. [Schichtplanung](web/schichten.md)  
 
 ---
 
-## 🎓 Video-Tutorials
+## Video-Tutorials
 
-!!! info "Coming Soon"
-    Video-Tutorials sind in Arbeit und werden bald verfügbar sein!
+!!! info "In Vorbereitung"
+    Kurze Erklärvideos ergänzen diese Hilfe — sobald sie live sind, verlinken wir sie hier.
 
 ---
 
-## 🆘 Brauchen Sie Hilfe?
+## Support
 
-Wir sind für Sie da! Hier sind Ihre Support-Optionen:
+Wir helfen gern weiter:
 
 <div class="grid cards" markdown>
 
 -   :material-chat:{ .lg } **Live-Chat**
-    
-    ---
-    
-    Schnelle Antworten während der Geschäftszeiten
-    
-    [Chat öffnen](https://www.planvo.de)
 
--   :material-email:{ .lg } **E-Mail Support**
-    
     ---
-    
-    Detaillierte Anfragen per E-Mail
-    
+
+    Schnelle Antworten in der Regel während der Geschäftszeiten
+
+    [Chat auf planvo.de](https://www.planvo.de)
+
+-   :material-email:{ .lg } **E-Mail**
+
+    ---
+
+    Ausführliche Anfragen und technische Details
+
     [support@planvo.de](mailto:support@planvo.de)
 
 -   :material-frequently-asked-questions:{ .lg } **FAQ**
-    
+
     ---
-    
+
     Antworten auf häufige Fragen
-    
-    [FAQ öffnen](hilfe/faq.md)
+
+    [Zum FAQ](hilfe/faq.md)
 
 -   :material-phone:{ .lg } **Telefon**
-    
+
     ---
-    
-    Mo-Fr 9:00 - 17:00 Uhr
-    
-    +49 (0) XXX XXXXXXX
+
+    Mo–Fr nach Vereinbarung — siehe [Kontakt](hilfe/kontakt.md)
+
+    [Kontakt & Rufnummern](hilfe/kontakt.md)
 
 </div>
 
 ---
 
-## ⚡ Weitere Ressourcen
+## Weitere Ressourcen
 
-- 📚 [Vollständige Web-Dokumentation](web/index.md)
-- 📱 [Mobile App Guide](mobile/index.md)
-- ❓ [Häufig gestellte Fragen](hilfe/faq.md)
-- 📞 [Kontakt & Support](hilfe/kontakt.md)
+- [Web-Dokumentation](web/index.md)  
+- [Mobile App](mobile/index.md)  
+- [FAQ](hilfe/faq.md)  
+- [Kontakt](hilfe/kontakt.md)  
 
 ---
 
-<div class="centered" markdown>
+<div class="planvo-cta-band" markdown>
 
-**Bereit loszulegen?**
+**Bereit?**
 
-[:material-rocket-launch: Jetzt starten](erste-schritte/index.md){ .md-button .md-button--primary }
-[:material-book-open-page-variant: Dokumentation](web/index.md){ .md-button }
+[:material-rocket-launch: Erste Schritte](erste-schritte/index.md){ .md-button .md-button--primary }
+[:material-book-open-variant: Gesamte Web-Hilfe](web/index.md){ .md-button }
 
 </div>
 
 ---
 
-*Letzte Aktualisierung: November 2024 | Version 1.6.6*
-
+*Letzte Aktualisierung: Mai 2026*

@@ -16,20 +16,17 @@ theme:
   name: material
   language: de
   
-  # Custom Colors (Planvo Branding)
+  # Planvo Markenfarben (CSS: docs/assets/extra.css → primary/accent "custom")
   palette:
-    # Light Mode
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Zu dunklem Modus wechseln
-    
-    # Dark Mode
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Zu hellem Modus wechseln
