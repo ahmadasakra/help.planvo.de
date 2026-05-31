@@ -842,14 +842,21 @@ body.planvo-home .md-typeset h1:first-child {
   margin: 0 auto 3rem;
 }
 
-.planvo-portal__title {
-  margin: 0 0 1.75rem;
-  font-size: clamp(1.85rem, 4vw, 2.35rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #111827;
-  background: none;
-  -webkit-text-fill-color: #111827;
+/* Material's .md-typeset h1 überschreibt Portal-Titel — explizit übersteuern */
+.planvo-portal__title,
+.md-typeset .planvo-portal__title,
+.md-typeset h1.planvo-portal__title {
+  margin: 0 0 1.75rem !important;
+  font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  color: #111827 !important;
+  background: none !important;
+  -webkit-text-fill-color: #111827 !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  page-break-after: avoid;
 }
 
 .planvo-portal-search {
@@ -1292,4 +1299,115 @@ body.planvo-home .md-typeset h1:first-child {
 .planvo-quick-links a:hover {
   background: rgba(var(--planvo-primary-rgb), 0.14);
   border-color: rgba(var(--planvo-secondary-rgb), 0.35);
+}
+
+/* =====================================================================
+   Planvo Footer — Content-Seiten (nicht Portal)
+   ===================================================================== */
+.planvo-footer {
+  margin-top: 3rem;
+}
+
+.planvo-footer__inner {
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: 0 0.8rem 2.5rem;
+}
+
+.planvo-footer__divider {
+  border: none;
+  border-top: 1px solid rgba(var(--planvo-primary-rgb), 0.14);
+  margin: 0 0 2rem;
+}
+
+[data-md-color-scheme="slate"] .planvo-footer__divider {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.planvo-footer__brand {
+  margin-bottom: 1rem;
+}
+
+.planvo-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.88;
+  transition: opacity 0.15s ease;
+}
+
+.planvo-footer__logo:hover {
+  opacity: 1;
+}
+
+.planvo-footer__logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+/* Dark Mode: Logo invertieren (logob2 ist dunkel/schwarz) */
+[data-md-color-scheme="slate"] .planvo-footer__logo-img {
+  filter: invert(1) brightness(0.9);
+}
+
+.planvo-footer__meta {
+  margin: 0 0 0.85rem;
+  font-size: 0.82rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.6;
+}
+
+.planvo-footer__meta a {
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.planvo-footer__meta a:hover {
+  color: var(--planvo-primary);
+}
+
+[data-md-color-scheme="slate"] .planvo-footer__meta a:hover {
+  color: var(--planvo-lavender-light);
+}
+
+.planvo-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.planvo-footer__links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.planvo-footer__links a:hover {
+  color: var(--planvo-primary);
+}
+
+[data-md-color-scheme="slate"] .planvo-footer__links a:hover {
+  color: var(--planvo-lavender-light);
+}
+
+/* Material Footer (Prev/Next Navigation) auf unsere Seiten anpassen */
+.md-footer__inner {
+  padding: 1rem 0.8rem;
+}
+
+.md-footer__link {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-footer__link:hover {
+  color: var(--planvo-primary);
+}
+
+/* Material-Standard-Footer ausblenden — wir haben unseren eigenen */
+.md-footer__meta {
+  display: none;
 }
