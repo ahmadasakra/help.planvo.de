@@ -1,308 +1,97 @@
 ---
 title: Startseite
-description: Offizielle Planvo Hilfe für Handwerk & KMU – Zeiterfassung, Einsatzplanung, Abwesenheiten, Projekte und Rechnungswesen
+description: Dein Planvo Hilfe-Center – Anleitungen für Handwerk & KMU
+hide:
+  - navigation
+  - toc
+  - footer
+  - edit
+  - view
 ---
 
-<div class="planvo-hero" markdown="0">
-  <div class="planvo-hero__inner">
-    <p class="planvo-hero__eyebrow">Weniger Zettel. Mehr Überblick.</p>
-    <h1 class="planvo-hero__title">Planvo Hilfe für Handwerk &amp; KMU</h1>
-    <p class="planvo-hero__lead">
-      Anleitungen zu Zeiterfassung, Einsatzplanung, Abwesenheiten, Projekten und Rechnungswesen —
-      abgestimmt auf die Web-App, Mobile App und Ihren Planvo-Tarif.
-    </p>
-    <div class="planvo-hero__chips">
-      <span class="planvo-hero__chip">Web &amp; Desktop</span>
-      <span class="planvo-hero__chip">iOS &amp; Android</span>
-      <span class="planvo-hero__chip">DSGVO · Hosting DE</span>
+<div class="planvo-portal" markdown="0">
+  <header class="planvo-portal__hero">
+    <h1 class="planvo-portal__title">Dein Planvo Hilfe-Center</h1>
+    <div class="planvo-portal-search" role="search">
+      <div class="planvo-portal-search__box">
+        <svg class="planvo-portal-search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path fill="currentColor" d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l3.27 3.27-1.42 1.42-3.27-3.27A6.5 6.5 0 1 1 9.5 3m0 2C7.01 5 5 7.01 5 9.5S7.01 14 9.5 14 14 11.99 14 9.5 11.99 5 9.5 5"/>
+        </svg>
+        <input
+          id="planvo-portal-search-input"
+          class="planvo-portal-search__input"
+          type="search"
+          placeholder="Nach Artikeln suchen …"
+          aria-label="Nach Artikeln suchen"
+          autocomplete="off"
+        />
+      </div>
     </div>
-    <div class="planvo-hero__actions">
-      <a class="planvo-hero__btn planvo-hero__btn--primary" href="erste-schritte/">Erste Schritte</a>
-      <a class="planvo-hero__btn planvo-hero__btn--ghost" href="web/zeiterfassung/">Zeiterfassung</a>
-      <a class="planvo-hero__btn planvo-hero__btn--ghost" href="hilfe/faq/">FAQ</a>
-    </div>
+  </header>
+
+  <div class="planvo-category-grid">
+
+    <a class="planvo-category-card" href="erste-schritte/">
+      <span class="planvo-category-card__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/></svg>
+      </span>
+      <h2 class="planvo-category-card__title">Schnellstart</h2>
+      <p class="planvo-category-card__desc">In wenigen Schritten mit Planvo starten — Anmeldung, Dashboard und erste Aktionen im Überblick.</p>
+      <span class="planvo-category-card__count">3 Artikel</span>
+    </a>
+
+    <a class="planvo-category-card" href="web/">
+      <span class="planvo-category-card__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2m0 2v2h16V7H4m0 4v6h16v-6H4m2 2h4v2H6v-2"/></svg>
+      </span>
+      <h2 class="planvo-category-card__title">Web-Version</h2>
+      <p class="planvo-category-card__desc">Zeiterfassung, Projekte, Schichtpläne, Abwesenheiten, Rechnungen, Plantafel und mehr am Computer.</p>
+      <span class="planvo-category-card__count">13 Artikel</span>
+    </a>
+
+    <a class="planvo-category-card" href="mobile/">
+      <span class="planvo-category-card__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M17 19H7V5h10v14m-1-14H8a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1m-3 14a1 1 0 0 1-1 1h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1"/></svg>
+      </span>
+      <h2 class="planvo-category-card__title">Mobile App</h2>
+      <p class="planvo-category-card__desc">App installieren, Zeiterfassung unterwegs, Offline-Modus und mobile Abwesenheitsanträge.</p>
+      <span class="planvo-category-card__count">4 Artikel</span>
+    </a>
+
+    <a class="planvo-category-card" href="api/">
+      <span class="planvo-category-card__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M7 7h10v3l4-4-4-4v3H5v6h2V7m10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4"/></svg>
+      </span>
+      <h2 class="planvo-category-card__title">API &amp; Integrationen</h2>
+      <p class="planvo-category-card__desc">API-Keys, Schnellstart, Referenz, Swagger-Playground und Code-Beispiele für Entwickler.</p>
+      <span class="planvo-category-card__count">6 Artikel</span>
+    </a>
+
+    <a class="planvo-category-card" href="hilfe/">
+      <span class="planvo-category-card__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M11 18h2v-2h-2v2m1-16A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-14a2 2 0 0 0-2 2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2v2h2a4 4 0 0 0 4-4 4 4 0 0 0-4-4"/></svg>
+      </span>
+      <h2 class="planvo-category-card__title">Hilfe &amp; Support</h2>
+      <p class="planvo-category-card__desc">FAQ, Kontakt, Live-Chat und Support-Kanäle — wenn Sie nicht weiterkommen.</p>
+      <span class="planvo-category-card__count">3 Artikel</span>
+    </a>
+
+    <a class="planvo-category-card planvo-category-card--external" href="https://www.planvo.de/preise" target="_blank" rel="noopener">
+      <span class="planvo-category-card__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M7 15h2v2H7v-2m4 0h2v2h-2v-2m4 0h2v2h-2v-2M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2m0 2v10h14V7H5"/></svg>
+      </span>
+      <h2 class="planvo-category-card__title">Tarife &amp; Module</h2>
+      <p class="planvo-category-card__desc">Business, Pro und Premium — welche Funktionen in welchem Tarif enthalten sind.</p>
+      <span class="planvo-category-card__count">planvo.de</span>
+    </a>
+
   </div>
+
+  <footer class="planvo-portal__footer">
+    <a href="https://www.planvo.de">planvo.de</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://demo.planvo.de">Demo</a>
+    <span aria-hidden="true">·</span>
+    <a href="hilfe/kontakt/">Support</a>
+  </footer>
 </div>
-
-<div class="planvo-quick-links" markdown="0">
-  <a href="web/zeiterfassung/">Zeiterfassung</a>
-  <a href="web/urlaub/">Abwesenheiten</a>
-  <a href="web/rechnungen/">Rechnungen</a>
-  <a href="mobile/installation/">Mobile App</a>
-  <a href="hilfe/kontakt/">Support</a>
-</div>
-
-## Ihr Einstieg
-
-<div class="grid cards" markdown>
-
--   :material-clock-fast:{ .lg .middle } __Schnellstart__
-
-    ---
-
-    Anmeldung, Dashboard und erste Aktionen — ideal für neue Nutzerinnen und Nutzer.
-
-    [:octicons-arrow-right-24: Erste Schritte](erste-schritte/index.md)
-
--   :material-web:{ .lg .middle } __Web-Version__
-
-    ---
-
-    Zeiterfassung, Projekte, Schichtpläne, Abwesenheiten, Rechnungen und mehr am Computer.
-
-    [:octicons-arrow-right-24: Web-Guide](web/index.md)
-
--   :material-cellphone:{ .lg .middle } __Mobile App__
-
-    ---
-
-    Stempeln unterwegs, Schichtplan, Abwesenheitsanträge und Offline-Modus.
-
-    [:octicons-arrow-right-24: Mobile-Guide](mobile/index.md)
-
--   :material-help-circle:{ .lg .middle } __Hilfe & Support__
-
-    ---
-
-    FAQ, Kontakt und Antworten auf häufige Fragen.
-
-    [:octicons-arrow-right-24: Hilfe](hilfe/faq.md)
-
-</div>
-
----
-
-## Was ist Planvo?
-
-**Planvo** ist die Betriebssoftware für kleine und mittlere Unternehmen — Handwerksbetriebe, Dienstleister und Teams mit wechselnden Einsätzen. Sie bündeln **Einsatzplanung, Zeiterfassung, Abwesenheiten, Mitarbeiterverwaltung, Projekte und Rechnungswesen** in einer Lösung — DSGVO-konform mit Hosting in Deutschland.
-
-!!! info "Tarif & Module"
-    Nicht jedes Modul ist in jedem Tarif enthalten. Die Badges **Business**, **Pro** und **Premium** zeigen den Mindesttarif. Details: [planvo.de/preise](https://www.planvo.de/preise).
-
-### Module im Überblick
-
-<div class="grid" markdown>
-
--   :material-clock-time-four:{ .lg } **Zeiterfassung** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
-
-    ---
-
-    Projektzeiten im Kalender, Zeiteinträge, Stundenkonto, Export und Auswertung.
-
-    [:octicons-arrow-right-24: Anleitung](web/zeiterfassung.md)
-
--   :material-beach:{ .lg } **Abwesenheiten** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
-
-    ---
-
-    Urlaub, Krankheit und Freigaben — im Menü **Abwesenheiten**.
-
-    [:octicons-arrow-right-24: Anleitung](web/urlaub.md)
-
--   :material-calendar-clock:{ .lg } **Schichtpläne** <span class="planvo-plan-badge planvo-plan-badge--pro">Pro</span>
-
-    ---
-
-    Planung, Bewerbungen und Benachrichtigungen — im Menü **Schichtpläne**.
-
-    [:octicons-arrow-right-24: Anleitung](web/schichten.md)
-
--   :material-chart-timeline-variant:{ .lg } **Projekte & Aufgaben** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
-
-    ---
-
-    Projekte verwalten, Aufgaben im Team, Fortschritt nachverfolgen.
-
-    [:octicons-arrow-right-24: Projekte](web/projekte.md) · [:octicons-arrow-right-24: Aufgaben](web/aufgaben.md)
-
--   :material-view-week:{ .lg } **Plantafel** <span class="planvo-plan-badge planvo-plan-badge--premium">Premium</span>
-
-    ---
-
-    Visuelle Einsatz- und Ressourcenplanung für Baustellen und Teams.
-
-    [:octicons-arrow-right-24: Anleitung](web/plantafel.md)
-
--   :material-currency-eur:{ .lg } **Rechnungen & E-Rechnung** <span class="planvo-plan-badge planvo-plan-badge--pro">Pro</span>
-
-    ---
-
-    Angebote, Auftragsbestätigungen, Rechnungen — inkl. XRechnung & ZUGFeRD.
-
-    [:octicons-arrow-right-24: Anleitung](web/rechnungen.md)
-
--   :material-folder:{ .lg } **DMS** <span class="planvo-plan-badge planvo-plan-badge--premium">Premium</span>
-
-    ---
-
-    Dokumente zentral ablegen, versionieren und wiederfinden.
-
-    [:octicons-arrow-right-24: Anleitung](web/dokumente.md)
-
--   :material-chart-bar:{ .lg } **Auswertung** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
-
-    ---
-
-    Kennzahlen, Diagramme und Reports — Menüpunkt **Auswertung** (`/analyse`).
-
-    [:octicons-arrow-right-24: Anleitung](web/auswertung.md)
-
-</div>
-
----
-
-## Branchen
-
-Planvo passt sich an Ihr Branchenprofil an — verfügbare Module hängen von **Branche × Tarif** ab.
-
-| Branche | Schwerpunkt in Planvo |
-|---------|------------------------|
-| **Handwerk & Bau** | Plantafel, Materialkatalog, Baudokumentation, E-Rechnung |
-| **Sicherheitsdienst** | Schichtpläne, Zeiterfassung mit GPS, Einsatzplanung |
-| **IT / Agentur** | Projekte, Zeiten, Kunden, Rechnungswesen |
-| **Gastronomie & Reinigung** | Schichten, Personal, Zeiterfassung |
-| **Sonstiges** | Flexible Modul-Kombination je nach Tarif |
-
-[:octicons-arrow-right-24: Branchen auf planvo.de](https://www.planvo.de/branchen){ .md-button }
-
----
-
-## Schnellstart nach Rolle
-
-!!! tip "Neu bei Planvo?"
-    Starten Sie mit [Erste Schritte](erste-schritte/index.md) — Anmeldung, Dashboard und die wichtigsten Menüpunkte.
-
-=== "Mitarbeiter"
-
-    **Typische Aufgaben**
-
-    - Projektzeiten erfassen ([Zeiterfassung](web/zeiterfassung.md))
-    - Schichtpläne einsehen ([Schichtpläne](web/schichten.md))
-    - Abwesenheit beantragen ([Abwesenheiten](web/urlaub.md))
-    - Mobile App nutzen ([Installation](mobile/installation.md))
-
-    [:octicons-arrow-right-24: Erste Schritte](erste-schritte/index.md)
-
-=== "Projektleiter"
-
-    **Typische Aufgaben**
-
-    - Projekte anlegen und steuern ([Projekte](web/projekte.md))
-    - Einsätze auf der Plantafel planen ([Plantafel](web/plantafel.md))
-    - Aufgaben und Berichte ([Aufgaben](web/aufgaben.md) · [Berichte](web/berichte.md))
-
-    [:octicons-arrow-right-24: Projektdokumentation](web/projekte.md)
-
-=== "HR / Personal"
-
-    **Typische Aufgaben**
-
-    - Mitarbeiter und Teams verwalten ([Web-Übersicht](web/index.md))
-    - Abwesenheiten genehmigen ([Abwesenheiten](web/urlaub.md))
-    - Zeiterfassung und Stundenkonto prüfen ([Zeiterfassung](web/zeiterfassung.md))
-
-    [:octicons-arrow-right-24: Abwesenheiten](web/urlaub.md)
-
-=== "Buchhaltung"
-
-    **Typische Aufgaben**
-
-    - Rechnungen und E-Rechnung ([Rechnungen](web/rechnungen.md))
-    - Angebote und Lieferscheine ([Web-Übersicht](web/index.md))
-    - Auswertungen und Finanz-Tabs ([Auswertung](web/auswertung.md))
-
-    [:octicons-arrow-right-24: Rechnungen](web/rechnungen.md)
-
-=== "Administrator"
-
-    **Typische Aufgaben**
-
-    - Mandant einrichten, Rollen vergeben
-    - App-Einstellungen (z. B. Zeiterfassung, GPS)
-    - API-Keys und Integrationen ([API](api/index.md))
-
-    [:octicons-arrow-right-24: API & Integrationen](api/index.md)
-
----
-
-## Auf allen Geräten
-
-| Plattform | Beschreibung | Link |
-|-----------|--------------|------|
-| **Web** | Volle Funktionalität im Browser | [demo.planvo.de](https://demo.planvo.de) |
-| **iOS** | iPhone & iPad | [App Store](https://apps.apple.com/) |
-| **Android** | Smartphones & Tablets | [Google Play](https://play.google.com/) |
-
----
-
-## Beliebte Artikel
-
-1. [Zeiterfassung (Web)](web/zeiterfassung.md) — Kalender, Export, Stundenkonto  
-2. [Erste Schritte](erste-schritte/index.md) — Einstieg und Navigation  
-3. [Anmeldung](erste-schritte/anmeldung.md) — Web, App & SSO  
-4. [Abwesenheiten](web/urlaub.md) — Urlaub beantragen und genehmigen  
-5. [Mobile App installieren](mobile/installation.md)  
-6. [Schichtpläne](web/schichten.md)  
-7. [Rechnungen & E-Rechnung](web/rechnungen.md)  
-8. [Dashboard-Übersicht](erste-schritte/dashboard.md)  
-
----
-
-## Support
-
-Wir helfen gern weiter:
-
-<div class="grid cards" markdown>
-
--   :material-chat:{ .lg } **Live-Chat**
-
-    ---
-
-    Schnelle Antworten während der Geschäftszeiten auf [planvo.de](https://www.planvo.de)
-
--   :material-email:{ .lg } **E-Mail**
-
-    ---
-
-    [support@planvo.de](mailto:support@planvo.de)
-
--   :material-frequently-asked-questions:{ .lg } **FAQ**
-
-    ---
-
-    [Häufige Fragen](hilfe/faq.md)
-
--   :material-phone:{ .lg } **Telefon**
-
-    ---
-
-    [+49 176 45827800](tel:+4917645827800) — Mo–Fr, siehe [Kontakt](hilfe/kontakt.md)
-
-</div>
-
----
-
-## Weitere Ressourcen
-
-- [Planvo Website](https://www.planvo.de) — Produkt, Demo, Kontakt  
-- [Preise & Tarife](https://www.planvo.de/preise) — Business, Pro, Premium  
-- [PlanvoAI](https://www.planvo.de/planvoai) — KI-Assistent (Premium)  
-- [Schnittstellen](https://www.planvo.de/schnittstellen) — DATEV, IDS-Connect, GAEB u. a.  
-- [Web-Dokumentation](web/index.md) · [Mobile App](mobile/index.md)  
-- [API & Integrationen](api/index.md) · [FAQ](hilfe/faq.md) · [Kontakt](hilfe/kontakt.md)  
-
----
-
-<div class="planvo-cta-band" markdown>
-
-**Bereit?**
-
-[:material-rocket-launch: Erste Schritte](erste-schritte/index.md){ .md-button .md-button--primary }
-[:material-book-open-variant: Gesamte Web-Hilfe](web/index.md){ .md-button }
-[:material-play-circle: Demo öffnen](https://demo.planvo.de){ .md-button }
-
-</div>
-
----
-
-*Letzte Aktualisierung: Mai 2026*

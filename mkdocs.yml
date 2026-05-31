@@ -21,19 +21,18 @@ theme:
 
   # Planvo Markenfarben (CSS: docs/assets/extra.css → primary/accent "custom")
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-7
-        name: Zu dunklem Modus wechseln
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    # Hell = Standard (Toggle wechselt zu Dunkel)
+    - scheme: default
       primary: custom
       accent: custom
       toggle:
         icon: material/brightness-4
+        name: Zu dunklem Modus wechseln
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
         name: Zu hellem Modus wechseln
 
   font:
@@ -69,11 +68,12 @@ theme:
     edit: material/pencil
     view: material/eye
 
-  extra_css:
-    - assets/extra.css
+# Zusätzliche Assets (Root-Level — nicht unter theme!)
+extra_css:
+  - assets/extra.css
 
-  extra_javascript:
-    - javascript/extra.js
+extra_javascript:
+  - javascript/extra.js
 
 # Plugins
 plugins:
@@ -129,6 +129,7 @@ extra:
   announce:
     text: "Neu — Hilfe für Handwerk & KMU mit Tarif-Hinweisen und aktualisierten Anleitungen."
     link: https://help.planvo.de/erste-schritte/
+    # Auf der Portal-Startseite per CSS ausgeblendet (.planvo-home .md-banner)
 
   social:
     - icon: fontawesome/solid/globe
@@ -185,6 +186,7 @@ nav:
     - Code-Beispiele: api/examples.md
   
   - Hilfe:
+    - hilfe/index.md
     - FAQ: hilfe/faq.md
     - Kontakt & Support: hilfe/kontakt.md
 

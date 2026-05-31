@@ -686,13 +686,362 @@ html {
   transform: translateY(-1px);
 }
 
-/* Startseite: breiterer Content, kein TOC */
-.planvo-home .md-content__inner {
-  max-width: 52rem;
+/* Startseite: Portal-Layout — Hell (Standard) + Grid-Fix */
+body:has(.planvo-portal) .md-main__inner.md-grid,
+.planvo-home .md-main__inner.md-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
 }
 
-.planvo-home .md-sidebar--secondary {
+body:has(.planvo-portal) .md-sidebar,
+.planvo-home .md-sidebar {
+  display: none !important;
+}
+
+body:has(.planvo-portal) .md-content,
+.planvo-home .md-content {
+  margin: 0;
+  max-width: none;
+  grid-column: 1;
+}
+
+body:has(.planvo-portal) .md-tabs,
+.planvo-home .md-tabs {
   display: none;
+}
+
+body:has(.planvo-portal) .md-banner,
+.planvo-home .md-banner {
+  display: none;
+}
+
+body:has(.planvo-portal) .md-main__inner,
+.planvo-home .md-main__inner {
+  margin: 0;
+  background: var(--planvo-mist);
+}
+
+body:has(.planvo-portal) .md-content__inner,
+.planvo-home .md-content__inner {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body:has(.planvo-portal) .md-content__inner > h1:first-child,
+.planvo-home .md-typeset h1:first-child {
+  display: none;
+}
+
+body:has(.planvo-portal) .md-footer,
+.planvo-home .md-footer {
+  display: none;
+}
+
+body:has(.planvo-portal) .md-content__button,
+.planvo-home .md-content__button {
+  display: none;
+}
+
+/* Header auf Portal: Planvo-Gradient beibehalten (nicht überschreiben) */
+
+/* Portal shell — Light */
+.planvo-portal {
+  min-height: calc(100vh - 3.2rem);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2rem) 3rem;
+  color: #374151;
+}
+
+.planvo-portal__hero {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+}
+
+.planvo-portal__title {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111827;
+  background: none;
+  -webkit-text-fill-color: #111827;
+}
+
+.planvo-portal-search {
+  width: 100%;
+}
+
+.planvo-portal-search__box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  background: #fff;
+  border: 1px solid rgba(107, 94, 205, 0.18);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(107, 94, 205, 0.08);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.planvo-portal-search__box:focus-within {
+  border-color: rgba(107, 94, 205, 0.55);
+  box-shadow: 0 0 0 3px rgba(107, 94, 205, 0.15);
+}
+
+.planvo-portal svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.planvo-portal-search__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: #9ca3af;
+}
+
+.planvo-portal-search__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #111827;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+.planvo-portal-search__input::placeholder {
+  color: #9ca3af;
+}
+
+.planvo-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.planvo-category-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.35rem 1.25rem 1.15rem;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid rgba(107, 94, 205, 0.1);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(107, 94, 205, 0.06);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.planvo-category-card:hover {
+  border-color: rgba(107, 94, 205, 0.28);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(107, 94, 205, 0.12);
+  color: inherit;
+}
+
+.planvo-category-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.55rem;
+  background: #fff;
+  color: var(--planvo-primary);
+  border: 1px solid rgba(107, 94, 205, 0.12);
+  box-shadow: 0 2px 6px rgba(107, 94, 205, 0.08);
+}
+
+.planvo-category-card__icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.planvo-category-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.01em;
+}
+
+.planvo-category-card__desc {
+  margin: 0;
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #6b7280;
+}
+
+.planvo-category-card__count {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.planvo-category-card--external .planvo-category-card__count {
+  color: var(--planvo-primary);
+}
+
+.planvo-portal__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.82rem;
+  color: #9ca3af;
+}
+
+.planvo-portal__footer a {
+  color: #6b7280;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.planvo-portal__footer a:hover {
+  color: var(--planvo-primary);
+}
+
+/* Portal — Dark Mode (Toggle) */
+[data-md-color-scheme="slate"] body:has(.planvo-portal) .md-main__inner,
+[data-md-color-scheme="slate"] .planvo-home .md-main__inner {
+  background: #0f1117;
+}
+
+[data-md-color-scheme="slate"] .planvo-portal {
+  color: #e5e7eb;
+}
+
+[data-md-color-scheme="slate"] .planvo-portal__title {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+[data-md-color-scheme="slate"] .planvo-portal-search__box {
+  background: #1a1d26;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+[data-md-color-scheme="slate"] .planvo-portal-search__icon {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+[data-md-color-scheme="slate"] .planvo-portal-search__input {
+  color: #fff;
+}
+
+[data-md-color-scheme="slate"] .planvo-portal-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+[data-md-color-scheme="slate"] .planvo-category-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+[data-md-color-scheme="slate"] .planvo-category-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-md-color-scheme="slate"] .planvo-category-card__title {
+  color: #fff;
+}
+
+[data-md-color-scheme="slate"] .planvo-category-card__desc {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+[data-md-color-scheme="slate"] .planvo-category-card__count {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+[data-md-color-scheme="slate"] .planvo-portal__footer a {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+[data-md-color-scheme="slate"] .planvo-portal__footer a:hover {
+  color: var(--planvo-lavender-light);
+}
+
+@media screen and (max-width: 76.1875em) {
+  .planvo-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .planvo-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planvo-portal {
+    padding-top: 2rem;
+  }
+}
+
+/* Header CTAs (Anmelden / Kostenlos testen) */
+.planvo-header-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
+.planvo-header-cta__link {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.planvo-header-cta__link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.planvo-header-cta__link--primary {
+  color: #fff;
+  background: var(--planvo-primary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.planvo-header-cta__link--primary:hover {
+  background: var(--planvo-primary-dark);
+  color: #fff;
+}
+
+@media screen and (max-width: 76.1875em) {
+  .planvo-header-cta__link:not(.planvo-header-cta__link--primary) {
+    display: none;
+  }
+
+  .planvo-header-cta__link--primary {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.72rem;
+  }
+}
+
+@media screen and (max-width: 59.9375em) {
+  .planvo-home [data-md-component="search"] {
+    display: none;
+  }
 }
 
 /* Suche — Help-Center-Stil */
