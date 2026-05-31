@@ -1,24 +1,25 @@
 {% extends "base.html" %}
 
-{# Inject portal layout styles into <head> for the homepage only.
-   This prevents FOUC (Flash of Unstyled Content) — sidebars and grid
-   are hidden before the first paint, no JavaScript needed. #}
+{# Inject portal layout styles into <head> on every page.
+   All selectors are scoped to body:has(.planvo-portal) so they only
+   activate on the homepage and are safe with navigation.instant SPA routing. #}
 {% block styles %}
   {{ super() }}
-  {% if page and page.is_homepage %}
   <style>
-    /* === Planvo Portal: Head-Injection (kein FOUC) === */
-    /* Sidebars vollständig entfernen */
-    .md-sidebar,
-    .md-sidebar--primary,
-    .md-sidebar--secondary {
+    /* === Planvo Portal: Head-Injection — nur aktiv wenn .planvo-portal im DOM === */
+
+    /* Sidebars ausblenden */
+    body:has(.planvo-portal) .md-sidebar,
+    body:has(.planvo-portal) .md-sidebar--primary,
+    body:has(.planvo-portal) .md-sidebar--secondary {
       display: none !important;
       width: 0 !important;
       min-width: 0 !important;
       overflow: hidden !important;
     }
-    /* Grid deaktivieren, .md-grid max-width aufheben, volle Breite */
-    .md-main__inner {
+
+    /* Grid + max-width aufheben, volle Breite */
+    body:has(.planvo-portal) .md-main__inner {
       display: block !important;
       max-width: none !important;
       width: 100% !important;
@@ -26,7 +27,8 @@
       padding: 0 !important;
       box-sizing: border-box !important;
     }
-    .md-content {
+
+    body:has(.planvo-portal) .md-content {
       display: block !important;
       width: 100% !important;
       max-width: none !important;
@@ -34,28 +36,31 @@
       padding: 0 !important;
       box-sizing: border-box !important;
     }
-    .md-content__inner {
+
+    body:has(.planvo-portal) .md-content__inner {
       width: 100% !important;
       max-width: none !important;
       margin: 0 !important;
       padding: 0 !important;
       box-sizing: border-box !important;
     }
+
     /* Tabs, Banner, Footer, Edit-Buttons */
-    .md-tabs,
-    .md-banner,
-    .md-footer,
-    .md-content__button {
+    body:has(.planvo-portal) .md-tabs,
+    body:has(.planvo-portal) .md-banner,
+    body:has(.planvo-portal) .md-footer,
+    body:has(.planvo-portal) .md-content__button {
       display: none !important;
     }
+
     /* Hell-Modus Hintergrund */
-    .md-main__inner {
+    body:has(.planvo-portal) .md-main__inner {
       background: #f6f7ff !important;
     }
+
     /* Dunkel-Modus Hintergrund */
-    body[data-md-color-scheme="slate"] .md-main__inner {
+    body[data-md-color-scheme="slate"]:has(.planvo-portal) .md-main__inner {
       background: #0f1117 !important;
     }
   </style>
-  {% endif %}
 {% endblock %}

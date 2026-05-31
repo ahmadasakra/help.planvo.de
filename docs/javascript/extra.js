@@ -1,50 +1,65 @@
 /* Planvo Hilfe – Portal-Startseite & Header-CTAs
-   Fix: planvo-home Klasse so früh wie möglich setzen,
-   damit CSS-Regeln ohne :has()-Support greifen. */
+   SPA-sicher via MutationObserver: body.planvo-home wird synchron
+   mit dem DOM-Swap entfernt, bevor der Browser den nächsten Frame zeichnet. */
 
-/* ── 1. Frühzeitig auf body setzen ──────────────────────────────── */
-(function () {
-  // Sofort bei Script-Ausführung prüfen (kein DOMContentLoaded nötig)
-  var isHome =
-    window.location.pathname === "/" ||
-    window.location.pathname === "/index.html" ||
-    window.location.pathname.replace(/\/$/, "") === "";
+/* ── Portal aktivieren ───────────────────────────────────────────── */
+function activatePortal() {
+  document.body.classList.add("planvo-home");
+  initPortalSearch();
+  startPortalWatcher();
+}
 
-  if (isHome) {
-    document.documentElement.classList.add("planvo-home-early");
-    // body ist zu diesem Zeitpunkt evtl. noch nicht da → via rAF
-    requestAnimationFrame(function () {
-      if (document.body) {
-        document.body.classList.add("planvo-home");
-      }
-    });
-  }
-})();
+/* ── Portal deaktivieren ─────────────────────────────────────────── */
+function deactivatePortal() {
+  document.body.classList.remove("planvo-home");
+}
 
-/* ── 2. Nach DOM-Ready: sauber initialisieren ────────────────────── */
-document.addEventListener("DOMContentLoaded", function () {
+/* ── MutationObserver: wartet auf Entfernung von .planvo-portal ──── */
+/* Läuft als Microtask — synchron nach DOM-Swap, vor nächstem Paint.
+   Damit gibt es keinen sichtbaren Frame mit fehlendem Sidebar. */
+var portalWatcher = null;
+
+function startPortalWatcher() {
+  if (portalWatcher) return; // Nur einmal registrieren
+
+  portalWatcher = new MutationObserver(function () {
+    if (!document.querySelector(".planvo-portal")) {
+      deactivatePortal();
+      portalWatcher.disconnect();
+      portalWatcher = null;
+    }
+  });
+
+  portalWatcher.observe(document.body, { childList: true, subtree: true });
+}
+
+/* ── Initialisierung bei Seitenload ─────────────────────────────── */
+function initPage() {
   var portal = document.querySelector(".planvo-portal");
 
   if (portal) {
-    document.body.classList.add("planvo-home");
-    initPortalSearch();
+    activatePortal();
+  } else {
+    deactivatePortal();
   }
 
   injectHeaderCtas();
-});
+}
 
-/* ── 3. MkDocs navigation.instant: nach jeder Navigation prüfen ─── */
-document.addEventListener("DOMContentLoaded", function () {
-  // Material for MkDocs feuert dieses Event nach SPA-Navigation
-  document.addEventListener("content.ready", function () {
-    var portal = document.querySelector(".planvo-portal");
-    if (portal) {
-      document.body.classList.add("planvo-home");
-    } else {
-      document.body.classList.remove("planvo-home");
-    }
-    injectHeaderCtas();
-  });
+/* ── DOMContentLoaded: erster Seitenaufruf ───────────────────────── */
+document.addEventListener("DOMContentLoaded", initPage);
+
+/* ── content.ready: navigation.instant SPA-Navigation ───────────── */
+/* Direkt auf document registriert (NICHT in DOMContentLoaded),
+   damit es bei jeder SPA-Navigation zuverlässig feuert. */
+document.addEventListener("content.ready", function () {
+  // Observer beenden falls noch aktiv (neuer Content = neuer Zustand)
+  if (portalWatcher) {
+    portalWatcher.disconnect();
+    portalWatcher = null;
+  }
+
+  initPage();
 });
 
 /* ── Suche: Portal-Input → Material-Suchfeld ────────────────────── */
@@ -53,21 +68,21 @@ function openMaterialSearch() {
     document.querySelector('label[for="__search"]') ||
     document.querySelector(".md-header__button[for='__search']");
 
-  if (toggle) {
-    toggle.click();
-  }
+  if (toggle) toggle.click();
 
   setTimeout(function () {
-    var searchInput = document.querySelector(".md-search__input");
-    if (searchInput) {
-      searchInput.focus();
-    }
+    var input = document.querySelector(".md-search__input");
+    if (input) input.focus();
   }, 80);
 }
 
 function initPortalSearch() {
   var portalInput = document.getElementById("planvo-portal-search-input");
   if (!portalInput) return;
+
+  // Listener nicht doppelt anhängen
+  if (portalInput._planvoSearchBound) return;
+  portalInput._planvoSearchBound = true;
 
   ["focus", "click"].forEach(function (evt) {
     portalInput.addEventListener(evt, function (e) {
@@ -86,7 +101,6 @@ function initPortalSearch() {
 
 /* ── Header-CTAs (Anmelden / Kostenlos testen) ───────────────────── */
 function injectHeaderCtas() {
-  // Nicht doppelt einfügen
   if (document.querySelector(".planvo-header-cta")) return;
 
   var headerInner = document.querySelector(".md-header__inner");

@@ -694,8 +694,7 @@ html {
 
 /* 1. Grid komplett deaktivieren + .md-grid max-width aufheben */
 body:has(.planvo-portal) .md-main__inner,
-body.planvo-home .md-main__inner,
-html.planvo-home-early .md-main__inner {
+body.planvo-home .md-main__inner {
   display: block !important;
   max-width: none !important;
   width: 100% !important;
@@ -717,10 +716,7 @@ body:has(.planvo-portal) .md-sidebar--primary,
 body:has(.planvo-portal) .md-sidebar--secondary,
 body.planvo-home .md-sidebar,
 body.planvo-home .md-sidebar--primary,
-body.planvo-home .md-sidebar--secondary,
-html.planvo-home-early .md-sidebar,
-html.planvo-home-early .md-sidebar--primary,
-html.planvo-home-early .md-sidebar--secondary {
+body.planvo-home .md-sidebar--secondary {
   display: none !important;
   width: 0 !important;
   min-width: 0 !important;
@@ -729,8 +725,7 @@ html.planvo-home-early .md-sidebar--secondary {
 
 /* 3. Content volle Breite — !important notwendig gegen Material-Defaults */
 body:has(.planvo-portal) .md-content,
-body.planvo-home .md-content,
-html.planvo-home-early .md-content {
+body.planvo-home .md-content {
   display: block !important;
   width: 100% !important;
   max-width: none !important;
@@ -740,8 +735,7 @@ html.planvo-home-early .md-content {
 }
 
 body:has(.planvo-portal) .md-content__inner,
-body.planvo-home .md-content__inner,
-html.planvo-home-early .md-content__inner {
+body.planvo-home .md-content__inner {
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
