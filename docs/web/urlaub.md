@@ -1,346 +1,301 @@
-# Abwesenheiten (Urlaub & Fehlzeiten)
+# Abwesenheiten
 
 > **Menüpunkt in der App:** **Abwesenheiten** (`/leave-management`)  
-> **⏱️ Lesezeit:** 8 Minuten  
-> **📱 Verfügbar in:** Web & Mobile  
-> **👤 Für:** Alle Mitarbeiter, Personalabteilung  
-> **Tarif:** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
+> **Seitentitel in der App:** Abwesenheitsverwaltung  
+> **Lesezeit:** ca. 18 Minuten  
+> **Verfügbar in:** Web, teilweise Mobile App  
+> **Für:** Mitarbeiter, Teamleitung, HR, Verwaltung und Admins  
+> **Modul:** Abwesenheiten / Personal & Urlaub
 
 ---
 
-## 📋 Was Sie in diesem Kapitel lernen
+## Kurz erklärt
 
-- ✅ Wie Sie Urlaubsanträge stellen
-- ✅ Wie Sie Urlaub genehmigen
-- ✅ Wie Sie Verfügbarkeiten einsehen
-- ✅ Wie Sie Urlaubskonten verwalten
-- ✅ Wie Sie Abwesenheiten verwalten
+Mit der **Abwesenheitsverwaltung** in Planvo verwalten Sie Urlaub, Krankheit, unbezahlten Urlaub und weitere Abwesenheitsarten zentral an einem Ort.
 
----
+Mitarbeiter können Abwesenheiten beantragen, Teamleitungen oder HR können Anträge prüfen und freigeben. Administratoren richten unter **Einstellungen** die verfügbaren **Urlaubstypen** ein — diese erscheinen dann in Anträgen und Kalendern.
 
-## 🎯 Übersicht
-
-Die Urlaubsverwaltung in Planvo bietet Ihnen:
-
-- 🏖️ **Urlaubsanträge** - Einfache Beantragung
-- ✅ **Genehmigungsworkflow** - Digitale Freigabe
-- 📊 **Urlaubskonten** - Übersicht über verfügbare Tage
-- 📅 **Verfügbarkeitskalender** - Wer ist wann da?
-- 🔔 **Automatische Benachrichtigungen** - Nie einen Antrag verpassen
-- 📈 **Statistiken** - Übersicht über Urlaubsnutzung
+!!! note "Kein Menüpunkt Abwesenheiten?"
+    Ihr Tarif muss das Modul **Abwesenheiten** enthalten (ab **Basic**, je nach Branchenprofil). Zusätzlich brauchen Sie die Berechtigung, eigene oder Team-Abwesenheiten anzuzeigen.
 
 ---
 
-## 📹 Video-Tutorial
+## Teil A: Abwesenheitsverwaltung
 
-!!! info "Video-Tutorial"
-    **🎥 Video: Urlaubsverwaltung**
-    
-    In diesem Video zeigen wir Ihnen, wie Sie:
-    - Einen Urlaubsantrag stellen
-    - Urlaub genehmigen
-    - Verfügbarkeiten einsehen
-    - Urlaubskonten verwalten
-    
-    *Video wird demnächst verfügbar sein*
+Öffnen Sie in der Seitenleiste **Abwesenheiten**. Oben rechts legen Sie jederzeit einen neuen Antrag an: **+ Neuen Abwesenheitsantrag**.
 
 ---
 
-## 🏖️ Urlaubsantrag stellen
+### A.1 Monatsübersicht der Abwesenheiten
 
-### Neuen Antrag erstellen
+**Registerkarte:** **Übersicht** — Team-Abwesenheiten im Monat oder in der Woche.
 
-1. Klicken Sie im Hauptmenü auf **"Urlaub"**
-2. Klicken Sie auf **"+ Urlaubsantrag"**
-3. Füllen Sie die Daten aus:
+![Monatsübersicht der Abwesenheiten](../assets/abwesenheit/1.png)
 
-**Pflichtfelder:**
-- 📅 **Startdatum**
-- 📅 **Enddatum**
-- 🏷️ **Urlaubsart** (siehe unten)
+| Bereich | Erklärung |
+|---------|-----------|
+| Mitarbeiterliste | Links: Name und Bereich jedes Mitarbeiters |
+| Monatskalender | Rechts: Tage des gewählten Monats |
+| Farbliche Balken | Abwesenheiten als farbige Zeiträume |
+| Kürzel | z. B. **UR** = Urlaub, **K** = Krankheit, **UN** = unbezahlter Urlaub |
+| Heute-Markierung | Aktueller Tag hervorgehoben |
+| Monat / Woche | Umschalten oben rechts |
 
-**Optionale Felder:**
-- 📄 **Grund/Notizen** (optional)
-- 👤 **Vertretung** (wer übernimmt?)
+**Zeitraum:** Pfeile neben dem Monat; mit **Heute** zurück zum aktuellen Datum.
 
-### Urlaubsarten
+**Neuer Antrag:** [A.4 Abwesenheit beantragen](#a4-abwesenheit-beantragen).
 
-**Verfügbare Arten:**
-- 🏖️ **Urlaub** - Bezahlter Urlaub
-- 🤒 **Krankheit** - Krankheitsbedingte Abwesenheit
-- 👶 **Elternzeit** - Elternzeit
-- 📚 **Bildungsurlaub** - Weiterbildung
-- 🏥 **Sonderurlaub** - Z.B. Umzug, Hochzeit
-- ⏸️ **Unbezahlter Urlaub** - Unbezahlte Freistellung
-
-**Urlaubsart wählen:**
-1. Klicken Sie auf **"Urlaubsart"**
-2. Wählen Sie aus Liste
-3. System zeigt verfügbare Tage an
-
-### Antrag einreichen
-
-1. Überprüfen Sie alle Eingaben
-2. System zeigt:
-   - 📊 Verfügbare Tage
-   - 📅 Beantragte Tage
-   - 📊 Verbleibende Tage
-3. Klicken Sie auf **"Antrag einreichen"**
-4. ✅ Antrag wird erstellt
-5. 🔔 Vorgesetzter erhält Benachrichtigung
+!!! info "Ohne Team-Rechte"
+    Ohne Berechtigung für das gesamte Team zeigt **Übersicht** Ihren **persönlichen Jahreskalender** (ähnlich A.2, nur für Sie). Die Monatsübersicht oben ist die **Team-Ansicht** für Führungskräfte und HR.
 
 ---
 
-## ✅ Urlaub genehmigen
+### A.2 Jahreskalender für das Team
 
-### Anträge anzeigen
+**Registerkarte:** **Jahreskalender** — ein ganzes Jahr kompakt.
 
-**Als Vorgesetzter:**
-1. Klicken Sie im Hauptmenü auf **"Urlaub"**
-2. Wechseln Sie zu **"Genehmigungen"**
-3. Sie sehen alle ausstehenden Anträge
+![Jahreskalender für das Team](../assets/abwesenheit/2.png)
 
-**Antrags-Übersicht:**
-```
-📋 Ausstehende Anträge
-├─ Max Mustermann
-│  ├─ 15.12.2024 - 20.12.2024
-│  ├─ 5 Tage Urlaub
-│  └─ Status: ⏳ Ausstehend
-│
-├─ Anna Schmidt
-│  ├─ 22.12.2024 - 31.12.2024
-│  ├─ 8 Tage Urlaub
-│  └─ Status: ⏳ Ausstehend
-```
+| Funktion | Nutzen |
+|----------|--------|
+| Ganzes Jahr sichtbar | Engpässe und Urlaubshäufungen erkennen |
+| Feiertage | Automatisch markiert |
+| Wochenenden | Optisch abgesetzt |
+| Farben & Legende | Urlaub, Krankheit, unbezahlter Urlaub unterscheidbar |
 
-### Antrag genehmigen
-
-1. Öffnen Sie den Antrag
-2. Überprüfen Sie:
-   - 📅 Datum
-   - 📊 Verfügbare Tage
-   - ⚠️ Konflikte (andere Anträge, Projekte)
-3. Klicken Sie auf **"Genehmigen"**
-4. Optional: **Notiz** hinzufügen
-5. Klicken Sie auf **"Bestätigen"**
-
-**Automatische Aktionen:**
-- ✅ Status: **"Genehmigt"**
-- 🔔 Mitarbeiter erhält Benachrichtigung
-- 📅 Termin wird im Kalender eingetragen
-- 📊 Urlaubskonto wird aktualisiert
-
-### Antrag ablehnen
-
-1. Öffnen Sie den Antrag
-2. Klicken Sie auf **"Ablehnen"**
-3. Geben Sie **Grund** ein (Pflichtfeld)
-4. Klicken Sie auf **"Bestätigen"**
-
-**Automatische Aktionen:**
-- ❌ Status: **"Abgelehnt"**
-- 🔔 Mitarbeiter erhält Benachrichtigung
-- 📄 Ablehnungsgrund wird gespeichert
+**Tipp:** Tag anklicken oder Zeitraum ziehen → **Urlaubsantrag** mit vorausgefüllten Daten ([A.4](#a4-abwesenheit-beantragen)).
 
 ---
 
-## 📊 Urlaubskonten
+### A.3 Abwesenheitsanträge prüfen und freigeben
 
-### Mein Urlaubskonto
+**Registerkarte:** **Anträge** — alle Anträge in einer Tabelle.
 
-**Übersicht:**
-```
-📊 Urlaubskonto 2024
-├─ Gesamtanspruch: 30 Tage
-├─ Bereits genommen: 15 Tage
-├─ Geplant: 8 Tage
-├─ Verfügbar: 7 Tage
-└─ Verfallend: 5 Tage (31.12.2024)
+![Abwesenheitsanträge verwalten](../assets/abwesenheit/3.png)
+
+| Spalte | Bedeutung |
+|--------|-----------|
+| Mitarbeiter | Antragsteller |
+| Abwesenheitstyp | z. B. Urlaub, Krankheit (aus [Teil B](#teil-b-urlaubstypen-in-den-einstellungen)) |
+| Dauer | Zeitraum und Tage |
+| Status | Ausstehend, freigegeben, abgelehnt |
+| Notizen | Zusatzinfos |
+| Antrag & Freigabe | Zeitpunkt und Bearbeiter |
+| Aktionen | Freigeben, ablehnen, stornieren |
+
+**Status**
+
+| Status | Bedeutung |
+|--------|-----------|
+| Ausstehend | Wartet auf Entscheidung |
+| Freigegeben | Genehmigt — erscheint im Kalender und Urlaubskonto |
+| Abgelehnt | Nicht genehmigt |
+| Storniert | Zurückgezogen, Historie bleibt |
+
+**Suchen & filtern:** Feld **Anträge suchen…** und Dropdown **Alle Status**.
+
+**Aktionen** (mit Genehmigungs-Recht): **Haken** = freigeben, **X** = ablehnen, **Storno** = stornieren (bei Freigabe oft mit Pflicht-Grund).
+
+---
+
+### A.4 Abwesenheit beantragen
+
+**+ Neuen Abwesenheitsantrag** oder Kalender → **Urlaubsantrag**.
+
+![Abwesenheit beantragen](../assets/abwesenheit/antrag.png)
+
+| Feld | Erklärung |
+|------|-----------|
+| Mitarbeiter | Bei HR/Admin wählbar; sonst eigenes Profil |
+| Abwesenheitsart | Typ aus den [Urlaubstypen](#teil-b-urlaubstypen-in-den-einstellungen) (z. B. Urlaub, Krankheit) |
+| Zeitraum | Start und Ende; Anzeige der **Arbeitstage** (ohne Sa/So) |
+| Notizen | Optional, bis 500 Zeichen |
+
+Bei **bezahltem Urlaub** zeigt das Formular das **Urlaubskonto** und warnt bei zu wenig Rest — Einreichung ist oft trotzdem möglich.
+
+**Absenden:** **Antrag stellen** → Status **Ausstehend** in [A.3](#a3-abwesenheitsanträge-prüfen-und-freigeben). Freigabe durch Teamleitung, HR oder Admin.
+
+---
+
+### A.5 Urlaubskonto verstehen
+
+**Registerkarte:** **Urlaubskonto**.
+
+![Urlaubskonto verwalten](../assets/abwesenheit/4.png)
+
+| Karte | Erklärung |
+|-------|-----------|
+| Urlaubsanspruch | Jahresanspruch in Tagen |
+| Genommene Tage | Bereits genutzt |
+| Verfügbar | Noch planbar |
+| Resturlaub Vorjahr | Übertrag |
+| Ausstehend | Beantragt, noch nicht entschieden |
+
+**Berechnung (vereinfacht):**
+
+```text
+Urlaubsanspruch
++ Resturlaub Vorjahr
+- genommene Urlaubstage
+- genehmigte (zukünftige) Urlaubstage
+- geplante / ausstehende Urlaubstage
+= verfügbarer Resturlaub
 ```
 
-**Details:**
-- 📅 **Jahresanspruch** - Gesamt verfügbare Tage
-- ✅ **Genommen** - Bereits verbrauchte Tage
-- 📅 **Geplant** - Genehmigte, aber noch nicht genommene Tage
-- ✅ **Verfügbar** - Noch verfügbare Tage
-- ⏰ **Verfallend** - Tage, die bis Jahresende genommen werden müssen
-
-### Urlaubskonto verwalten
-
-**Als Personalabteilung:**
-1. Gehen Sie zu **"Personal"** → **"Urlaubskonten"**
-2. Wählen Sie Mitarbeiter
-3. Klicken Sie auf **"Konto bearbeiten"**
-4. Passen Sie an:
-   - 📊 Jahresanspruch
-   - 📅 Sonderurlaub
-   - ⏰ Verfallsdatum
-5. Speichern
+Die **Detailtabelle** darunter führt dieselbe Logik Schritt für Schritt aus. **Jahresübersicht** und **Bearbeitungshistorie** liefern Details und Änderungsverlauf.
 
 ---
 
-## 📅 Verfügbarkeitskalender
+### A.6 Abwesenheiten auswerten
 
-### Kalender anzeigen
+**Eigener Menüpunkt** — nicht unter den Registerkarten von Abwesenheiten.
 
-1. Klicken Sie im Hauptmenü auf **"Urlaub"**
-2. Wechseln Sie zu **"Verfügbarkeit"**
-3. Sie sehen Team-Übersicht
+![Abwesenheitsauswertung](../assets/abwesenheit/5.png)
 
-**Kalender-Ansicht:**
-```
-📅 Dezember 2024
-├─ Mo 02: ✅ Alle verfügbar
-├─ Di 03: ✅ Alle verfügbar
-├─ Mi 04: ⚠️ Max (Urlaub)
-├─ Do 05: ⚠️ Max (Urlaub)
-├─ Fr 06: ⚠️ Max (Urlaub)
-├─ Sa 07: ✅ Alle verfügbar
-└─ So 08: ✅ Alle verfügbar
-```
+**Weg:** Seitenleiste → **Auswertung** (`/analyse`) → **Abwesenheitsauswertung**
 
-**Farbcodierung:**
-- 🟢 **Grün** - Verfügbar
-- 🟡 **Gelb** - Teilweise verfügbar
-- 🔴 **Rot** - Nicht verfügbar
-- ⚪ **Grau** - Wochenende/Feiertag
+| Bereich | Erklärung |
+|---------|-----------|
+| Kennzahlen | Mitarbeiter, Ø Resturlaub, Krankentage, Anzahl Typen |
+| Krankenstand pro Monat | Balkendiagramm |
+| Abwesenheitstypen | Verteilung nach Art |
+| Urlaubsstand — Alle Mitarbeiter | Tabelle je Person |
+| Export (.xlsx) | Excel-Export |
+| Aktualisieren | Daten für gewähltes Jahr laden |
 
-### Verfügbarkeit prüfen
-
-**Vor Projektplanung:**
-1. Öffnen Sie den Kalender
-2. Wählen Sie Datum
-3. System zeigt:
-   - ✅ Verfügbare Mitarbeiter
-   - ⚠️ Teilweise verfügbar
-   - ❌ Nicht verfügbar
+Mehr: [Auswertung (Web)](auswertung.md).
 
 ---
 
-## 🔔 Benachrichtigungen
+## Teil B: Urlaubstypen in den Einstellungen
 
-### Automatische Benachrichtigungen
+**Für HR und Admins:** Welche Abwesenheitsarten Mitarbeiter wählen können, legen Sie zentral fest. Die Typen aus Teil B erscheinen in Anträgen ([A.4](#a4-abwesenheit-beantragen)), Kalendern ([A.1](#a1-monatsübersicht-der-abwesenheiten), [A.2](#a2-jahreskalender-für-das-team)) und Auswertungen ([A.6](#a6-abwesenheiten-auswerten)).
 
-**Sie erhalten Benachrichtigungen bei:**
-- 📧 **Neuer Antrag** - Mitarbeiter hat Antrag gestellt
-- ✅ **Antrag genehmigt** - Ihr Antrag wurde genehmigt
-- ❌ **Antrag abgelehnt** - Ihr Antrag wurde abgelehnt
-- ⚠️ **Konflikt** - Überschneidung mit anderem Antrag
-- 📅 **Erinnerung** - Antrag wartet auf Genehmigung
+Im gleichen Bereich **Personal & Urlaub** finden Sie außerdem (ohne eigene Screenshots hier):
 
-**Benachrichtigungs-Kanäle:**
-- 🔔 In-App Benachrichtigung
-- 📧 E-Mail
-- 📱 Push (Mobile App)
+- **Urlaubskonto-Einstellungen** — Regeln zum Jahresurlaub
+- **Feiertage** — betriebliche und gesetzliche Feiertage
+- **Arbeitszeitmodelle** — Sollzeiten für die Zeiterfassung
 
 ---
 
-## 📈 Statistiken
+### B.1 Urlaubstypen in den Einstellungen öffnen
 
-### Persönliche Statistiken
+![Einstellungen → Personal & Urlaub → Urlaubstypen](../assets/abwesenheit/urlaubstypen-01-einstellungen.png)
 
-**Mein Urlaub:**
-```
-📊 Urlaubsstatistik 2024
-├─ Genommen: 15 Tage
-├─ Geplant: 8 Tage
-├─ Verfügbar: 7 Tage
-├─ Ø pro Monat: 1,25 Tage
-└─ Meist genommen: Juli (5 Tage)
-```
+**Navigation**
 
-### Team-Statistiken
+1. Seitenleiste → **Einstellungen**
+2. Kategorie **Personal & Urlaub**
+3. **Urlaubstypen** auswählen
 
-**Team-Übersicht:**
-```
-📊 Team-Urlaub 2024
-├─ Gesamt genommen: 120 Tage
-├─ Ø pro Mitarbeiter: 15 Tage
-├─ Verfügbar gesamt: 60 Tage
-└─ Auslastung: 67%
-```
+Hier verwalten Sie alle Abwesenheitsarten des Unternehmens zentral — ein Einstieg für HR und Admins.
 
 ---
 
-## ⚙️ Einstellungen
+### B.2 Urlaubstypen zentral verwalten
 
-### Urlaubsregeln
+![Übersicht Urlaubstypen mit Name, Kategorie und Beschreibung](../assets/abwesenheit/urlaubstypen-02-uebersicht.png)
 
-**Konfigurierbare Regeln:**
-- 📅 **Mindestvorlaufzeit** - Wie früh muss beantragt werden?
-- ⚠️ **Max. gleichzeitige Anträge** - Wie viele gleichzeitig?
-- 📊 **Max. Tage pro Antrag** - Maximale Dauer
-- 🔔 **Automatische Genehmigung** - Bei bestimmten Bedingungen
+Auf der Seite **Urlaubstypen** sehen Sie eine Tabelle:
 
-**Einrichtung:**
-1. **Einstellungen** → **"Urlaub"**
-2. Wählen Sie Regeln
-3. Speichern
+| Spalte | Inhalt |
+|--------|--------|
+| **Name** | Anzeigename mit Farbpunkt (z. B. Urlaub, Krankheit) |
+| **Kategorie** | Systemkategorie (z. B. Bezahlter Urlaub, Krankheit mit Lohnfortzahlung) |
+| **Beschreibung** | Kurzerklärung für HR und Anträge |
 
-### Genehmigungsworkflow
+**Typische Typen** (Beispiel aus der Einrichtung):
 
-**Mehrstufige Genehmigung:**
-1. **Team-Lead** - Erste Genehmigung
-2. **Abteilungsleiter** - Zweite Genehmigung
-3. **Geschäftsführung** - Finale Genehmigung (optional)
+| Farbe | Name | Kategorie |
+|-------|------|-----------|
+| Grün | Urlaub | Bezahlter Urlaub |
+| Rosa | Krankheit | Krankheit mit Lohnfortzahlung |
+| Lavendel | Unbezahlter Urlaub | Unbezahlter Urlaub |
 
-**Konfiguration:**
-1. **Einstellungen** → **"Urlaub"** → **"Workflow"**
-2. Definieren Sie Stufen
-3. Zuweisen Sie Genehmiger
-4. Speichern
+Mit **Bearbeiten** (oben rechts) passen Sie bestehende Typen an oder legen neue an. Optional: **Einrichtungsanleitung** für kontextuelle Hilfe in der App.
 
 ---
 
-## 💡 Tipps & Tricks
+### B.3 Neue Abwesenheitsart erstellen
 
-!!! tip "Tipp 1: Frühzeitig beantragen"
-    Beantragen Sie Urlaub frühzeitig, um Konflikte zu vermeiden.
+![Dialog Abwesenheitsart erstellen](../assets/abwesenheit/urlaubstypen-03-anlegen.png)
 
-!!! tip "Tipp 2: Verfügbarkeit prüfen"
-    Prüfen Sie vor Beantragung die Team-Verfügbarkeit.
+Über **Hinzufügen** / Anlegen im Bearbeitungsmodus öffnet sich **Abwesenheitsart erstellen**.
 
-!!! tip "Tipp 3: Vertretung organisieren"
-    Organisieren Sie rechtzeitig eine Vertretung.
+| Feld | Pflicht | Erklärung |
+|------|---------|-----------|
+| **Name** | Ja | Bezeichnung im Antrag und Kalender (z. B. „Sonderurlaub“) |
+| **Kategorie** | Ja | Steuert Auswertung und Urlaubskonto — z. B. Bezahlter Urlaub, Krankheit mit Lohnfortzahlung, Arbeitsbedingte Abwesenheit |
+| **Beschreibung** | Nein | Interne Erläuterung für HR |
+| **Farbe** | Ja | Farbpunkt in Kalendern und Listen |
+| **Gesamt-Tage Quelle** | Ja | z. B. **Kein Limit** oder Anbindung ans Urlaubskonto (Tooltip im Formular) |
+| **Übertragung vom Vorjahr erlauben** | Optional | Checkbox für Resturlaub-Übertrag bei diesem Typ |
 
-!!! tip "Tipp 4: Urlaubskonto überwachen"
-    Überprüfen Sie regelmäßig Ihr Urlaubskonto, um Verfall zu vermeiden.
+**Speichern:** **Erstellen** — der Typ steht sofort in [A.4](#a4-abwesenheit-beantragen) zur Auswahl.
 
----
+**Verfügbare Kategorien** (Auswahl im Formular):
 
-## ❓ Häufige Fragen
+| Kategorie | Typische Nutzung |
+|-----------|------------------|
+| Bezahlter Urlaub | Jahresurlaub |
+| Unbezahlter Urlaub | Unbezahlte Freistellung |
+| Krankheit mit / ohne Lohnfortzahlung | Krankmeldungen |
+| Stundenabbau | Überstunden abbauen |
+| Arbeitsbedingte Abwesenheit | Homeoffice, Schulung, Dienstreise |
+| Feiertag, Elternzeit, Mutterschutz | Spezialfälle |
 
-### Kann ich einen Antrag nachträglich ändern?
-
-Ja, solange er noch nicht genehmigt wurde. Nach Genehmigung müssen Sie einen neuen Antrag stellen.
-
-### Was passiert bei Überschneidungen?
-
-Das System warnt Sie bei Überschneidungen. Sie können trotzdem beantragen, aber der Genehmiger wird informiert.
-
-### Kann ich Urlaub stornieren?
-
-Ja, öffnen Sie den genehmigten Antrag → **"Stornieren"** → Grund angeben.
-
-### Wie funktioniert die automatische Genehmigung?
-
-Bei bestimmten Bedingungen (z.B. < 3 Tage, keine Konflikte) kann Urlaub automatisch genehmigt werden.
+!!! warning "Typ bereits in Verwendung?"
+    Beim Löschen oder starken Ändern prüft Planvo, ob der Typ schon in Anträgen vorkommt. Nutzen Sie dann eher **Bearbeiten** statt Löschen.
 
 ---
 
-## 🔗 Verwandte Themen
+## Auch woanders in Planvo
 
-- [Zeiterfassung](zeiterfassung.md)
-- [Schichtplanung](schichten.md)
-- [Service-Termine](service-termine.md)
-
----
-
-[:octicons-arrow-right-24: Weiter zu Plantafel](plantafel.md){ .md-button .md-button--primary }
-[:octicons-arrow-right-24: Zurück zur Übersicht](../web/index.md){ .md-button }
+| Ort | Zweck |
+|-----|--------|
+| **Mitarbeiter** → Profil → **Abwesenheit** | Urlaubskonto und Anträge einer Person |
+| **Mobile App** | Abwesenheitsantrag unterwegs |
+| **Dashboard** | Aktuelle Abwesenheiten (je nach Rolle) |
 
 ---
 
-*Letzte Aktualisierung: November 2024 | Version 1.6.6*
+## Häufige Fragen
 
+### Kann ich einen ausstehenden Antrag ändern?
+
+Nein — **stornieren** und **neu anlegen**.
+
+### Was passiert nach der Freigabe?
+
+Eintrag in **Übersicht** / **Jahreskalender**; **Urlaubskonto** wird aktualisiert.
+
+### Warum fehlt die Team-Monatsübersicht?
+
+Dafür brauchen Sie Team-Lese-Rechte. Sonst ist **Übersicht** Ihr persönlicher Jahreskalender.
+
+### Wer darf Urlaubstypen anlegen?
+
+In der Regel Admins und HR mit Zugriff auf **Einstellungen** → **Urlaubstypen**.
+
+### Welchen Typ soll ich als Mitarbeiter wählen?
+
+Die Liste kommt aus [Teil B](#teil-b-urlaubstypen-in-den-einstellungen). Bei Unklarheit: Personalabteilung.
+
+---
+
+## Hilfe & Support
+
+--8<-- "includes/kontakt-ssot.md"
+
+---
+
+## Verwandte Themen
+
+- [Auswertung](auswertung.md) — Abwesenheitsauswertung (A.6)
+- [Schichtpläne](schichten.md) — Planung neben Abwesenheiten
+- [Mobile App](../mobile/index.md) — Anträge unterwegs
+
+---
+
+*Screenshots: Abwesenheitsverwaltung (`1`–`5`, `antrag`), Urlaubstypen (`urlaubstypen-01`–`03`).*
