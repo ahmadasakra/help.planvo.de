@@ -16,7 +16,20 @@ description: Offizielle Planvo Hilfe für Handwerk & KMU – Zeiterfassung, Eins
       <span class="planvo-hero__chip">iOS &amp; Android</span>
       <span class="planvo-hero__chip">DSGVO · Hosting DE</span>
     </div>
+    <div class="planvo-hero__actions">
+      <a class="planvo-hero__btn planvo-hero__btn--primary" href="erste-schritte/">Erste Schritte</a>
+      <a class="planvo-hero__btn planvo-hero__btn--ghost" href="web/zeiterfassung/">Zeiterfassung</a>
+      <a class="planvo-hero__btn planvo-hero__btn--ghost" href="hilfe/faq/">FAQ</a>
+    </div>
   </div>
+</div>
+
+<div class="planvo-quick-links" markdown="0">
+  <a href="web/zeiterfassung/">Zeiterfassung</a>
+  <a href="web/urlaub/">Abwesenheiten</a>
+  <a href="web/rechnungen/">Rechnungen</a>
+  <a href="mobile/installation/">Mobile App</a>
+  <a href="hilfe/kontakt/">Support</a>
 </div>
 
 ## Ihr Einstieg

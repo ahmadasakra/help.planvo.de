@@ -606,3 +606,201 @@ html {
 [data-md-color-scheme="slate"] .planvo-plan-badge--premium {
   color: var(--planvo-lavender-light);
 }
+
+/* =============================================================================
+   Premium Help-Center Layer (Intercom / Plancraft-Niveau)
+   ============================================================================= */
+
+/* Announcement bar */
+.md-banner {
+  background: linear-gradient(90deg, #4a3a9d 0%, #6b5ecd 50%, #06b6d4 100%);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.82rem;
+}
+
+.md-banner__inner {
+  max-width: 61rem;
+}
+
+.md-banner a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Typografie & Lesbarkeit */
+.md-typeset {
+  font-size: 0.94rem;
+  line-height: 1.72;
+}
+
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol {
+  max-width: 46rem;
+}
+
+/* Hero CTAs */
+.planvo-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.65rem;
+}
+
+.planvo-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.62rem 1.15rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.planvo-hero__btn--primary {
+  color: #4a3a9d;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.planvo-hero__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  color: #4a3a9d;
+}
+
+.planvo-hero__btn--ghost {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.planvo-hero__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Startseite: breiterer Content, kein TOC */
+.planvo-home .md-content__inner {
+  max-width: 52rem;
+}
+
+.planvo-home .md-sidebar--secondary {
+  display: none;
+}
+
+/* Suche — Help-Center-Stil */
+.md-header__inner {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+.md-search__input {
+  font-size: 0.88rem;
+  background-color: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.md-search__icon {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Tabs — cleaner */
+.md-tabs__link {
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  opacity: 0.88;
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+}
+
+/* Sidebar — softer */
+.md-sidebar__inner {
+  padding-top: 0.75rem;
+}
+
+.md-nav__title {
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-nav__item .md-nav__link {
+  border-radius: 0.5rem;
+  margin: 0.05rem 0.35rem;
+  padding: 0.35rem 0.65rem;
+  transition: background 0.15s ease;
+}
+
+.md-nav__item .md-nav__link:hover {
+  background: rgba(var(--planvo-primary-rgb), 0.08);
+}
+
+/* Footer navigation (prev/next) */
+.md-footer-nav {
+  border-top: 1px solid rgba(var(--planvo-primary-rgb), 0.12);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+/* Revision date */
+.md-source-file {
+  margin-top: 2rem;
+  opacity: 0.75;
+  font-size: 0.78rem;
+}
+
+/* GLightbox Bilder */
+.glightbox-container img {
+  border-radius: var(--planvo-radius-lg);
+}
+
+/* Quick links row on home */
+.planvo-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: -0.5rem 0 2rem;
+}
+
+.planvo-quick-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--planvo-primary-dark);
+  background: rgba(var(--planvo-primary-rgb), 0.08);
+  border: 1px solid rgba(var(--planvo-primary-rgb), 0.14);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+[data-md-color-scheme="slate"] .planvo-quick-links a {
+  color: var(--planvo-lavender-light);
+  background: rgba(168, 160, 220, 0.1);
+  border-color: rgba(168, 160, 220, 0.18);
+}
+
+.planvo-quick-links a:hover {
+  background: rgba(var(--planvo-primary-rgb), 0.14);
+  border-color: rgba(var(--planvo-secondary-rgb), 0.35);
+}

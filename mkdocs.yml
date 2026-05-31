@@ -1,6 +1,6 @@
 site_name: Planvo Hilfe & Dokumentation
 site_url: https://help.planvo.de
-site_description: Offizielle Hilfe-Dokumentation für Planvo - Ihre digitale Business-Lösung
+site_description: Offizielle Hilfe für Planvo – Handwerk & KMU. Zeiterfassung, Einsatzplanung, Abwesenheiten, Projekte und Rechnungswesen.
 site_author: Planvo GmbH
 
 # Repository
@@ -9,63 +9,91 @@ repo_name: help.planvo.de
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 2026 Planvo GmbH - Alle Rechte vorbehalten
+copyright: Copyright &copy; 2026 Planvo GmbH — <a href="https://www.planvo.de">planvo.de</a>
 
 # Theme Configuration
 theme:
   name: material
   language: de
-  
+
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+
   # Planvo Markenfarben (CSS: docs/assets/extra.css → primary/accent "custom")
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: custom
       accent: custom
       toggle:
         icon: material/brightness-7
         name: Zu dunklem Modus wechseln
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: custom
       accent: custom
       toggle:
         icon: material/brightness-4
         name: Zu hellem Modus wechseln
-  
-  # Features - GitHub-Style Navigation
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
   features:
-    - navigation.instant        # Schnelles Laden ohne Reload
-    - navigation.tracking       # URL aktualisiert sich beim Scrollen
-    - navigation.tabs           # Hauptnavigation als Tabs
-    - navigation.tabs.sticky    # Tabs bleiben beim Scrollen sichtbar
-    - navigation.sections       # Sections in der Sidebar
-    - navigation.expand         # Sidebar automatisch expandiert
-    - navigation.indexes        # Index-Seiten für Sections
-    - navigation.path           # Breadcrumb-Navigation (wie GitHub)
-    - navigation.top            # "Zurück nach oben" Button
-    - search.suggest            # Suchvorschläge
-    - search.highlight          # Suchergebnisse hervorheben
-    - search.share              # Suche teilen
-    - toc.follow                # TOC folgt beim Scrollen (wie "In diesem Artikel")
-    - content.code.copy         # Code kopieren Button
-    - content.code.annotate     # Code-Annotationen
-    - content.tabs.link         # Tabs verlinken
-  
-  # Icons
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
   icon:
     repo: fontawesome/brands/github
-    logo: material/help-circle
-  
-  # Custom CSS
+    edit: material/pencil
+    view: material/eye
+
   extra_css:
     - assets/extra.css
+
+  extra_javascript:
+    - javascript/extra.js
 
 # Plugins
 plugins:
   - search:
-      lang: 
+      lang:
         - de
         - en
       separator: '[\s\-\.]+'
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      locale: de
+      fallback_to_build_date: true
   - swagger-ui-tag
 
 # Markdown Extensions
@@ -96,6 +124,12 @@ markdown_extensions:
 
 # Extra
 extra:
+  generator: false
+
+  announce:
+    text: "Neu — Hilfe für Handwerk & KMU mit Tarif-Hinweisen und aktualisierten Anleitungen."
+    link: https://help.planvo.de/erste-schritte/
+
   social:
     - icon: fontawesome/solid/globe
       link: https://www.planvo.de
@@ -103,11 +137,14 @@ extra:
     - icon: fontawesome/solid/envelope
       link: mailto:support@planvo.de
       name: Support E-Mail
-  
-  # Analytics (optional - später hinzufügen)
-  # analytics:
-  #   provider: google
-  #   property: G-XXXXXXXXXX
+    - icon: fontawesome/solid/circle-play
+      link: https://demo.planvo.de
+      name: Demo
+
+  metadata:
+    og:type: website
+    og:site_name: Planvo Hilfe
+    twitter:card: summary_large_image
 
 # Navigation Structure - MVP Phase 1
 nav:

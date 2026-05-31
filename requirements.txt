@@ -5,13 +5,8 @@ mkdocs-material>=9.5.0
 # Plugins
 mkdocs-minify-plugin>=0.7.0
 mkdocs-swagger-ui-tag>=0.6.0
+mkdocs-glightbox>=0.4.0
+mkdocs-git-revision-date-localized-plugin>=1.2.0
 
 # Markdown Extensions (bereits in mkdocs-material enthalten, aber für Klarheit)
 pymdown-extensions>=10.0
-
-
-
-
-
-
-

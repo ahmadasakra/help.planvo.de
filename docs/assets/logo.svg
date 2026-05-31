@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32" fill="none" role="img" aria-label="Planvo">
+  <rect x="0" y="2" width="28" height="28" rx="8" fill="white" fill-opacity="0.95"/>
+  <path d="M8 22V10h5.2c3.1 0 5 1.7 5 4.4 0 2.1-1.1 3.5-2.9 4l3.4 3.6H15l-2.8-3.2H11v3.2H8zm3-5.6h2c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5H11v3z" fill="#6B5ECD"/>
+  <text x="36" y="22" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="white">Planvo</text>
+  <text x="36" y="30" font-family="Inter, system-ui, sans-serif" font-size="8" font-weight="500" fill="rgba(255,255,255,0.75)" letter-spacing="0.08em">HILFE</text>
+</svg>
