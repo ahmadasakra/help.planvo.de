@@ -686,63 +686,77 @@ html {
   transform: translateY(-1px);
 }
 
-/* Startseite: Portal-Layout — Hell (Standard) + Grid-Fix */
-body:has(.planvo-portal) .md-main__inner.md-grid,
-.planvo-home .md-main__inner.md-grid {
-  grid-template-columns: minmax(0, 1fr) !important;
-}
+/* =====================================================================
+   Startseite: Portal-Layout — kein Grid, volle Breite, kein TOC
+   Beide Selektoren: body.planvo-home (gesetzt per JS) +
+                     :has(.planvo-portal) (CSS-only Fallback)
+   ===================================================================== */
 
-body:has(.planvo-portal) .md-sidebar,
-.planvo-home .md-sidebar {
-  display: none !important;
-}
-
-body:has(.planvo-portal) .md-content,
-.planvo-home .md-content {
-  margin: 0;
-  max-width: none;
-  grid-column: 1;
-}
-
-body:has(.planvo-portal) .md-tabs,
-.planvo-home .md-tabs {
-  display: none;
-}
-
-body:has(.planvo-portal) .md-banner,
-.planvo-home .md-banner {
-  display: none;
-}
-
+/* 1. Grid komplett deaktivieren — zuverlässiger als grid-template-columns */
 body:has(.planvo-portal) .md-main__inner,
-.planvo-home .md-main__inner {
+body.planvo-home .md-main__inner,
+html.planvo-home-early .md-main__inner {
+  display: block !important;
   margin: 0;
+  padding: 0;
   background: var(--planvo-mist);
 }
 
+[data-md-color-scheme="slate"] body:has(.planvo-portal) .md-main__inner,
+[data-md-color-scheme="slate"] body.planvo-home .md-main__inner {
+  background: #0f1117;
+}
+
+/* 2. Sidebars + TOC ausblenden */
+body:has(.planvo-portal) .md-sidebar,
+body.planvo-home .md-sidebar,
+html.planvo-home-early .md-sidebar {
+  display: none !important;
+}
+
+/* 3. Content volle Breite */
+body:has(.planvo-portal) .md-content,
+body.planvo-home .md-content,
+html.planvo-home-early .md-content {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
 body:has(.planvo-portal) .md-content__inner,
-.planvo-home .md-content__inner {
+body.planvo-home .md-content__inner {
   max-width: none;
   margin: 0;
   padding: 0;
 }
 
-body:has(.planvo-portal) .md-content__inner > h1:first-child,
-.planvo-home .md-typeset h1:first-child {
+/* 4. Tabs, Banner, Footer, Edit-Buttons ausblenden */
+body:has(.planvo-portal) .md-tabs,
+body.planvo-home .md-tabs {
+  display: none;
+}
+
+body:has(.planvo-portal) .md-banner,
+body.planvo-home .md-banner {
   display: none;
 }
 
 body:has(.planvo-portal) .md-footer,
-.planvo-home .md-footer {
+body.planvo-home .md-footer {
   display: none;
 }
 
 body:has(.planvo-portal) .md-content__button,
-.planvo-home .md-content__button {
-  display: none;
+body.planvo-home .md-content__button {
+  display: none !important;
 }
 
-/* Header auf Portal: Planvo-Gradient beibehalten (nicht überschreiben) */
+/* 5. Automatisch generierte H1 ausblenden */
+body:has(.planvo-portal) .md-content__inner > h1:first-child,
+body.planvo-home .md-typeset h1:first-child {
+  display: none;
+}
 
 /* Portal shell — Light */
 .planvo-portal {
