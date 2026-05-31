@@ -82,8 +82,67 @@
   backdrop-filter: blur(8px);
 }
 
+/* Header: Text weiß — KEIN opacity override, Material braucht den
+   Opacity-Übergang um zwischen Site-Name und Seiten-Titel zu wechseln */
+.md-header__title {
+  color: #fff !important;
+}
+
+.md-header__topic .md-ellipsis {
+  color: #fff !important;
+}
+
+/* Alle Icon-Buttons im Header (Dark Mode Toggle, Menu, Suche, etc.) */
+.md-header__button {
+  color: rgba(255, 255, 255, 0.92) !important;
+  opacity: 1 !important;
+}
+
+.md-header__button:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Dark Mode Toggle Icon explizit */
+.md-header__button[title*="Modus"],
+.md-header__button[title*="mode"],
+.md-header__button.md-icon {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* Navigation Tabs Zeile */
 .md-tabs {
   background-color: rgba(74, 58, 157, 0.92);
+}
+
+/* Tab-Links: klarer weißer Text */
+.md-tabs__link {
+  color: rgba(255, 255, 255, 0.82) !important;
+  opacity: 1 !important;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Dark Mode: Header bleibt gleich (lila), Icons passen */
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(
+    135deg,
+    #4a3a9d 0%,
+    #5a4fcf 45%,
+    #6b5ecd 100%
+  );
+}
+
+[data-md-color-scheme="slate"] .md-header__button {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: rgba(58, 46, 140, 0.95);
 }
 
 .md-search__form {
@@ -1029,12 +1088,20 @@ body.planvo-home .md-typeset h1:first-child {
   }
 }
 
+/* Header-Titel: darf schrumpfen damit CTAs Platz haben */
+.md-header__title {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
 /* Header CTAs (Anmelden / Kostenlos testen) */
 .planvo-header-cta {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  margin-left: auto;
+  flex-shrink: 0;       /* CTAs schrumpfen nie */
+  margin-left: 0.75rem; /* Abstand zum Titel */
   margin-right: 0.5rem;
 }
 
