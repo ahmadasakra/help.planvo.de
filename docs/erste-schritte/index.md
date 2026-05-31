@@ -1,33 +1,45 @@
 # Erste Schritte mit Planvo
 
-Willkommen bei Planvo! Diese Anleitung hilft Ihnen, schnell und einfach mit Planvo zu starten.
+Willkommen bei Planvo! Diese Anleitung hilft Ihnen, schnell und einfach mit Planvo zu starten — für Handwerksbetriebe, Dienstleister und KMU.
 
 ---
 
 ## 📋 Was Sie in diesem Bereich lernen
 
-In diesem Abschnitt erfahren Sie:
-
-- ✅ Wie Sie sich bei Planvo anmelden
+- ✅ Wie Sie sich bei Planvo anmelden (Web, App, ggf. SSO)
 - ✅ Wie das Dashboard aufgebaut ist
-- ✅ Welche Bereiche es gibt und was Sie dort finden
+- ✅ Welche Bereiche es in der Seitenleiste gibt
 - ✅ Wie Sie Ihr Profil einrichten
 
 ---
 
-## 🎯 Übersicht
+## 🎯 Navigation in der Web-App
 
-Planvo ist in verschiedene Bereiche unterteilt, die Sie über das Hauptmenü erreichen:
+Planvo gliedert Funktionen in Bereiche der **linken Seitenleiste**. Die sichtbaren Menüpunkte hängen von **Rolle, Berechtigung und Tarif** ab.
 
-| Bereich | Beschreibung | Für wen? |
-|---------|--------------|----------|
-| 🏠 **Dashboard** | Ihre persönliche Übersicht | Alle |
-| ⏰ **Zeiterfassung** | Arbeitszeiten stempeln | Alle |
-| 📊 **Projekte** | Projekte verwalten | Projektleiter, Mitarbeiter |
-| 📅 **Schichten** | Schichtpläne ansehen | Alle |
-| 🏖️ **Urlaub** | Urlaubsanträge | Alle |
-| 💰 **Rechnungen** | Rechnungswesen | Buchhaltung, Geschäftsführung |
-| 👥 **Team** | Mitarbeiterverwaltung | Geschäftsführung, Personalabteilung |
+| Menüpunkt | Route | Beschreibung | Tarif (min.) |
+|-----------|-------|--------------|--------------|
+| **Dashboard** | `/dashboard` | Persönliche Übersicht | Alle |
+| **Auswertung** | `/analyse` | Kennzahlen, Diagramme, Reports | Business |
+| **Projekte** | `/projects` | Projekte verwalten | Business |
+| **Plantafel** | `/plantafel` | Visuelle Einsatzplanung | Premium |
+| **Zeiterfassung** | `/project-time` | Kalender, Zeiteinträge, Stundenkonto | Business |
+| **Aufgaben** | `/taskmanager` | Tasks im Team | Pro |
+| **Mitarbeiter** | `/employee` | Stammdaten, Teams, HR | Business |
+| **Schichtpläne** | `/shiftplans` | Schichtplanung | Pro |
+| **Abwesenheiten** | `/leave-management` | Urlaub, Krankheit, Freigaben | Business |
+| **Kunden** | `/clients` | Kunden und Kontakte | Business |
+| **Rechnungen** | `/documents/invoices` | Ausgangsrechnungen, Mahnungen | Pro |
+| **Angebote** | `/documents/quotes` | Angebote und Kalkulation | Pro |
+| **Auftragsbestätigungen** | `/documents/order-confirmations` | ABs | Pro |
+| **Lieferscheine** | `/documents/delivery-notes` | Liefernachweise | Pro |
+| **Eingangsrechnungen** | `/incoming-invoices` | Eingehende Belege | Pro |
+| **DMS** | `/dms` | Dokumentenmanagement | Premium |
+| **Katalog** | `/katalog` | Material / Stammartikel | Pro |
+| **Einstellungen** | `/settings` | Mandant, Rollen, App-Einstellungen | Admin |
+
+!!! tip "Menüpunkt fehlt?"
+    Ihr Tarif oder Ihre Rolle schaltet Module frei. Details: [planvo.de/preise](https://www.planvo.de/preise) oder Administrator kontaktieren.
 
 ---
 
@@ -35,9 +47,9 @@ Planvo ist in verschiedene Bereiche unterteilt, die Sie über das Hauptmenü err
 
 ### Schritt 1: Anmelden
 
-1. Öffnen Sie [ihre-firma.planvo.de](https://demo.planvo.de)
-2. Geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein
-3. Klicken Sie auf **"Anmelden"**
+1. Öffnen Sie `https://ihre-firma.planvo.de` (Subdomain von Ihrem Administrator)
+2. Melden Sie sich mit **E-Mail/Passwort** oder **SSO (Keycloak)** an — je nach Firma
+3. Bei der App: Subdomain, E-Mail und Passwort eingeben
 
 [:octicons-arrow-right-24: Detaillierte Anmeldeanleitung](anmeldung.md)
 
@@ -45,13 +57,12 @@ Planvo ist in verschiedene Bereiche unterteilt, die Sie über das Hauptmenü err
 
 ### Schritt 2: Dashboard kennenlernen
 
-Nach der Anmeldung sehen Sie Ihr persönliches Dashboard mit:
+Nach der Anmeldung sehen Sie das **Dashboard** mit u. a.:
 
-- 📊 Aktuellen Projekten
-- ⏰ Ihrer laufenden Zeiterfassung
-- 📅 Anstehenden Schichten
-- 📝 Offenen Aufgaben
-- 📢 Wichtigen Benachrichtigungen
+- Zeiterfassung (Widget, je nach Tarif)
+- Projekte, Aufgaben, Schichten
+- Geburtstage im Team (HR)
+- Kennzahlen und Benachrichtigungen
 
 [:octicons-arrow-right-24: Dashboard-Übersicht](dashboard.md)
 
@@ -61,89 +72,41 @@ Nach der Anmeldung sehen Sie Ihr persönliches Dashboard mit:
 
 === "Zeit erfassen"
 
-    **Arbeitsbeginn stempeln:**
+    1. Seitenleiste → **Projekte & Planung** → **Zeiterfassung**
+    2. **+ Zeit erfassen** oder Eintrag im Kalender anlegen
+    3. Projekt, Datum, Start und Ende wählen
     
-    1. Klicken Sie auf das ⏰ **Zeiterfassung-Widget**
-    2. Drücken Sie **"Arbeit starten"**
-    3. ✅ Sie sind jetzt eingestempelt!
-    
-    [:octicons-arrow-right-24: Mehr zur Zeiterfassung](../web/zeiterfassung.md)
+    [:octicons-arrow-right-24: Zeiterfassung](../web/zeiterfassung.md)
 
-=== "Urlaub beantragen"
+=== "Abwesenheit beantragen"
 
-    **Urlaubsantrag stellen:**
+    1. Seitenleiste → **Mitarbeiter & HR** → **Abwesenheiten**
+    2. **Neuer Antrag** wählen
+    3. Zeitraum und Art der Abwesenheit angeben
     
-    1. Gehen Sie zu **Urlaub & Abwesenheit**
-    2. Klicken Sie auf **"Neuer Antrag"**
-    3. Wählen Sie Zeitraum und Grund
-    4. Klicken Sie auf **"Antrag stellen"**
-    
-    [:octicons-arrow-right-24: Mehr zu Urlaubsanträgen](../web/zeiterfassung.md)
+    [:octicons-arrow-right-24: Abwesenheiten](../web/urlaub.md)
 
 === "Projekt ansehen"
 
-    **Projektdetails öffnen:**
+    1. Seitenleiste → **Projekte & Planung** → **Projekte**
+    2. Projekt in der Liste öffnen
     
-    1. Gehen Sie zu **Projekte**
-    2. Klicken Sie auf ein Projekt
-    3. Sehen Sie Details, Aufgaben und Team
-    
-    [:octicons-arrow-right-24: Mehr zu Projekten](../web/projekte.md)
+    [:octicons-arrow-right-24: Projekte](../web/projekte.md)
 
 ---
 
 ## 📱 Mobile App installieren
 
-Nutzen Sie Planvo auch unterwegs!
-
-**iOS (iPhone/iPad):**
-1. Öffnen Sie den **App Store**
-2. Suchen Sie nach **"Planvo"**
-3. Tippen Sie auf **"Laden"**
-
-**Android:**
-1. Öffnen Sie **Google Play Store**
-2. Suchen Sie nach **"Planvo"**
-3. Tippen Sie auf **"Installieren"**
-
 [:octicons-arrow-right-24: Mobile App Guide](../mobile/installation.md)
-
----
-
-## 💡 Tipps für den Start
-
-!!! tip "Profil vervollständigen"
-    Füllen Sie Ihr Profil vollständig aus, um alle Funktionen nutzen zu können:
-    
-    - Profilbild hochladen
-    - Telefonnummer hinzufügen
-    - Benachrichtigungseinstellungen anpassen
-
-!!! tip "Benachrichtigungen aktivieren"
-    Aktivieren Sie Benachrichtigungen, um über wichtige Ereignisse informiert zu werden:
-    
-    - Neue Aufgaben
-    - Genehmigungen
-    - Schichtänderungen
-    - Team-Nachrichten
-
-!!! tip "Mobile App nutzen"
-    Installieren Sie die Mobile App für:
-    
-    - Schnelles Stempeln unterwegs
-    - Push-Benachrichtigungen
-    - Offline-Funktionalität
 
 ---
 
 ## 🎓 Nächste Schritte
 
-Nachdem Sie die Grundlagen kennen, können Sie tiefer einsteigen:
-
-1. [Zeiterfassung nutzen](../web/zeiterfassung.md)
-2. [Projekte verwalten](../web/projekte.md)
-3. [Schichten ansehen](../web/schichten.md)
-4. [Mobile App optimal nutzen](../mobile/index.md)
+1. [Zeiterfassung](../web/zeiterfassung.md)
+2. [Abwesenheiten](../web/urlaub.md)
+3. [Schichtpläne](../web/schichten.md)
+4. [Mobile App](../mobile/index.md)
 
 ---
 
@@ -151,31 +114,28 @@ Nachdem Sie die Grundlagen kennen, können Sie tiefer einsteigen:
 
 ### Ich kann mich nicht anmelden. Was tun?
 
-1. Prüfen Sie Ihre E-Mail-Adresse und Ihr Passwort
-2. Versuchen Sie "Passwort vergessen?"
-3. Kontaktieren Sie Ihren Administrator
-4. Wenden Sie sich an unseren Support
-
-[:octicons-arrow-right-24: Login-Probleme beheben](anmeldung.md)
+1. Subdomain und E-Mail prüfen
+2. Bei Legacy-Login: „Passwort vergessen?“
+3. Bei SSO: Firmen-Login (Microsoft/Google) nutzen
+4. Administrator oder [Support](../hilfe/kontakt.md) kontaktieren
 
 ### Wo finde ich meine Stammdaten?
 
-Klicken Sie oben rechts auf Ihr **Profilbild** → **Einstellungen** → **Mein Profil**
+Profilbild oben rechts → **Profil** / **Einstellungen**
 
 ### Kann ich Planvo auf mehreren Geräten nutzen?
 
-Ja! Planvo funktioniert auf Desktop, Tablet und Smartphone. Ihre Daten werden automatisch synchronisiert.
+Ja — Desktop, Tablet und Smartphone synchronisieren Ihre Daten.
 
 ---
 
-## 📞 Weitere Hilfe benötigt?
+## 📞 Weitere Hilfe
 
-- 📧 E-Mail: [support@planvo.de](mailto:support@planvo.de)
-- 💬 Live-Chat auf [www.planvo.de](https://www.planvo.de)
-- 📞 Telefon: +49 (0) XXX XXXXXXX (Mo-Fr 9:00-17:00)
+--8<-- "includes/kontakt-ssot.md"
 
 ---
 
 [:octicons-arrow-right-24: Weiter zu Anmeldung](anmeldung.md){ .md-button .md-button--primary }
 [:octicons-arrow-right-24: Weiter zu Dashboard](dashboard.md){ .md-button }
 
+*Letzte Aktualisierung: Mai 2026*

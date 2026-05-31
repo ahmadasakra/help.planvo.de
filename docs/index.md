@@ -1,19 +1,20 @@
 ---
 title: Startseite
-description: Offizielle Planvo Hilfe – Schnellstart, Web, Mobile und Support
+description: Offizielle Planvo Hilfe für Handwerk & KMU – Zeiterfassung, Einsatzplanung, Abwesenheiten, Projekte und Rechnungswesen
 ---
 
 <div class="planvo-hero" markdown="0">
   <div class="planvo-hero__inner">
-    <p class="planvo-hero__eyebrow">Offizielle Dokumentation</p>
-    <h1 class="planvo-hero__title">Willkommen bei Planvo</h1>
+    <p class="planvo-hero__eyebrow">Weniger Zettel. Mehr Überblick.</p>
+    <h1 class="planvo-hero__title">Planvo Hilfe für Handwerk &amp; KMU</h1>
     <p class="planvo-hero__lead">
-      Alles, was Sie für den Einstieg brauchen: erste Schritte, Web- und App-Hilfe sowie Support — übersichtlich und immer griffbereit.
+      Anleitungen zu Zeiterfassung, Einsatzplanung, Abwesenheiten, Projekten und Rechnungswesen —
+      abgestimmt auf die Web-App, Mobile App und Ihren Planvo-Tarif.
     </p>
     <div class="planvo-hero__chips">
-      <span class="planvo-hero__chip">Web & Desktop</span>
-      <span class="planvo-hero__chip">iOS & Android</span>
-      <span class="planvo-hero__chip">Immer aktuell</span>
+      <span class="planvo-hero__chip">Web &amp; Desktop</span>
+      <span class="planvo-hero__chip">iOS &amp; Android</span>
+      <span class="planvo-hero__chip">DSGVO · Hosting DE</span>
     </div>
   </div>
 </div>
@@ -26,7 +27,7 @@ description: Offizielle Planvo Hilfe – Schnellstart, Web, Mobile und Support
 
     ---
 
-    In wenigen Minuten mit Planvo vertraut werden — ideal für neue Nutzerinnen und Nutzer.
+    Anmeldung, Dashboard und erste Aktionen — ideal für neue Nutzerinnen und Nutzer.
 
     [:octicons-arrow-right-24: Erste Schritte](erste-schritte/index.md)
 
@@ -34,7 +35,7 @@ description: Offizielle Planvo Hilfe – Schnellstart, Web, Mobile und Support
 
     ---
 
-    Zeiterfassung, Projekte, Schichten und mehr — die komplette Oberfläche am Computer.
+    Zeiterfassung, Projekte, Schichtpläne, Abwesenheiten, Rechnungen und mehr am Computer.
 
     [:octicons-arrow-right-24: Web-Guide](web/index.md)
 
@@ -42,7 +43,7 @@ description: Offizielle Planvo Hilfe – Schnellstart, Web, Mobile und Support
 
     ---
 
-    Unterwegs arbeiten: Installation, Offline-Modus und mobile Zeiterfassung.
+    Stempeln unterwegs, Schichtplan, Abwesenheitsanträge und Offline-Modus.
 
     [:octicons-arrow-right-24: Mobile-Guide](mobile/index.md)
 
@@ -60,87 +61,154 @@ description: Offizielle Planvo Hilfe – Schnellstart, Web, Mobile und Support
 
 ## Was ist Planvo?
 
-**Planvo** bündelt Ihr Tagesgeschäft an einem Ort: Zeiten, Projekte, Team, Finanzen und Dokumente — durchdacht vernetzt, damit Sie weniger suchen und mehr erledigen.
+**Planvo** ist die Betriebssoftware für kleine und mittlere Unternehmen — Handwerksbetriebe, Dienstleister und Teams mit wechselnden Einsätzen. Sie bündeln **Einsatzplanung, Zeiterfassung, Abwesenheiten, Mitarbeiterverwaltung, Projekte und Rechnungswesen** in einer Lösung — DSGVO-konform mit Hosting in Deutschland.
 
-### Funktionen im Überblick
+!!! info "Tarif & Module"
+    Nicht jedes Modul ist in jedem Tarif enthalten. Die Badges **Business**, **Pro** und **Premium** zeigen den Mindesttarif. Details: [planvo.de/preise](https://www.planvo.de/preise).
+
+### Module im Überblick
 
 <div class="grid" markdown>
 
--   :material-clock-time-four:{ .lg } **Zeiterfassung**
+-   :material-clock-time-four:{ .lg } **Zeiterfassung** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
 
     ---
 
-    Projektzeiten im Kalender, Listen, Export und Auswertungen.
+    Projektzeiten im Kalender, Zeiteinträge, Stundenkonto, Export und Auswertung.
 
--   :material-chart-timeline-variant:{ .lg } **Projektmanagement**
+    [:octicons-arrow-right-24: Anleitung](web/zeiterfassung.md)
 
-    ---
-
-    Projekte, Aufgaben und die Plantafel für den Überblick im Team.
-
--   :material-calendar-clock:{ .lg } **Schichtplanung**
+-   :material-beach:{ .lg } **Abwesenheiten** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
 
     ---
 
-    Planung, Bewerbungen und Benachrichtigungen rund um Schichten.
+    Urlaub, Krankheit und Freigaben — im Menü **Abwesenheiten**.
 
--   :material-currency-eur:{ .lg } **Rechnungen & Angebote**
+    [:octicons-arrow-right-24: Anleitung](web/urlaub.md)
 
-    ---
-
-    Von Angebot bis Rechnung — professionelle Dokumente schnell erstellt.
-
--   :material-account-group:{ .lg } **Team & HR**
+-   :material-calendar-clock:{ .lg } **Schichtpläne** <span class="planvo-plan-badge planvo-plan-badge--pro">Pro</span>
 
     ---
 
-    Urlaub, Verfügbarkeiten und Zusammenarbeit zentral.
+    Planung, Bewerbungen und Benachrichtigungen — im Menü **Schichtpläne**.
 
--   :material-file-document:{ .lg } **Dokumente**
+    [:octicons-arrow-right-24: Anleitung](web/schichten.md)
+
+-   :material-chart-timeline-variant:{ .lg } **Projekte & Aufgaben** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
 
     ---
 
-    Projektbezogene Dateien sicher ablegen und wiederfinden.
+    Projekte verwalten, Aufgaben im Team, Fortschritt nachverfolgen.
+
+    [:octicons-arrow-right-24: Projekte](web/projekte.md) · [:octicons-arrow-right-24: Aufgaben](web/aufgaben.md)
+
+-   :material-view-week:{ .lg } **Plantafel** <span class="planvo-plan-badge planvo-plan-badge--premium">Premium</span>
+
+    ---
+
+    Visuelle Einsatz- und Ressourcenplanung für Baustellen und Teams.
+
+    [:octicons-arrow-right-24: Anleitung](web/plantafel.md)
+
+-   :material-currency-eur:{ .lg } **Rechnungen & E-Rechnung** <span class="planvo-plan-badge planvo-plan-badge--pro">Pro</span>
+
+    ---
+
+    Angebote, Auftragsbestätigungen, Rechnungen — inkl. XRechnung & ZUGFeRD.
+
+    [:octicons-arrow-right-24: Anleitung](web/rechnungen.md)
+
+-   :material-folder:{ .lg } **DMS** <span class="planvo-plan-badge planvo-plan-badge--premium">Premium</span>
+
+    ---
+
+    Dokumente zentral ablegen, versionieren und wiederfinden.
+
+    [:octicons-arrow-right-24: Anleitung](web/dokumente.md)
+
+-   :material-chart-bar:{ .lg } **Auswertung** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
+
+    ---
+
+    Kennzahlen, Diagramme und Reports — Menüpunkt **Auswertung** (`/analyse`).
+
+    [:octicons-arrow-right-24: Anleitung](web/auswertung.md)
 
 </div>
+
+---
+
+## Branchen
+
+Planvo passt sich an Ihr Branchenprofil an — verfügbare Module hängen von **Branche × Tarif** ab.
+
+| Branche | Schwerpunkt in Planvo |
+|---------|------------------------|
+| **Handwerk & Bau** | Plantafel, Materialkatalog, Baudokumentation, E-Rechnung |
+| **Sicherheitsdienst** | Schichtpläne, Zeiterfassung mit GPS, Einsatzplanung |
+| **IT / Agentur** | Projekte, Zeiten, Kunden, Rechnungswesen |
+| **Gastronomie & Reinigung** | Schichten, Personal, Zeiterfassung |
+| **Sonstiges** | Flexible Modul-Kombination je nach Tarif |
+
+[:octicons-arrow-right-24: Branchen auf planvo.de](https://www.planvo.de/branchen){ .md-button }
 
 ---
 
 ## Schnellstart nach Rolle
 
 !!! tip "Neu bei Planvo?"
-    Starten Sie mit dem [Guide „Erste Schritte“](erste-schritte/index.md) — dort finden Sie Anmeldung, Dashboard und die wichtigsten Abläufe.
+    Starten Sie mit [Erste Schritte](erste-schritte/index.md) — Anmeldung, Dashboard und die wichtigsten Menüpunkte.
 
 === "Mitarbeiter"
 
     **Typische Aufgaben**
 
-    - Arbeits- und Projektzeiten erfassen  
-    - Schichten einsehen und bewerben  
-    - Urlaub beantragen  
-    - Projektinfos und Aufgaben verfolgen  
+    - Projektzeiten erfassen ([Zeiterfassung](web/zeiterfassung.md))
+    - Schichtpläne einsehen ([Schichtpläne](web/schichten.md))
+    - Abwesenheit beantragen ([Abwesenheiten](web/urlaub.md))
+    - Mobile App nutzen ([Installation](mobile/installation.md))
 
-    [:octicons-arrow-right-24: Zu den ersten Schritten](erste-schritte/index.md)
+    [:octicons-arrow-right-24: Erste Schritte](erste-schritte/index.md)
 
 === "Projektleiter"
 
     **Typische Aufgaben**
 
-    - Projekte anlegen und steuern  
-    - Teams und Ressourcen koordinieren  
-    - Fortschritt und Berichte einsehen  
+    - Projekte anlegen und steuern ([Projekte](web/projekte.md))
+    - Einsätze auf der Plantafel planen ([Plantafel](web/plantafel.md))
+    - Aufgaben und Berichte ([Aufgaben](web/aufgaben.md) · [Berichte](web/berichte.md))
 
     [:octicons-arrow-right-24: Projektdokumentation](web/projekte.md)
 
-=== "Geschäftsführung"
+=== "HR / Personal"
 
     **Typische Aufgaben**
 
-    - Gesamtüberblick über Projekte und Kennzahlen  
-    - Finanzen und Auswertungen  
-    - Strategische Planung mit Reports  
+    - Mitarbeiter und Teams verwalten ([Web-Übersicht](web/index.md))
+    - Abwesenheiten genehmigen ([Abwesenheiten](web/urlaub.md))
+    - Zeiterfassung und Stundenkonto prüfen ([Zeiterfassung](web/zeiterfassung.md))
 
-    [:octicons-arrow-right-24: Web-Übersicht](web/index.md)
+    [:octicons-arrow-right-24: Abwesenheiten](web/urlaub.md)
+
+=== "Buchhaltung"
+
+    **Typische Aufgaben**
+
+    - Rechnungen und E-Rechnung ([Rechnungen](web/rechnungen.md))
+    - Angebote und Lieferscheine ([Web-Übersicht](web/index.md))
+    - Auswertungen und Finanz-Tabs ([Auswertung](web/auswertung.md))
+
+    [:octicons-arrow-right-24: Rechnungen](web/rechnungen.md)
+
+=== "Administrator"
+
+    **Typische Aufgaben**
+
+    - Mandant einrichten, Rollen vergeben
+    - App-Einstellungen (z. B. Zeiterfassung, GPS)
+    - API-Keys und Integrationen ([API](api/index.md))
+
+    [:octicons-arrow-right-24: API & Integrationen](api/index.md)
 
 ---
 
@@ -156,18 +224,14 @@ description: Offizielle Planvo Hilfe – Schnellstart, Web, Mobile und Support
 
 ## Beliebte Artikel
 
-1. [Zeiterfassung (Web)](web/zeiterfassung.md)  
-2. [Mobile App installieren](mobile/installation.md)  
-3. [Urlaubsverwaltung](web/urlaub.md)  
-4. [Projekte](web/projekte.md)  
-5. [Schichtplanung](web/schichten.md)  
-
----
-
-## Video-Tutorials
-
-!!! info "In Vorbereitung"
-    Kurze Erklärvideos ergänzen diese Hilfe — sobald sie live sind, verlinken wir sie hier.
+1. [Zeiterfassung (Web)](web/zeiterfassung.md) — Kalender, Export, Stundenkonto  
+2. [Erste Schritte](erste-schritte/index.md) — Einstieg und Navigation  
+3. [Anmeldung](erste-schritte/anmeldung.md) — Web, App & SSO  
+4. [Abwesenheiten](web/urlaub.md) — Urlaub beantragen und genehmigen  
+5. [Mobile App installieren](mobile/installation.md)  
+6. [Schichtpläne](web/schichten.md)  
+7. [Rechnungen & E-Rechnung](web/rechnungen.md)  
+8. [Dashboard-Übersicht](erste-schritte/dashboard.md)  
 
 ---
 
@@ -181,15 +245,11 @@ Wir helfen gern weiter:
 
     ---
 
-    Schnelle Antworten in der Regel während der Geschäftszeiten
-
-    [Chat auf planvo.de](https://www.planvo.de)
+    Schnelle Antworten während der Geschäftszeiten auf [planvo.de](https://www.planvo.de)
 
 -   :material-email:{ .lg } **E-Mail**
 
     ---
-
-    Ausführliche Anfragen und technische Details
 
     [support@planvo.de](mailto:support@planvo.de)
 
@@ -197,17 +257,13 @@ Wir helfen gern weiter:
 
     ---
 
-    Antworten auf häufige Fragen
-
-    [Zum FAQ](hilfe/faq.md)
+    [Häufige Fragen](hilfe/faq.md)
 
 -   :material-phone:{ .lg } **Telefon**
 
     ---
 
-    Mo–Fr nach Vereinbarung — siehe [Kontakt](hilfe/kontakt.md)
-
-    [Kontakt & Rufnummern](hilfe/kontakt.md)
+    [+49 176 45827800](tel:+4917645827800) — Mo–Fr, siehe [Kontakt](hilfe/kontakt.md)
 
 </div>
 
@@ -215,10 +271,12 @@ Wir helfen gern weiter:
 
 ## Weitere Ressourcen
 
-- [Web-Dokumentation](web/index.md)  
-- [Mobile App](mobile/index.md)  
-- [FAQ](hilfe/faq.md)  
-- [Kontakt](hilfe/kontakt.md)  
+- [Planvo Website](https://www.planvo.de) — Produkt, Demo, Kontakt  
+- [Preise & Tarife](https://www.planvo.de/preise) — Business, Pro, Premium  
+- [PlanvoAI](https://www.planvo.de/planvoai) — KI-Assistent (Premium)  
+- [Schnittstellen](https://www.planvo.de/schnittstellen) — DATEV, IDS-Connect, GAEB u. a.  
+- [Web-Dokumentation](web/index.md) · [Mobile App](mobile/index.md)  
+- [API & Integrationen](api/index.md) · [FAQ](hilfe/faq.md) · [Kontakt](hilfe/kontakt.md)  
 
 ---
 
@@ -228,6 +286,7 @@ Wir helfen gern weiter:
 
 [:material-rocket-launch: Erste Schritte](erste-schritte/index.md){ .md-button .md-button--primary }
 [:material-book-open-variant: Gesamte Web-Hilfe](web/index.md){ .md-button }
+[:material-play-circle: Demo öffnen](https://demo.planvo.de){ .md-button }
 
 </div>
 

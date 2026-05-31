@@ -1,18 +1,18 @@
 # Mobile App - Übersicht
 
-Willkommen bei der Planvo Mobile App! Arbeiten Sie flexibel von überall aus.
+Willkommen bei der Planvo Mobile App! Arbeiten Sie flexibel von unterwegs — Zeiterfassung, Schichten und Abwesenheiten in der Tasche.
 
 ---
 
 ## 📱 Was ist die Mobile App?
 
-Die **Planvo Mobile App** ist Ihre Lösung für unterwegs:
+Die **Planvo Mobile App** (iOS & Android) ergänzt die Web-Version für Mitarbeitende im Außendienst, auf der Baustelle oder unterwegs:
 
-- ⏰ **Schnelles Stempeln** - Ein Fingertipp genügt
-- 📍 **GPS-Tracking** - Standort-basierte Zeiterfassung
-- 📴 **Offline-Modus** - Funktioniert auch ohne Internet
-- 🔔 **Push-Benachrichtigungen** - Bleiben Sie informiert
-- 📱 **Touch-optimiert** - Perfekt für Smartphones
+- **Zeiterfassung** mit optional GPS und Foto
+- **Schichtpläne** einsehen
+- **Abwesenheitsanträge** stellen
+- **Projekte** und Team-Infos (je nach Berechtigung)
+- **Offline-Modus** für bereits geladene Daten
 
 ---
 
@@ -24,7 +24,7 @@ Die **Planvo Mobile App** ist Ihre Lösung für unterwegs:
     
     ---
     
-    Für iPhone und iPad
+    iPhone und iPad
     
     [:octicons-arrow-right-24: Installation](installation.md)
 
@@ -32,7 +32,7 @@ Die **Planvo Mobile App** ist Ihre Lösung für unterwegs:
     
     ---
     
-    Für alle Android-Geräte
+    Smartphones und Tablets
     
     [:octicons-arrow-right-24: Installation](installation.md)
 
@@ -44,25 +44,37 @@ Die **Planvo Mobile App** ist Ihre Lösung für unterwegs:
 
 | Funktion | Beschreibung | Offline? |
 |----------|--------------|----------|
-| [⏰ Zeiterfassung](zeiterfassung.md) | Stempeln mit GPS | ✅ Ja |
-| 📅 **Schichten** | Schichtplan ansehen | ✅ Ja |
-| 📊 **Projekte** | Projekt-Übersicht | ⚠️ Teilweise |
-| 🏖️ **Urlaub** | Anträge stellen | ❌ Nein |
-| 💬 **Chat** | Team-Kommunikation | ❌ Nein |
-| 📸 **Fotos** | Dokumentation | ✅ Ja |
+| [Zeiterfassung](zeiterfassung.md) | Stempeln, Projektzeiten, GPS je nach Firma | ✅ Teilweise |
+| **Schichtpläne** | Geplante Schichten ansehen | ✅ Teilweise |
+| **Projekte** | Projekt- und Einsatzinfos | ⚠️ Teilweise |
+| **Abwesenheiten** | Anträge stellen | ❌ Nein |
+| **Projekt-Chat** | Nur wenn in Ihrem Mandant aktiviert | ❌ Nein |
+| **Fotos** | Dokumentation / Nachweise | ✅ Teilweise |
+
+!!! info "Projekt-Chat"
+    Der Chat ist kein globales App-Feature — er erscheint nur, wenn Ihr Administrator Projekt-Chat für Projekte freigeschaltet hat.
+
+---
+
+## 🔐 Anmeldung
+
+1. Subdomain eingeben (z. B. `ihre-firma`)
+2. E-Mail und Passwort (oder SSO je nach Mandant)
+
+[:octicons-arrow-right-24: Anmeldung](../erste-schritte/anmeldung.md)
 
 ---
 
 ## 💡 Schnellstart
 
 1. [App installieren](installation.md)
-2. [Anmelden](installation.md)
-3. [Zeiterfassung nutzen](zeiterfassung.md)
-4. [Offline-Modus aktivieren](offline-modus.md)
+2. [Anmelden](../erste-schritte/anmeldung.md)
+3. [Zeiterfassung Mobile](zeiterfassung.md)
+4. [Offline-Modus](offline-modus.md)
 
 ---
 
 [:octicons-arrow-right-24: Installation](installation.md){ .md-button .md-button--primary }
 [:octicons-arrow-right-24: Zeiterfassung](zeiterfassung.md){ .md-button }
-[:octicons-arrow-right-24: Offline-Modus](offline-modus.md){ .md-button }
 
+*Letzte Aktualisierung: Mai 2026*

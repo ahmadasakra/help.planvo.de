@@ -8,7 +8,7 @@ Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu Planvo.
 
 ### Wie kann ich mich anmelden?
 
-Gehen Sie zu `ihre-firma.planvo.de` und geben Sie Ihre E-Mail und Ihr Passwort ein.
+Öffnen Sie `https://ihre-firma.planvo.de` und melden Sie sich mit **E-Mail/Passwort** oder **SSO (Keycloak)** an — je nach Mandant.
 
 [:octicons-arrow-right-24: Detaillierte Anleitung](../erste-schritte/anmeldung.md)
 
@@ -68,7 +68,7 @@ Beispiel: 42h gearbeitet - 40h Vertrag = 2h Überstunden
 
 ### Wie bewerbe ich mich für eine Schicht?
 
-1. Gehen Sie zu **Schichten**
+1. Gehen Sie zu **Schichtpläne** (Menü **Mitarbeiter & HR**)
 2. Finden Sie eine offene Schicht
 3. Klicken Sie auf **"Bewerben"**
 4. Fügen Sie optional eine Nachricht hinzu
@@ -113,14 +113,16 @@ Unterstützte Formate: PDF, Word, Excel, Bilder, ZIP
 
 ---
 
-## 🏖️ Urlaub & Abwesenheit
+## 🏖️ Abwesenheiten
 
 ### Wie beantrage ich Urlaub?
 
-1. Gehen Sie zu **Urlaub & Abwesenheit**
-2. Klicken Sie auf **"Neuer Antrag"**
+1. Gehen Sie zu **Abwesenheiten**
+2. Klicken Sie auf **Neuer Antrag**
 3. Wählen Sie Zeitraum und Typ
-4. Klicken Sie auf **"Antrag stellen"**
+4. Klicken Sie auf **Antrag stellen**
+
+[:octicons-arrow-right-24: Abwesenheiten](../web/urlaub.md)
 
 ### Wie schnell wird mein Urlaubsantrag bearbeitet?
 
@@ -132,7 +134,7 @@ Ja, solange er noch nicht genehmigt wurde. Gehen Sie zu Ihren Anträgen und klic
 
 ### Wie viele Urlaubstage habe ich noch?
 
-Ihr Resturlaub wird im Dashboard und unter "Urlaub & Abwesenheit" angezeigt.
+Ihr Resturlaub wird im Dashboard und unter **Abwesenheiten** angezeigt.
 
 ---
 
@@ -301,7 +303,7 @@ Keine Sorge! Hier sind weitere Ressourcen:
     
     Mo-Fr 9:00-17:00
     
-    +49 (0) XXX XXXXXXX
+    [+49 176 45827800](tel:+4917645827800)
 
 </div>
 

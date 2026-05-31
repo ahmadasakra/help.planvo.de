@@ -1,8 +1,13 @@
 # Projektmanagement (Web)
 
+> **Menüpunkt in der App:** **Projekte** (`/projects`)  
 > **⏱️ Lesezeit:** 10 Minuten  
 > **📱 Verfügbar in:** Web & Mobile  
-> **👤 Für:** Projektleiter, Team-Mitglieder
+> **👤 Für:** Projektleiter, Team-Mitglieder  
+> **Tarif:** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
+
+!!! warning "Dokumentation in Überarbeitung"
+    Einzelne Abschnitte dieses Artikels werden an die aktuelle Oberfläche angepasst. Für Plantafel, Aufgaben und Zeiterfassung siehe die verlinkten Fachartikel.
 
 ---
 
@@ -20,12 +25,11 @@
 
 Das Projektmanagement in Planvo bietet Ihnen:
 
-- 📊 **Projekt-Dashboard** - Alle Projekte auf einen Blick
-- 🗓️ **Plantafel** - Visuelle Ressourcenplanung
-- ✅ **Aufgaben-Management** - Kanban-Boards
-- 👥 **Team-Koordination** - Rollen und Zuständigkeiten
-- 📈 **Fortschritts-Tracking** - Echtzeit-Übersicht
-- 📄 **Dokumenten-Verwaltung** - Zentrale Ablage
+- 📊 **Projekt-Übersicht** — Liste und Detailansicht mit Status und Team
+- 👥 **Team-Zuordnung** — Mitarbeiter Projekten zuweisen
+- 📈 **Fortschritt & Aktivitäten** — Nachverfolgung im Projekt
+- 📄 **Projekt-Dokumente & Chat** — je nach Mandanten-Konfiguration
+- 🔗 **Verknüpfung** mit [Zeiterfassung](zeiterfassung.md), [Aufgaben](aufgaben.md) und [Plantafel](plantafel.md)
 
 ---
 
@@ -439,30 +443,26 @@ Archivierte Projekte:
 
 ## ❓ Häufige Fragen
 
-### Kann ich Projektvorlagen erstellen?
-
-Ja! Erstellen Sie ein Musterprojekt und nutzen Sie **"Als Vorlage speichern"**.
-
 ### Wie viele Projekte kann ich erstellen?
 
-Unbegrenzt! Es gibt keine Beschränkung für die Anzahl der Projekte.
+Es gibt keine feste Obergrenze — abhängig von Ihrem Tarif und Ihrer Rolle.
 
-### Können externe Personen auf Projekte zugreifen?
+### Wo finde ich die Plantafel?
 
-Ja, Sie können Kunden oder Partner per E-Mail einladen. Diese erhalten eingeschränkte Zugriffsrechte.
+Die **Plantafel** ist ein eigener Menüpunkt unter **Projekte & Planung** — siehe [Plantafel](plantafel.md) (Tarif Premium).
 
-### Wie kann ich Projekte duplizieren?
+### Wie verknüpfe ich Zeiten mit Projekten?
 
-Öffnen Sie ein Projekt → **Einstellungen** → **"Projekt duplizieren"**
+Beim Erfassen von Projektzeiten wählen Sie das Projekt im Dialog — siehe [Zeiterfassung](zeiterfassung.md).
 
 ---
 
 ## 🔗 Verwandte Themen
 
-- [Aufgaben-Management](zeiterfassung.md)
-- [Plantafel-Guide](schichten.md)
-- [Zeit auf Projekte buchen](zeiterfassung.md)
-- [Team-Management](index.md)
+- [Zeiterfassung](zeiterfassung.md)
+- [Aufgaben](aufgaben.md)
+- [Plantafel](plantafel.md)
+- [Berichte](berichte.md)
 
 ---
 
@@ -471,5 +471,5 @@ Ja, Sie können Kunden oder Partner per E-Mail einladen. Diese erhalten eingesch
 
 ---
 
-*Letzte Aktualisierung: November 2024 | Version 1.6.6*
+*Letzte Aktualisierung: Mai 2026*
 

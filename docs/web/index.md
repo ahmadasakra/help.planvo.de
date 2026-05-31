@@ -1,6 +1,6 @@
 # Web-Version - Übersicht
 
-Willkommen bei der Planvo Web-Version! Hier finden Sie die vollständige Dokumentation für alle Desktop-Funktionen.
+Willkommen bei der Planvo Web-Version! Hier finden Sie die Dokumentation für die Desktop-Oberfläche — für Handwerk, Dienstleistung und KMU.
 
 ---
 
@@ -8,11 +8,10 @@ Willkommen bei der Planvo Web-Version! Hier finden Sie die vollständige Dokumen
 
 Die **Planvo Web-Version** ist Ihre vollständige Desktop-Lösung für:
 
-- 💼 Professionelles Arbeiten am Computer
-- 📊 Detaillierte Übersichten und Analysen
-- 📝 Umfangreiche Dateneingabe
-- 📄 Dokument-Erstellung und -Verwaltung
-- 👥 Team-Administration
+- Zeiterfassung, Schichtpläne und Abwesenheiten
+- Projekte, Plantafel und Aufgaben
+- Kunden, Angebote, Rechnungen und E-Rechnung
+- Auswertungen, DMS und Administration
 
 ---
 
@@ -24,33 +23,49 @@ Die **Planvo Web-Version** ist Ihre vollständige Desktop-Lösung für:
     
     ---
     
-    Projektzeit im Kalender, Liste, Export und Auswertung
+    Kalender, Zeiteinträge, Stundenkonto, Export
     
-    [:octicons-arrow-right-24: Mehr erfahren](zeiterfassung.md)
+    [:octicons-arrow-right-24: Anleitung](zeiterfassung.md)
+
+-   :material-chart-bar:{ .lg } **Auswertung**
+    
+    ---
+    
+    Kennzahlen, Diagramme, Finanz- und HR-Tabs
+    
+    [:octicons-arrow-right-24: Anleitung](auswertung.md)
 
 -   :material-chart-timeline-variant:{ .lg } **Projekte**
     
     ---
     
-    Projektmanagement mit Plantafel
+    Projektmanagement, Team, Dokumentation
     
-    [:octicons-arrow-right-24: Mehr erfahren](projekte.md)
+    [:octicons-arrow-right-24: Anleitung](projekte.md)
 
--   :material-file-document:{ .lg } **Berichte**
+-   :material-view-week:{ .lg } **Plantafel**
     
     ---
     
-    Professionelle PDF-Berichte aus Projekten
+    Visuelle Einsatzplanung (Premium)
     
-    [:octicons-arrow-right-24: Mehr erfahren](berichte.md)
+    [:octicons-arrow-right-24: Anleitung](plantafel.md)
 
--   :material-calendar-clock:{ .lg } **Schichtplanung**
+-   :material-calendar-clock:{ .lg } **Schichtpläne**
     
     ---
     
-    Intelligente Mitarbeiterplanung
+    Planung und Bewerbungen (Pro)
     
-    [:octicons-arrow-right-24: Mehr erfahren](schichten.md)
+    [:octicons-arrow-right-24: Anleitung](schichten.md)
+
+-   :material-currency-eur:{ .lg } **Rechnungen**
+    
+    ---
+    
+    Angebote, Rechnungen, E-Rechnung (Pro)
+    
+    [:octicons-arrow-right-24: Anleitung](rechnungen.md)
 
 </div>
 
@@ -58,30 +73,34 @@ Die **Planvo Web-Version** ist Ihre vollständige Desktop-Lösung für:
 
 ## 📋 Alle Bereiche
 
-| Bereich | Beschreibung | Für wen? |
-|---------|--------------|----------|
-| [🏠 Dashboard](../erste-schritte/dashboard.md) | Persönliche Übersicht | Alle |
-| [⏰ Zeiterfassung](zeiterfassung.md) | Kalender, Zeiteinträge, Auswertung | Alle (je nach Rolle) |
-| [📊 Projekte](projekte.md) | Projektmanagement | Projektleiter, Team |
-| [📄 Berichte](berichte.md) | Berichtsvorlagen & PDF-Erstellung | Projektleiter, Techniker |
-| [📅 Schichten](schichten.md) | Schichtplanung | Alle |
-| 🏖️ **Urlaub** | Urlaubsverwaltung | Alle |
-| 💰 **Rechnungen** | Rechnungswesen | Buchhaltung |
-| 👥 **Team** | Mitarbeiterverwaltung | HR, Management |
+| Menüpunkt | Dokumentation | Tarif (min.) |
+|-----------|---------------|--------------|
+| [Dashboard](../erste-schritte/dashboard.md) | Übersicht | Alle |
+| [Zeiterfassung](zeiterfassung.md) | `/project-time` | Business |
+| [Auswertung](auswertung.md) | `/analyse` | Business |
+| [Projekte](projekte.md) | `/projects` | Business |
+| [Plantafel](plantafel.md) | `/plantafel` | Premium |
+| [Aufgaben](aufgaben.md) | `/taskmanager` | Pro |
+| [Schichtpläne](schichten.md) | `/shiftplans` | Pro |
+| [Abwesenheiten](urlaub.md) | `/leave-management` | Business |
+| [Kunden](kunden.md) | `/clients` | Business |
+| [Rechnungen](rechnungen.md) | `/documents/invoices` | Pro |
+| [DMS](dokumente.md) | `/dms` | Premium |
+| [Berichte](berichte.md) | Projektberichte | Pro |
 
 ---
 
 ## 💡 Schnellstart
 
 1. [Anmeldung](../erste-schritte/anmeldung.md)
-2. [Dashboard kennenlernen](../erste-schritte/dashboard.md)
-3. [Zeit erfassen](zeiterfassung.md)
-4. [Projekte ansehen](projekte.md)
-5. [Bericht erstellen](berichte.md)
+2. [Dashboard](../erste-schritte/dashboard.md)
+3. [Zeiterfassung](zeiterfassung.md)
+4. [Abwesenheiten](urlaub.md)
 
 ---
 
 [:octicons-arrow-right-24: Zeiterfassung](zeiterfassung.md){ .md-button .md-button--primary }
+[:octicons-arrow-right-24: Auswertung](auswertung.md){ .md-button }
 [:octicons-arrow-right-24: Projekte](projekte.md){ .md-button }
-[:octicons-arrow-right-24: Berichte](berichte.md){ .md-button }
-[:octicons-arrow-right-24: Schichten](schichten.md){ .md-button }
+
+*Letzte Aktualisierung: Mai 2026*

@@ -1,8 +1,10 @@
-# Urlaubsverwaltung
+# Abwesenheiten (Urlaub & Fehlzeiten)
 
+> **Menüpunkt in der App:** **Abwesenheiten** (`/leave-management`)  
 > **⏱️ Lesezeit:** 8 Minuten  
 > **📱 Verfügbar in:** Web & Mobile  
-> **👤 Für:** Alle Mitarbeiter, Personalabteilung
+> **👤 Für:** Alle Mitarbeiter, Personalabteilung  
+> **Tarif:** <span class="planvo-plan-badge planvo-plan-badge--business">Business</span>
 
 ---
 

@@ -1,211 +1,138 @@
 # Anmeldung bei Planvo
 
-> **⏱️ Lesezeit:** 3 Minuten  
+> **⏱️ Lesezeit:** 4 Minuten  
 > **📱 Verfügbar in:** Web & Mobile App  
 > **👤 Für:** Alle Benutzer
 
 ---
 
-## 🔐 Erstes Login
+## 🔐 Anmeldung — Überblick
 
-### Web-Version
+Je nach Mandant melden Sie sich auf eine der folgenden Arten an:
 
-**Schritt 1: Planvo öffnen**
+| Variante | Wann? | Hinweis |
+|----------|-------|---------|
+| **SSO (Keycloak)** | Von Ihrer Firma eingerichtet | Anmeldung über Firmen-Login (z. B. Microsoft) |
+| **E-Mail & Passwort** | Legacy-Mandanten | Klassisches Login-Formular |
+| **Mobile App** | iOS & Android | Subdomain + E-Mail + Passwort (oder SSO-Flow) |
 
-Öffnen Sie Ihren Browser und gehen Sie zu:
+Ihre Firma teilt Ihnen mit, welche Variante gilt.
+
+---
+
+## Web-Version
+
+### Schritt 1: Planvo öffnen
+
 ```
 https://ihre-firma.planvo.de
 ```
 
-Ersetzen Sie `ihre-firma` durch den Namen Ihrer Firma.
+Ersetzen Sie `ihre-firma` durch die Subdomain Ihres Mandanten (z. B. `demo` für [demo.planvo.de](https://demo.planvo.de)).
 
 !!! info "Ihre Planvo-Adresse"
-    Die genaue Adresse erhalten Sie von Ihrem Administrator oder per E-Mail nach der Registrierung.
+    Die Subdomain erhalten Sie vom Administrator oder per E-Mail nach der Registrierung.
 
-**Schritt 2: Login-Daten eingeben**
+### Schritt 2: Anmelden
 
-1. **E-Mail-Adresse** eingeben
-2. **Passwort** eingeben
-3. Optional: **"Angemeldet bleiben"** aktivieren
-4. Auf **"Anmelden"** klicken
+**SSO (Keycloak):**
 
-![Login Screenshot Platzhalter]
+1. Seite öffnen — ggf. Weiterleitung zum Firmen-Login
+2. Mit Ihrem Firmen-Konto anmelden
+3. Nach erfolgreicher Anmeldung landen Sie in Planvo
+
+**E-Mail & Passwort (Legacy):**
+
+1. E-Mail-Adresse eingeben
+2. Passwort eingeben
+3. Optional: „Angemeldet bleiben“
+4. **Anmelden** klicken
+
+!!! warning "Direkter Login deaktiviert?"
+    Wenn Ihr Mandant vollständig auf Keycloak umgestellt ist, ist das klassische Passwort-Formular nicht mehr verfügbar. Nutzen Sie den SSO-Button bzw. den Link Ihres Administrators.
 
 ---
 
-### Mobile App
+## Mobile App
 
-**Schritt 1: App öffnen**
-
-Öffnen Sie die Planvo App auf Ihrem Smartphone.
-
-**Schritt 2: Anmelden**
-
-1. Geben Sie Ihre **Firma-ID** ein (z.B. `ihre-firma`)
-2. Geben Sie Ihre **E-Mail-Adresse** ein
-3. Geben Sie Ihr **Passwort** ein
-4. Tippen Sie auf **"Anmelden"**
-
-![Mobile Login Screenshot Platzhalter]
+1. Planvo App öffnen
+2. **Subdomain** eingeben (z. B. `ihre-firma` — ohne `.planvo.de`)
+3. E-Mail und Passwort eingeben
+4. **Anmelden** tippen
 
 !!! tip "Biometrische Anmeldung"
-    Nach der ersten Anmeldung können Sie Face ID / Touch ID aktivieren für schnelleres Login.
+    Nach der ersten Anmeldung können Sie Face ID / Touch ID aktivieren.
 
 ---
 
 ## 🔑 Passwort vergessen?
 
-Falls Sie Ihr Passwort vergessen haben:
+Nur bei Mandanten mit **Legacy-Login**:
 
-**Web-Version:**
-1. Klicken Sie auf **"Passwort vergessen?"**
-2. Geben Sie Ihre E-Mail-Adresse ein
-3. Klicken Sie auf **"Link senden"**
-4. Prüfen Sie Ihr E-Mail-Postfach
-5. Klicken Sie auf den Link in der E-Mail
-6. Vergeben Sie ein neues Passwort
+1. **Passwort vergessen?** wählen
+2. E-Mail eingeben und Link anfordern
+3. E-Mail öffnen und neues Passwort setzen
 
-**Mobile App:**
-1. Tippen Sie auf **"Passwort vergessen?"**
-2. Folgen Sie den gleichen Schritten wie oben
-
-!!! warning "E-Mail nicht erhalten?"
-    - Prüfen Sie Ihren Spam-Ordner
-    - Warten Sie 5-10 Minuten
-    - Versuchen Sie es erneut
-    - Kontaktieren Sie Ihren Administrator
+Bei **SSO** verwaltet Ihr IT-Administrator oder Identity-Provider die Passwörter.
 
 ---
 
-## 🔐 Sicheres Passwort erstellen
+## 🔐 Passwort-Anforderungen (Legacy)
 
-Ihr Passwort sollte:
-
-- ✅ Mindestens **8 Zeichen** lang sein
-- ✅ **Groß- und Kleinbuchstaben** enthalten
-- ✅ Mindestens **eine Zahl** enthalten
-- ✅ Mindestens **ein Sonderzeichen** enthalten (z.B. @, #, !)
-- ❌ **Nicht** ein einfaches Wort sein
-- ❌ **Nicht** Ihr Name oder Geburtsdatum sein
-
-**Beispiel für ein sicheres Passwort:**
-```
-Planvo2024!Sicher#
-```
-
----
-
-## 🆕 Erstmalige Anmeldung
-
-Bei Ihrer ersten Anmeldung werden Sie aufgefordert:
-
-1. **Passwort ändern** (falls ein temporäres Passwort vergeben wurde)
-2. **Profil vervollständigen**
-   - Profilbild hochladen (optional)
-   - Telefonnummer hinzufügen
-   - Abteilung bestätigen
-3. **Benachrichtigungseinstellungen** festlegen
-4. **Datenschutzerklärung** akzeptieren
+- Mindestens **8 Zeichen**
+- Groß- und Kleinbuchstaben, Zahl, Sonderzeichen
+- Kein triviales Wort oder Geburtsdatum
 
 ---
 
 ## 🔒 Zwei-Faktor-Authentifizierung (2FA)
 
-Für erhöhte Sicherheit können Sie 2FA aktivieren:
-
-1. Gehen Sie zu **Einstellungen** → **Sicherheit**
-2. Aktivieren Sie **"Zwei-Faktor-Authentifizierung"**
-3. Scannen Sie den QR-Code mit einer Authenticator-App
-4. Geben Sie den Code zur Bestätigung ein
-
-**Empfohlene Authenticator-Apps:**
-- Google Authenticator (iOS & Android)
-- Microsoft Authenticator (iOS & Android)
-- Authy (iOS & Android)
+Falls Ihr Mandant 2FA aktiviert hat, folgen Sie den Hinweisen beim Login oder in **Einstellungen → Sicherheit**.
 
 ---
 
-## 🌍 Multi-Device Login
+## 🌍 Mehrere Geräte
 
-Sie können sich auf mehreren Geräten gleichzeitig anmelden:
-
-- 💻 Desktop-Computer
-- 💼 Laptop
-- 📱 Smartphone
-- 📱 Tablet
-
-Ihre Daten werden automatisch auf allen Geräten synchronisiert!
-
-!!! tip "Aktive Sitzungen verwalten"
-    Unter **Einstellungen** → **Sicherheit** → **Aktive Sitzungen** können Sie sehen, wo Sie angemeldet sind und einzelne Sitzungen beenden.
+Sie können parallel am Desktop, Laptop, Tablet und Smartphone angemeldet sein. Daten synchronisieren sich automatisch.
 
 ---
 
 ## 🚪 Abmelden
 
-### Web-Version
-1. Klicken Sie oben rechts auf Ihr **Profilbild**
-2. Wählen Sie **"Abmelden"**
+**Web:** Profilbild oben rechts → **Abmelden**
 
-### Mobile App
-1. Gehen Sie zu **Mehr** (unten rechts)
-2. Tippen Sie auf **"Abmelden"**
+**Mobile App:** **Einstellungen** → **Abmelden** (Bezeichnung kann je nach App-Version variieren)
 
 ---
 
 ## ❓ Probleme beim Anmelden
 
-### Problem: "E-Mail oder Passwort falsch"
+### „E-Mail oder Passwort falsch“
 
-**Lösung:**
-- Prüfen Sie Groß-/Kleinschreibung
-- Prüfen Sie Tippfehler
-- Nutzen Sie "Passwort vergessen?"
-- Kontaktieren Sie Ihren Administrator
+- Schreibweise prüfen
+- Bei Legacy: Passwort zurücksetzen
+- Bei SSO: Firmen-Login erneut versuchen
+- Administrator kontaktieren
 
-### Problem: "Konto gesperrt"
+### „Konto gesperrt“ / zu viele Versuche
 
-**Lösung:**
-- Nach 5 falschen Login-Versuchen wird Ihr Konto für 15 Minuten gesperrt
-- Warten Sie 15 Minuten
-- Oder kontaktieren Sie Ihren Administrator für sofortige Entsperrung
+Nach **5 fehlgeschlagenen Login-Versuchen** innerhalb von 15 Minuten kann der Zugang für **bis zu 30 Minuten** blockiert sein. Warten oder Administrator kontaktieren.
 
-### Problem: "Keine Internetverbindung"
+### „Server nicht erreichbar“
 
-**Lösung:**
-- Prüfen Sie Ihre WLAN-/Mobile-Datenverbindung
-- Versuchen Sie es erneut
-- Mobile App: Nutzen Sie den Offline-Modus für bereits geladene Daten
-
-### Problem: "Server nicht erreichbar"
-
-**Lösung:**
-- Prüfen Sie, ob Sie die richtige URL verwenden
-- Warten Sie einige Minuten und versuchen Sie es erneut
-- Kontaktieren Sie den Support
-
----
-
-## 🔗 Verwandte Themen
-
-- [Dashboard-Übersicht](dashboard.md)
-- [Profil einrichten](dashboard.md#profil)
-- [Mobile App installieren](../mobile/installation.md)
-- [Sicherheitseinstellungen](dashboard.md#sicherheit)
+- Subdomain prüfen (`ihre-firma.planvo.de`)
+- Internetverbindung prüfen
+- Kurz warten und erneut versuchen
+- [Support](../hilfe/kontakt.md) kontaktieren
 
 ---
 
 ## 📞 Support
 
-**Probleme beim Anmelden?**
-
-- 📧 E-Mail: [support@planvo.de](mailto:support@planvo.de)
-- 💬 Live-Chat: [www.planvo.de](https://www.planvo.de)
-- 📞 Telefon: +49 (0) XXX XXXXXXX
+--8<-- "includes/kontakt-ssot.md"
 
 ---
 
 [:octicons-arrow-right-24: Weiter zum Dashboard](dashboard.md){ .md-button .md-button--primary }
 
-*Letzte Aktualisierung: November 2024*
-
+*Letzte Aktualisierung: Mai 2026*

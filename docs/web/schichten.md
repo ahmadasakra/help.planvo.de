@@ -1,8 +1,10 @@
-# Schichtplanung (Web)
+# Schichtpläne (Web)
 
+> **Menüpunkt in der App:** **Schichtpläne** (`/shiftplans`)  
 > **⏱️ Lesezeit:** 7 Minuten  
 > **📱 Verfügbar in:** Web & Mobile  
-> **👤 Für:** Schichtplaner, Mitarbeiter
+> **👤 Für:** Schichtplaner, Mitarbeiter  
+> **Tarif:** <span class="planvo-plan-badge planvo-plan-badge--pro">Pro</span>
 
 ---
 
@@ -48,7 +50,7 @@ Die Schichtplanung in Planvo hilft Ihnen bei:
 
 ### Kalender-Ansicht
 
-1. Klicken Sie im Hauptmenü auf **"Schichten"**
+1. Klicken Sie im Hauptmenü auf **Schichtpläne**
 2. Sie sehen einen Kalender mit allen Schichten
 
 **Ansichts-Optionen:**

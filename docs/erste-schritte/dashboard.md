@@ -1,23 +1,20 @@
 # Dashboard-Übersicht
 
 > **⏱️ Lesezeit:** 5 Minuten  
-> **📱 Verfügbar in:** Web & Mobile App  
-> **👤 Für:** Alle Benutzer
+> **📱 Verfügbar in:** Web (Mobile: kompakte Startansicht)  
+> **👤 Für:** Alle Benutzer (Inhalt je nach Rolle und Tarif)
 
 ---
 
 ## 🎯 Was ist das Dashboard?
 
-Das Dashboard ist Ihre **persönliche Startseite** in Planvo. Hier sehen Sie auf einen Blick alle wichtigen Informationen:
+Das **Dashboard** (`/dashboard`) ist Ihre persönliche Startseite in Planvo. Welche Karten Sie sehen, hängt von **Rolle, Berechtigung und Tarif** ab — z. B.:
 
-- 📊 Ihre aktuellen Projekte
-- ⏰ Laufende Zeiterfassung
-- 📅 Anstehende Schichten
-- ✅ Offene Aufgaben
-- 📢 Wichtige Benachrichtigungen
-- 📈 Persönliche Statistiken
-
-![Dashboard Screenshot Platzhalter]
+- Zeiterfassung und Kennzahlen
+- Projekte, Aufgaben, Schichten
+- Geburtstage im Team (HR)
+- Finanz-KPIs (Rechnungsmodul)
+- Benachrichtigungen und Aktivitäten
 
 ---
 
@@ -38,30 +35,13 @@ Das Dashboard ist Ihre **persönliche Startseite** in Planvo. Hier sehen Sie auf
 
 ### 2. Willkommensbereich
 
-```
-Guten Morgen, [Ihr Name]! 👋
-Heute ist Montag, 4. November 2024
-```
-
-Zeigt:
-- Persönliche Begrüßung
-- Aktuelles Datum
-- Wetter (optional)
+Persönliche Begrüßung und aktuelles Datum — abhängig von Konfiguration und Rolle.
 
 ---
 
-### 3. Zeiterfassung-Widget
+### 3. Zeiterfassung
 
-⏰ **Schnell-Zugriff zur Zeiterfassung**
-
-**Wenn Sie NICHT eingestempelt sind:**
-- Grüner Button: **"Arbeit starten"**
-- Zeigt letzte Arbeitszeit
-
-**Wenn Sie eingestempelt sind:**
-- Rote Uhr: **Laufende Arbeitszeit** (z.B. 03:24:15)
-- Orange Button: **"Pause starten"**
-- Roter Button: **"Arbeitsende"**
+Schnellzugriff auf die Zeiterfassung — je nach Einstellung als Widget auf dem Dashboard oder über **Zeiterfassung** in der Seitenleiste.
 
 [:octicons-arrow-right-24: Mehr zur Zeiterfassung](../web/zeiterfassung.md)
 
@@ -145,42 +125,24 @@ Neueste Benachrichtigungen:
 
 ### 8. Schnellzugriffe
 
-⚡ **Häufig genutzte Aktionen**
-
-Buttons für schnellen Zugriff:
-- 🏖️ **Urlaub beantragen**
-- 📊 **Neues Projekt**
-- 📝 **Neue Aufgabe**
-- 📄 **Stundenzettel exportieren**
-- 👥 **Team kontaktieren**
+Häufig genutzte Bereiche erreichen Sie über die **Seitenleiste** (z. B. Abwesenheiten, Projekte, Zeiterfassung) oder über Karten auf dem Dashboard.
 
 ---
 
 ## 🎨 Dashboard personalisieren
 
-Sie können Ihr Dashboard anpassen:
+Über **Dashboard anpassen** (Widget-Bibliothek) können Sie Karten ein- und ausblenden sowie die Anordnung ändern — soweit Ihre Rolle das erlaubt.
 
-### Widgets verschieben
+**Typische Widgets (je nach Tarif):**
 
-1. Klicken Sie oben rechts auf **⚙️ Dashboard anpassen**
-2. Ziehen Sie Widgets mit der Maus
-3. Klicken Sie auf **"Speichern"**
+- Zeiterfassung / Kennzahlen
+- Aufgaben, Schichten, Projekte
+- Geburtstage
+- Finanz-KPIs (Rechnungen, Angebote, Eingangsrechnungen)
+- Aktuelle Abwesenheiten
 
-### Widgets ein-/ausblenden
-
-1. Klicken Sie auf **⚙️ Dashboard anpassen**
-2. Aktivieren/Deaktivieren Sie Widgets
-3. Klicken Sie auf **"Speichern"**
-
-**Verfügbare Widgets:**
-- ✅ Zeiterfassung
-- ✅ Projekte
-- ✅ Aufgaben
-- ✅ Schichten
-- ✅ Benachrichtigungen
-- ✅ Statistiken
-- ✅ Wetter
-- ✅ Geburtstage
+!!! info "Kein separates Layout pro Modus"
+    Es gibt eine anpassbare Dashboard-Ansicht pro Benutzer, aber keine mehreren benannten Layout-Profile in den Einstellungen.
 
 ---
 
@@ -201,18 +163,7 @@ Zeigt Ihre Zahlen für den aktuellen Monat:
 
 ## 📱 Dashboard Mobile
 
-Die Mobile App zeigt eine **kompakte Version** des Dashboards:
-
-### Haupt-Widgets:
-1. ⏰ Zeiterfassung (groß)
-2. 📅 Nächste Schicht
-3. ✅ Offene Aufgaben (Top 3)
-4. 🔔 Benachrichtigungen
-
-### Swipe-Navigation:
-- 👆 Nach oben wischen → Aktualisieren
-- 👈 Nach links wischen → Nächstes Widget
-- 👉 Nach rechts wischen → Vorheriges Widget
+Die Mobile App zeigt eine **kompakte Startansicht** mit Fokus auf Zeiterfassung, Schichten und Abwesenheiten — nicht alle Web-Widgets sind auf dem Smartphone verfügbar.
 
 [:octicons-arrow-right-24: Mehr zur Mobile App](../mobile/index.md)
 
@@ -246,7 +197,7 @@ Das Dashboard passt sich an Ihre Rolle an:
     - ⏰ Zeiterfassung
     - ✅ Eigene Aufgaben
     - 📅 Schichtplan
-    - 🏖️ Urlaubsübersicht
+    - 🏖️ Abwesenheitsübersicht
 
 === "Projektleiter"
 
@@ -283,9 +234,9 @@ Das Dashboard passt sich an Ihre Rolle an:
 
 **Mobile:** Wischen Sie auf dem Dashboard nach unten (Pull-to-Refresh)
 
-### Kann ich mehrere Dashboard-Layouts speichern?
+### Kann ich das Dashboard anpassen?
 
-Ja! Unter **Einstellungen** → **Dashboard** → **Layouts** können Sie verschiedene Layouts für unterschiedliche Arbeitsmodi erstellen.
+Ja — über **Dashboard anpassen** in der Widget-Bibliothek. Verfügbare Karten hängen von Tarif und Berechtigung ab.
 
 ---
 
@@ -303,5 +254,5 @@ Ja! Unter **Einstellungen** → **Dashboard** → **Layouts** können Sie versch
 
 ---
 
-*Letzte Aktualisierung: November 2024*
+*Letzte Aktualisierung: Mai 2026*
 
