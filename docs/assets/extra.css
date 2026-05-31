@@ -692,43 +692,61 @@ html {
                      :has(.planvo-portal) (CSS-only Fallback)
    ===================================================================== */
 
-/* 1. Grid komplett deaktivieren — zuverlässiger als grid-template-columns */
+/* 1. Grid komplett deaktivieren + .md-grid max-width aufheben */
 body:has(.planvo-portal) .md-main__inner,
 body.planvo-home .md-main__inner,
 html.planvo-home-early .md-main__inner {
   display: block !important;
-  margin: 0;
-  padding: 0;
-  background: var(--planvo-mist);
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: var(--planvo-mist) !important;
+  box-sizing: border-box !important;
 }
 
-[data-md-color-scheme="slate"] body:has(.planvo-portal) .md-main__inner,
-[data-md-color-scheme="slate"] body.planvo-home .md-main__inner {
-  background: #0f1117;
+body[data-md-color-scheme="slate"]:has(.planvo-portal) .md-main__inner,
+body[data-md-color-scheme="slate"].planvo-home .md-main__inner,
+html[data-md-color-scheme="slate"] .md-main__inner {
+  background: #0f1117 !important;
 }
 
-/* 2. Sidebars + TOC ausblenden */
+/* 2. Sidebars + TOC ausblenden (inkl. --secondary explizit) */
 body:has(.planvo-portal) .md-sidebar,
+body:has(.planvo-portal) .md-sidebar--primary,
+body:has(.planvo-portal) .md-sidebar--secondary,
 body.planvo-home .md-sidebar,
-html.planvo-home-early .md-sidebar {
+body.planvo-home .md-sidebar--primary,
+body.planvo-home .md-sidebar--secondary,
+html.planvo-home-early .md-sidebar,
+html.planvo-home-early .md-sidebar--primary,
+html.planvo-home-early .md-sidebar--secondary {
   display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
 }
 
-/* 3. Content volle Breite */
+/* 3. Content volle Breite — !important notwendig gegen Material-Defaults */
 body:has(.planvo-portal) .md-content,
 body.planvo-home .md-content,
 html.planvo-home-early .md-content {
-  display: block;
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 body:has(.planvo-portal) .md-content__inner,
-body.planvo-home .md-content__inner {
-  max-width: none;
-  margin: 0;
-  padding: 0;
+body.planvo-home .md-content__inner,
+html.planvo-home-early .md-content__inner {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* 4. Tabs, Banner, Footer, Edit-Buttons ausblenden */
@@ -926,18 +944,9 @@ body.planvo-home .md-typeset h1:first-child {
 }
 
 /* Portal — Dark Mode (Toggle) */
-[data-md-color-scheme="slate"] body:has(.planvo-portal) .md-main__inner,
-[data-md-color-scheme="slate"] .planvo-home .md-main__inner {
-  background: #0f1117;
-}
-
 [data-md-color-scheme="slate"] .planvo-portal {
   color: #e5e7eb;
-}
-
-[data-md-color-scheme="slate"] .planvo-portal__title {
-  color: #fff;
-  -webkit-text-fill-color: #fff;
+  background: #0f1117;
 }
 
 [data-md-color-scheme="slate"] .planvo-portal-search__box {
@@ -959,34 +968,55 @@ body.planvo-home .md-typeset h1:first-child {
 }
 
 [data-md-color-scheme="slate"] .planvo-category-card {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: none;
+  background: #1e2130;
+  border-color: rgba(168, 160, 220, 0.14);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 [data-md-color-scheme="slate"] .planvo-category-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: #252a3d;
+  border-color: rgba(168, 160, 220, 0.32);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+[data-md-color-scheme="slate"] .planvo-category-card__icon {
+  background: rgba(168, 160, 220, 0.12);
+  border-color: rgba(168, 160, 220, 0.2);
+  color: var(--planvo-lavender-light);
 }
 
 [data-md-color-scheme="slate"] .planvo-category-card__title {
-  color: #fff;
+  color: #f1f0ff;
 }
 
 [data-md-color-scheme="slate"] .planvo-category-card__desc {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(225, 220, 255, 0.65);
 }
 
 [data-md-color-scheme="slate"] .planvo-category-card__count {
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(168, 160, 220, 0.55);
+}
+
+[data-md-color-scheme="slate"] .planvo-category-card--external .planvo-category-card__count {
+  color: var(--planvo-lavender-light);
+}
+
+[data-md-color-scheme="slate"] .planvo-portal__footer {
+  color: rgba(225, 220, 255, 0.45);
 }
 
 [data-md-color-scheme="slate"] .planvo-portal__footer a {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(225, 220, 255, 0.65);
 }
 
 [data-md-color-scheme="slate"] .planvo-portal__footer a:hover {
   color: var(--planvo-lavender-light);
+}
+
+/* Portal-Titel Dark Mode */
+[data-md-color-scheme="slate"] .planvo-portal__title {
+  color: #f1f0ff;
+  -webkit-text-fill-color: #f1f0ff;
 }
 
 @media screen and (max-width: 76.1875em) {
@@ -1064,19 +1094,54 @@ body.planvo-home .md-typeset h1:first-child {
   padding-bottom: 0.15rem;
 }
 
-.md-search__input {
+/* Suchfeld im Header (lila Hintergrund) — weiße Schrift/Icons */
+.md-header .md-search__input {
   font-size: 0.88rem;
   background-color: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.22);
   color: #fff;
 }
 
-.md-search__input::placeholder {
+.md-header .md-search__input::placeholder {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.md-search__icon {
+.md-header .md-search__icon {
   color: rgba(255, 255, 255, 0.85);
+}
+
+/* Such-Overlay (geöffnet) — korrekte Farben je nach Scheme */
+[data-md-color-scheme="default"] .md-search__output {
+  background: #fff;
+}
+
+[data-md-color-scheme="default"] .md-search__form .md-search__input {
+  color: #111827;
+  background-color: rgba(107, 94, 205, 0.06);
+  border-color: rgba(107, 94, 205, 0.2);
+}
+
+[data-md-color-scheme="default"] .md-search__form .md-search__input::placeholder {
+  color: #9ca3af;
+}
+
+[data-md-color-scheme="default"] .md-search__form .md-search__icon {
+  color: #6b7280;
+}
+
+/* Dark Mode: Overlay */
+[data-md-color-scheme="slate"] .md-search__form .md-search__input {
+  color: #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-md-color-scheme="slate"] .md-search__form .md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+[data-md-color-scheme="slate"] .md-search__form .md-search__icon {
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* Tabs — cleaner */

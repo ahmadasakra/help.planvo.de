@@ -92,7 +92,7 @@ Mehr Beispiele in **[Code-Beispiele](examples.md)**.
 
 Diese API ist proprietär und nur für Planvo-Kunden verfügbar.
 
-© 2024 Planvo GmbH - Alle Rechte vorbehalten.
+© 2024 Planvo - Alle Rechte vorbehalten.
 
 
 

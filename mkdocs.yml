@@ -1,7 +1,7 @@
 site_name: Planvo Hilfe & Dokumentation
 site_url: https://help.planvo.de
 site_description: Offizielle Hilfe für Planvo – Handwerk & KMU. Zeiterfassung, Einsatzplanung, Abwesenheiten, Projekte und Rechnungswesen.
-site_author: Planvo GmbH
+site_author: Planvo
 
 # Repository
 repo_url: https://github.com/ahmadasakra/help.planvo.de
@@ -9,11 +9,12 @@ repo_name: help.planvo.de
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 2026 Planvo GmbH — <a href="https://www.planvo.de">planvo.de</a>
+copyright: Copyright &copy; 2026 Planvo — <a href="https://www.planvo.de">planvo.de</a>
 
 # Theme Configuration
 theme:
   name: material
+  custom_dir: overrides
   language: de
 
   logo: assets/logo.svg
@@ -60,7 +61,6 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-    - toc.follow
 
   icon:
     repo: fontawesome/brands/github
